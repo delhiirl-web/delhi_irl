@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO Meta Tags -->
+    <title>Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi</title>
+    <meta name="title" content="Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi">
+    <meta name="description" content="Discover Delhi in real life—from hidden food lanes in Chandni Chowk to aesthetic cafes, heritage walks, street style, and vibrant cultural stories.">
+    <meta name="keywords" content="Delhi tourism, Delhi food guide, Old Delhi heritage, Delhi IRL, travel Delhi, Delhi street food, Delhi aesthetic spots, Delhi vlog">
+    <meta name="author" content="Delhi IRL Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / WhatsApp Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delhiirl.com/">
+    <meta property="og:title" content="Delhi IRL | Discover the Heartbeat of Capital">
+    <meta property="og:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://delhiirl.com/">
+    <meta property="twitter:title" content="Delhi IRL | Discover the Heartbeat of Capital">
+    <meta property="twitter:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Structured Data (Schema.org JSON-LD for SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Delhi IRL",
+      "url": "https://delhiirl.com/",
+      "description": "Your ultimate lifestyle, heritage, and food guide to Delhi in Real Life.",
+      "sameAs": [
+        "https://www.instagram.com/delhii.irl/",
+        "https://www.facebook.com/profile.php?id=61592521435393",
+        "https://in.pinterest.com/delhiirl/"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-terracotta: #C85A32;
+            --primary-terracotta-dark: #A34320;
+            --gold-accent: #D4AF37;
+            --dark-royal: #1A181B;
+            --bg-cream: #FAF6F0;
+            --card-bg: #FFFFFF;
+            --text-dark: #2C2828;
+            --text-muted: #66605C;
+            --border-color: #E8E2D9;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: rgba(26, 24, 27, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--primary-terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #E0DDD7;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .social-header-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-header-icons a {
+            color: var(--gold-accent);
+            font-size: 1.2rem;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--gold-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-header-icons a:hover {
+            background-color: var(--gold-accent);
+            color: var(--dark-royal);
+            transform: translateY(-2px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 550px;
+            background: linear-gradient(rgba(26, 24, 27, 0.5), rgba(26, 24, 27, 0.7)), 
+                        url('https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-heading);
+            color: var(--gold-accent);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            color: #F0EAE1;
+        }
+
+        .hero-cta-btn {
+            background-color: var(--primary-terracotta);
+            color: #FFFFFF;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border: 2px solid var(--primary-terracotta);
+            box-shadow: 0 4px 15px rgba(200, 90, 50, 0.4);
+            display: inline-block;
+        }
+
+        .hero-cta-btn:hover {
+            background-color: transparent;
+            color: #FFFFFF;
+            border-color: #FFFFFF;
+            transform: translateY(-3px);
+        }
+
+        /* --- Global Container --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            color: var(--primary-terracotta);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            color: var(--dark-royal);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold-accent);
+            margin: 0.8rem auto 0;
+        }
+
+        /* --- Grid Layouts --- */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--dark-royal);
+            color: var(--gold-accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark-royal);
+        }
+
+        .card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .read-more {
+            color: var(--primary-terracotta);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more:hover {
+            color: var(--primary-terracotta-dark);
+            gap: 8px;
+        }
+
+        /* --- Social & Influencer Hub Section --- */
+        .social-hub-bg {
+            background-color: var(--dark-royal);
+            color: #FFFFFF;
+            padding: 5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-hub-bg .section-title {
+            color: #FFFFFF;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold-accent);
+            transform: translateY(-5px);
+        }
+
+        .social-icon-lg {
+            font-size: 2.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .social-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-card p {
+            color: #B0AAA2;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            background-color: var(--gold-accent);
+            color: var(--dark-royal);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .social-btn:hover {
+            background-color: #FFFFFF;
+            color: var(--dark-royal);
+        }
+
+        /* --- Influencer Collab Callout Box --- */
+        .collab-banner {
+            background: linear-gradient(135deg, var(--primary-terracotta), var(--primary-terracotta-dark));
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            color: #FFFFFF;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .collab-banner h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .collab-banner p {
+            max-width: 650px;
+            margin: 0 auto 1.8rem;
+            font-size: 1.05rem;
+            color: #F8E8E0;
+        }
+
+        .collab-btn {
+            background-color: var(--dark-royal);
+            color: var(--gold-accent);
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            display: inline-block;
+            border: 1px solid var(--gold-accent);
+        }
+
+        .collab-btn:hover {
+            background-color: #FFFFFF;
+            color: var(--dark-royal);
+        }
+
+        /* --- Easy Content Editor Guide Notice (CMS Feel) --- */
+        .cms-notice {
+            background-color: #EBF4FF;
+            border: 1px solid #BEE3F8;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cms-notice i {
+            font-size: 2rem;
+            color: #3182CE;
+        }
+
+        .cms-notice-text h4 {
+            color: #2B6CB0;
+            margin-bottom: 0.2rem;
+        }
+
+        .cms-notice-text p {
+            color: #4A5568;
+            font-size: 0.9rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #111012;
+            color: #8C857B;
+            padding: 3rem 1.5rem 1.5rem;
+            border-top: 1px solid #28252A;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--primary-terracotta);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #B0AAA2;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            border-top: 1px solid #222024;
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none; /* Can be toggled with JS */
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-group">
+                <a href="#" class="logo-text">DELHI <span>IRL</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blogs">Stories & Guides</a></li>
+                    <li><a href="#social">Social Hub</a></li>
+                    <li><a href="#collab">Collaborate</a></li>
+                </ul>
+            </nav>
+            <div class="social-header-icons">
+                <a href="https://www.instagram.com/delhii.irl/" target="_blank" title="Instagram"><i class="fab font-awesome-icon fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://in.pinterest.com/delhiirl/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">The Real Capital Experience</p>
+            <h1 class="hero-title">Experience Delhi In Real Life</h1>
+            <p class="hero-description">Uncovering hidden heritage lanes, legendary street food spots, aesthetic corners, and authentic local culture.</p>
+            <a href="#blogs" class="hero-cta-btn">Explore Delhi Stories</a>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- Visual Editor Guidance Note for Non-Coders -->
+        <div class="cms-notice">
+            <i class="fas fa-edit"></i>
+            <div class="cms-notice-text">
+                <h4>Easy Content Update Mode Activated</h4>
+                <p>This layout is built with clean, modular HTML blocks. You can open this file in any drag-and-drop editor (like Elementor, Pinegrow, or Netlify CMS) to edit text and photos easily without writing code!</p>
+            </div>
+        </div>
+
+        <!-- Section: Curated Stories & Blogs -->
+        <section id="blogs">
+            <div class="section-header">
+                <span class="section-tag">Curated Content & Guides</span>
+                <h2 class="section-title">Latest From Delhi IRL</h2>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Blog Card 1 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">Food & Culture</span>
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Old Delhi Paranthe Wali Gali Street Food">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Midnight Paranthas & Secret Spices of Chandni Chowk</h3>
+                        <p class="card-excerpt">A deep-dive walkthrough into the 100-year-old culinary secrets hidden in the narrowest lanes of Purani Dilli.</p>
+                        <div class="card-footer">
+                            <span>5 min read</span>
+                            <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">Aesthetic Walk</span>
+                        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Lodhi Art District Delhi Wall Murals">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Lodhi Art District: Delhi’s Open-Air Canvas</h3>
+                        <p class="card-excerpt">Discovering the best Instagrammable wall murals, local coffee spots, and peaceful morning walk routes in Lodhi Colony.</p>
+                        <div class="card-footer">
+                            <span>4 min read</span>
+                            <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">Heritage Spots</span>
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80" alt="Humayun Tomb Delhi Heritage Sunset">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Sunsets at Mughal Gardens & Hidden Tombs</h3>
+                        <p class="card-excerpt">Escape the city chaos. Here are 5 lesser-known historical monuments perfect for golden hour photography.</p>
+                        <div class="card-footer">
+                            <span>6 min read</span>
+                            <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Social Media Feed Hub Section -->
+    <section id="social" class="social-hub-bg">
+        <div class="container" style="padding-top:0; padding-bottom:0;">
+            <div class="section-header">
+                <span class="section-tag" style="color:var(--gold-accent);">Stay Connected</span>
+                <h2 class="section-title">Delhi IRL Across Channels</h2>
+            </div>
+
+            <div class="social-grid">
+                <!-- Instagram Box -->
+                <div class="social-card">
+                    <i class="fab fa-instagram social-icon-lg"></i>
+                    <h3>Instagram</h3>
+                    <p>Reels, aesthetic aesthetics, daily street stories & polls.</p>
+                    <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="social-btn">Follow @delhii.irl</a>
+                </div>
+
+                <!-- Facebook Box -->
+                <div class="social-card">
+                    <i class="fab fa-facebook-f social-icon-lg"></i>
+                    <h3>Facebook</h3>
+                    <p>Community discussions, event updates & heritage deep dives.</p>
+                    <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" class="social-btn">Like Facebook Page</a>
+                </div>
+
+                <!-- Pinterest Box -->
+                <div class="social-card">
+                    <i class="fab fa-pinterest-p social-icon-lg"></i>
+                    <h3>Pinterest</h3>
+                    <p>Curated Delhi aesthetic boards, outfit inspo & travel pins.</p>
+                    <a href="https://in.pinterest.com/delhiirl/" target="_blank" class="social-btn">Explore Pinterest Boards</a>
+                </div>
+            </div>
+
+            <!-- Influencer Collaboration Banner -->
+            <div id="collab" class="collab-banner">
+                <h3>Are You A Delhi Creator or Influencer?</h3>
+                <p>We are actively collaborating with local content creators, foodies, photographers, and storytellers to showcase Delhi in its rawest, most creative form.</p>
+                <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="collab-btn"><i class="fab fa-instagram"></i> DM Us On Instagram to Collab</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">DELHI <span>IRL</span></div>
+        <ul class="footer-links">
+            <li><a href="#about">About Delhi IRL</a></li>
+            <li><a href="#blogs">Guides & Stories</a></li>
+            <li><a href="#social">Social Connect</a></li>
+            <li><a href="#collab">Creator Collaborations</a></li>
+        </ul>
+        <p class="copyright">&copy; 2026 Delhi IRL. All rights reserved. Crafting authentic Delhi experiences for the world.</p>
+    </footer>
+
+</body>
+</html>
