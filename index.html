@@ -16,14 +16,14 @@
     <meta property="og:url" content="https://delhiirl.com/">
     <meta property="og:title" content="Delhi IRL | Discover the Heartbeat of Capital">
     <meta property="og:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image" content="https://i.pinimg.com/1200x/4c/00/43/4c004386b9e3eb8aaa2a4f2d43051326.jpg">
 
     <!-- Twitter Card Meta Tags -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://delhiirl.com/">
     <meta property="twitter:title" content="Delhi IRL | Discover the Heartbeat of Capital">
     <meta property="twitter:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80">
+    <meta property="twitter:image" content="https://i.pinimg.com/1200x/4c/00/43/4c004386b9e3eb8aaa2a4f2d43051326.jpg">
 
     <!-- Structured Data (Schema.org JSON-LD for SEO) -->
     <script type="application/ld+json">
@@ -127,14 +127,20 @@
             color: var(--primary-terracotta);
         }
 
+        /* Dynamic Dropdown Navigation */
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: center;
         }
 
-        .nav-links a {
+        .nav-item {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item > a {
             color: #E0DDD7;
             font-size: 0.95rem;
             font-weight: 500;
@@ -142,8 +148,40 @@
             letter-spacing: 1px;
         }
 
-        .nav-links a:hover {
+        .nav-item:hover > a {
             color: var(--gold-accent);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 210px;
+            background-color: var(--dark-royal);
+            border: 1px solid var(--gold-accent);
+            border-radius: 8px;
+            list-style: none;
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 0.6rem 1.2rem;
+            color: #E0DDD7;
+            font-size: 0.85rem;
+            text-transform: capitalize;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: rgba(212, 175, 55, 0.15);
+            color: var(--gold-accent);
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
         }
 
         .social-header-icons {
@@ -177,7 +215,7 @@
             height: 80vh;
             min-height: 550px;
             background: linear-gradient(rgba(26, 24, 27, 0.45), rgba(26, 24, 27, 0.65)), 
-                        url('https://i.pinimg.com/736x/2d/88/fc/2d88fcec9d402cc5c1cb9e9c4a8a34bd.jpg') center/cover no-repeat;
+                        url('https://i.pinimg.com/1200x/4c/00/43/4c004386b9e3eb8aaa2a4f2d43051326.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -480,7 +518,7 @@
             color: var(--dark-royal);
         }
 
-        /* --- Easy Content Editor Guide Notice (CMS Feel) --- */
+        /* --- Easy Content Editor Guide Notice --- */
         .cms-notice {
             background-color: #EBF4FF;
             border: 1px solid #BEE3F8;
@@ -557,7 +595,7 @@
                 font-size: 2.5rem;
             }
             .nav-links {
-                display: none; /* Can be toggled with JS */
+                display: none;
             }
             .section-title {
                 font-size: 1.8rem;
@@ -575,14 +613,48 @@
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blogs">Stories & Guides</a></li>
-                    <li><a href="#social">Social Hub</a></li>
-                    <li><a href="#collab">Collaborate</a></li>
+                    <!-- About Dropdown -->
+                    <li class="nav-item">
+                        <a href="#about">About <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://delhiirl.com/" target="_blank">Our Story</a></li>
+                            <li><a href="https://delhiirl.com/" target="_blank">The Team</a></li>
+                            <li><a href="https://delhiirl.com/" target="_blank">Mission & Vision</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Stories & Guides Dropdown -->
+                    <li class="nav-item">
+                        <a href="#blogs">Stories & Guides <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.google.com/maps/search/Chandni+Chowk+Food+Walk+Delhi/" target="_blank">Chandni Chowk Food Guide</a></li>
+                            <li><a href="https://www.google.com/maps/search/Lodhi+Art+District+Delhi/" target="_blank">Lodhi Art District Walk</a></li>
+                            <li><a href="https://www.google.com/maps/search/Humayun's+Tomb+Delhi/" target="_blank">Humayun's Tomb Trail</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Social Hub Dropdown -->
+                    <li class="nav-item">
+                        <a href="#social">Social Hub <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.instagram.com/delhii.irl/" target="_blank"><i class="fab fa-instagram"></i> Instagram Feed</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank"><i class="fab fa-facebook-f"></i> Facebook Page</a></li>
+                            <li><a href="https://in.pinterest.com/delhiirl/" target="_blank"><i class="fab fa-pinterest-p"></i> Pinterest Boards</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Collaborate Dropdown -->
+                    <li class="nav-item">
+                        <a href="#collab">Collaborate <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.instagram.com/delhii.irl/" target="_blank">Creator DM Application</a></li>
+                            <li><a href="mailto:contact@delhiirl.com" target="_blank">Brand Partnerships</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <div class="social-header-icons">
-                <a href="https://www.instagram.com/delhii.irl/" target="_blank" title="Instagram"><i class="fab font-awesome-icon fa-instagram"></i></a>
+                <a href="https://www.instagram.com/delhii.irl/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://in.pinterest.com/delhiirl/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
             </div>
@@ -602,12 +674,12 @@
     <!-- Main Content Container -->
     <main class="container">
 
-        <!-- Visual Editor Guidance Note for Non-Coders -->
+        <!-- CMS Visual Editor Guidance Note -->
         <div class="cms-notice">
             <i class="fas fa-edit"></i>
             <div class="cms-notice-text">
                 <h4>Easy Content Update Mode Activated</h4>
-                <p>This layout is built with clean, modular HTML blocks. You can open this file in any drag-and-drop editor (like Elementor, Pinegrow, or Netlify CMS) to edit text and photos easily without writing code!</p>
+                <p>This layout is built with clean, modular HTML blocks. You can open this file in any visual builder or code editor to edit text and photos directly.</p>
             </div>
         </div>
 
@@ -630,7 +702,7 @@
                         <p class="card-excerpt">A deep-dive walkthrough into the 100-year-old culinary secrets hidden in the narrowest lanes of Purani Dilli.</p>
                         <div class="card-footer">
                             <span>5 min read</span>
-                            <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.google.com/maps/search/Paranthe+Wali+Gali+Chandni+Chowk/" target="_blank" class="read-more">View Location <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </article>
@@ -646,7 +718,7 @@
                         <p class="card-excerpt">Discovering the best Instagrammable wall murals, local coffee spots, and peaceful morning walk routes in Lodhi Colony.</p>
                         <div class="card-footer">
                             <span>4 min read</span>
-                            <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.google.com/maps/search/Lodhi+Art+District/" target="_blank" class="read-more">View Location <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </article>
@@ -662,7 +734,7 @@
                         <p class="card-excerpt">Escape the city chaos. Here are 5 lesser-known historical monuments perfect for golden hour photography.</p>
                         <div class="card-footer">
                             <span>6 min read</span>
-                            <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.google.com/maps/search/Humayun's+Tomb/" target="_blank" class="read-more">View Location <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </article>
@@ -684,7 +756,7 @@
                 <div class="social-card">
                     <i class="fab fa-instagram social-icon-lg"></i>
                     <h3>Instagram</h3>
-                    <p>Reels, aesthetic aesthetics, daily street stories & polls.</p>
+                    <p>Reels, aesthetic photography, daily street stories & polls.</p>
                     <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="social-btn">Follow @delhii.irl</a>
                 </div>
 
