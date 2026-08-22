@@ -1,57 +1,665 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mughal Gardens & Hidden Tombs - Delhi IRL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Marcellus&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --gold: #d4af37;
-      --royal-green: #0f2e23;
-      --bg-cream: #f4f1ea;
-      --card-bg: #ffffff;
-      --text-dark: #1c2826;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: var(--bg-cream); color: var(--text-dark); font-family: 'Marcellus', serif; line-height: 1.8; }
-    .nav-bar { position: fixed; top: 0; width: 100%; background: rgba(15, 46, 35, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--gold); padding: 1rem 8%; display: flex; justify-content: space-between; }
-    .brand-logo { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--gold); text-decoration: none; letter-spacing: 2px; }
-    .hero { position: relative; height: 65vh; background: linear-gradient(to bottom, rgba(15,46,35,0.4), var(--bg-cream)), url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80') center/cover; display: flex; align-items: flex-end; padding: 3rem 8%; }
-    .badge { background: var(--gold); color: #000; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; border-radius: 2px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; display: inline-block; }
-    .hero h1 { font-family: 'Cinzel', serif; font-size: 3rem; color: #fff; text-shadow: 2px 4px 10px rgba(0,0,0,0.8); }
-    .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
-    .heritage-card { background: var(--card-bg); border: 1px solid rgba(212,175,55,0.4); border-left: 4px solid var(--royal-green); padding: 1.8rem; margin-bottom: 1.5rem; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .heritage-card h3 { font-family: 'Cinzel', serif; color: var(--royal-green); font-size: 1.3rem; margin-bottom: 0.4rem; }
-    .btn-back { display: inline-block; padding: 12px 30px; background: var(--royal-green); color: var(--gold); border: 1px solid var(--gold); font-family: 'Cinzel', serif; font-weight: 700; text-decoration: none; margin-top: 2rem; transition: 0.3s; }
-    .btn-back:hover { background: var(--gold); color: #000; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERITAGE IRL — Sunsets at Mughal Gardens & Hidden Tombs</title>
+    
+    <!-- Google Fonts for Classical Heritage Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --heritage-green: #0f3020;
+            --heritage-gold: #d4a017;
+            --gold-tag: #e8a923;
+            --sandstone-bg: #fbf9f4;
+            --card-bg: #ffffff;
+            --text-dark: #1f2421;
+            --text-muted: #555f58;
+            --metro-blue: #1e3a8a;
+            --border-soft: #e5dfd3;
+            --accent-green-border: #14432c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', Georgia, serif;
+            background-color: var(--sandstone-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Header Banner matching screenshot */
+        header.top-nav {
+            background-color: var(--heritage-green);
+            padding: 16px 2.5rem;
+            border-bottom: 2px solid #091f15;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .brand-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--heritage-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section with Golden Hour Mughal Backdrop (Replaces Idli Sambar) */
+        .hero-banner {
+            position: relative;
+            min-height: 480px;
+            background: linear-gradient(180deg, rgba(15, 48, 32, 0.45) 0%, rgba(251, 249, 244, 0.92) 80%, rgba(251, 249, 244, 1) 100%),
+                        url('https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 2rem;
+        }
+
+        .hero-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 1rem;
+            width: 100%;
+        }
+
+        .tag-pill {
+            display: inline-block;
+            background-color: var(--gold-tag);
+            color: #122118;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 5px 14px;
+            border-radius: 4px;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        h1.hero-heading {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4.5vw, 3.4rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.25;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0,0,0,0.9);
+            margin-bottom: 2rem;
+        }
+
+        .hero-intro {
+            font-size: 1.2rem;
+            color: #2b3a30;
+            font-weight: 600;
+            max-width: 860px;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtext {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 5rem;
+        }
+
+        /* Spot Card Layout matching the screenshot's left-border cards */
+        .spot-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-left: 6px solid var(--accent-green-border);
+            border-radius: 8px;
+            padding: 2.2rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .spot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(15, 48, 32, 0.1);
+        }
+
+        .spot-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #f0eae1;
+            padding-bottom: 10px;
+        }
+
+        .spot-number {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--heritage-gold);
+        }
+
+        .spot-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--heritage-green);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .spot-desc {
+            font-size: 1.08rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Image Display within Cards */
+        .card-img-wrap {
+            width: 100%;
+            height: 380px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .card-img-wrap:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Metro Guide Badge Box */
+        .transit-box {
+            background-color: #f4efe6;
+            border-radius: 6px;
+            padding: 1.1rem 1.4rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border-left: 3px solid var(--heritage-gold);
+        }
+
+        .transit-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .transit-label {
+            font-weight: 700;
+            color: var(--heritage-green);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            min-width: 120px;
+        }
+
+        .transit-value {
+            color: #333;
+        }
+
+        .metro-tag {
+            background-color: #e2dcd0;
+            color: #1e3a8a;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+        }
+
+        /* Strategy & Plan Banner */
+        .gameplan-box {
+            background: linear-gradient(135deg, var(--heritage-green), #1b4d35);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 3rem 2.2rem;
+            margin: 4rem 0 2rem;
+            box-shadow: 0 10px 30px rgba(15, 48, 32, 0.25);
+            text-align: center;
+        }
+
+        .gameplan-box h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--heritage-gold);
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .gameplan-box p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #f1f5f3;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--heritage-green);
+            color: #a4b3aa;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem;
+            border-top: 1px solid #1c4a33;
+        }
+
+        footer p.footer-gold {
+            font-family: 'Cinzel', serif;
+            color: var(--heritage-gold);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                min-height: 400px;
+            }
+            .spot-card {
+                padding: 1.5rem;
+            }
+            .card-img-wrap {
+                height: 250px;
+            }
+            .transit-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <nav class="nav-bar"><a href="index.html" class="brand-logo">HERITAGE IRL</a></nav>
-  <header class="hero">
-    <div>
-      <span class="badge">Heritage Spots</span>
-      <h1>Sunsets at Mughal Gardens & Hidden Tombs</h1>
+
+    <!-- Top Navigation Header -->
+    <header class="top-nav">
+        <div class="brand-title">HERITAGE IRL</div>
+    </header>
+
+    <!-- Hero Banner with Sunset Silhouette -->
+    <div class="hero-banner">
+        <div class="hero-inner">
+            <span class="tag-pill">HERITAGE SPOTS</span>
+            <h1 class="hero-heading">Sunsets at Mughal Gardens &amp; Hidden Tombs</h1>
+            
+            <p class="hero-intro">
+                There's a version of Delhi that only shows up after 5 pm — when the harsh afternoon sun softens into gold, the crowds thin out, and centuries-old sandstone starts glowing like it's lit from within.
+            </p>
+            <p class="hero-subtext">
+                This is the Delhi locals chase on weekends: a city where every monument doubles as the perfect sunset backdrop, and every "just a quick visit" turns into an hour of quietly staring at history. Grab your walking shoes and your metro card — we're doing a full golden-hour heritage crawl through Delhi's most iconic (and a few criminally underrated) spots.
+            </p>
+        </div>
     </div>
-  </header>
-  <main class="container">
-    <p style="font-size: 1.25rem; color: var(--royal-green); font-weight: 600;">Escape the city noise and discover 5 golden-hour Mughal ruins tucked inside Delhi's quietest green pockets.</p>
-    <div style="margin: 2rem 0;">
-      <div class="heritage-card">
-        <h3>1. Isa Khan's Sunken Octagonal Tomb</h3>
-        <p>Pre-dates Humayun's Tomb with exquisite blue tiles and sunken gardens.</p>
-      </div>
-      <div class="heritage-card">
-        <h3>2. Jamali Kamali Mosque Ruins</h3>
-        <p>Tucked deep inside Mehrauli Archaeological Park featuring red sandstone Mughal poetry carvings.</p>
-      </div>
-      <div class="heritage-card">
-        <h3>3. Safdarjung Tomb Gardens</h3>
-        <p>The last grand garden tomb of the Mughal Empire, perfect for sunset silhouettes.</p>
-      </div>
-    </div>
-    <div style="text-align:center;"><a href="index.html" class="btn-back">← Return to Exploration Hub</a></div>
-  </main>
+
+    <!-- Main Heritage Spots Crawl -->
+    <main class="container">
+
+        <!-- 1. Mughal Gardens (Amrit Udyan) -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">1.</span>
+                <h2 class="spot-title">Mughal Gardens: The Sunset Star of the List</h2>
+            </div>
+            <p class="spot-desc">
+                Tucked inside the President's Estate, the Mughal Gardens (now renamed Amrit Udyan) are Delhi's best-kept secret for a reason — they're only open to the public for a limited season each year, usually between February and March. When you do catch them, it's magic: manicured lawns, canals inspired by Mughal design, and flowerbeds so vivid they look painted. Come at sunset, and the entire garden turns into a soft golden canvas.
+            </p>
+            
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1585130401366-fe05a8d813c4?auto=format&fit=crop&w=900&q=80" alt="Mughal Gardens Amrit Udyan in Full Bloom">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Central Secretariat</span> (Yellow &amp; Violet Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">From Central Secretariat station, it's roughly a 15-20 minute walk or a quick auto ride to the Rashtrapati Bhavan gate. Entry is via online booking during the open season, so plan ahead.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2. Red Fort -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">2.</span>
+                <h2 class="spot-title">Red Fort: Where Sunset Meets Empire</h2>
+            </div>
+            <p class="spot-desc">
+                No Delhi heritage list is complete without the massive red sandstone walls of Red Fort (Lal Qila), Shah Jahan's 17th-century seat of power. Watching the sun dip behind its ramparts while Chandni Chowk buzzes just outside is a full sensory experience — history in front of you, street food aroma behind you.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?auto=format&fit=crop&w=900&q=80" alt="Red Fort Lal Qila at Sunset">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Lal Qila</span> (Violet Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">The station is a two-minute walk from the fort's entrance — about as convenient as heritage travel gets in Delhi.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3. Jama Masjid -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">3.</span>
+                <h2 class="spot-title">Jama Masjid: Sunset Prayers and Skyline Views</h2>
+            </div>
+            <p class="spot-desc">
+                Right around the corner from Red Fort stands Jama Masjid, one of India's largest mosques, built by the same Mughal emperor. Climb the southern minaret (small fee applies) right before sunset, and you get a sweeping view of Old Delhi's rooftops turning amber, with the call to prayer echoing below.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=900&q=80" alt="Jama Masjid Mosque Courtyard at Sunset">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Jama Masjid</span> (Violet Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">A short 5-minute walk from the metro station gets you right to the mosque's steps.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4. Purana Qila -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">4.</span>
+                <h2 class="spot-title">Purana Qila: The Underrated Sunset Gem</h2>
+            </div>
+            <p class="spot-desc">
+                While everyone rushes to Red Fort, Purana Qila — believed to stand on the site of the legendary city of Indraprastha — stays peacefully uncrowded. Its massive stone walls and the boat club by the moat make it one of the most romantic, least-hyped sunset spots in the city.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=900&q=80" alt="Purana Qila Ancient Fort Walls">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Pragati Maidan</span> (Blue Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">About a 10-minute walk from Pragati Maidan station takes you straight to its gates.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5. Humayun's Tomb -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">5.</span>
+                <h2 class="spot-title">Humayun's Tomb: The Blueprint for the Taj Mahal</h2>
+            </div>
+            <p class="spot-desc">
+                Often called the precursor to the Taj Mahal, Humayun's Tomb is a UNESCO World Heritage Site with a symmetrical charbagh garden that looks stunning any time of day — but at sunset, the reddish sandstone practically glows. It's peaceful, spacious, and criminally underrated compared to its more famous cousin in Agra.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80" alt="Humayun's Tomb Glowing at Sunset">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">JLN Stadium</span> (Violet Line) or <span class="metro-tag">Jangpura</span> (Pink Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">Roughly a 15-20 minute walk or a short auto ride from either station.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6. Safdarjung's Tomb -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">6.</span>
+                <h2 class="spot-title">Safdarjung's Tomb: Delhi's "Hidden" Tomb</h2>
+            </div>
+            <p class="spot-desc">
+                If Humayun's Tomb is the famous sibling, Safdarjung's Tomb is the quiet, underrated one — and honestly, that's what makes it special. Built in the mid-1700s, this marble-and-sandstone mausoleum sits in its own peaceful garden, with far fewer crowds and just as much charm. Sunset here feels almost private.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1592635196078-9ffc8f654b9d?auto=format&fit=crop&w=900&q=80" alt="Safdarjung's Tomb in Golden Light">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Jor Bagh</span> (Yellow Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">About a 10-minute walk from Jor Bagh station.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 7. Qutub Minar -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">7.</span>
+                <h2 class="spot-title">Qutub Minar: The Tallest Sunset View in Delhi</h2>
+            </div>
+            <p class="spot-desc">
+                Standing at 73 metres, Qutub Minar is the tallest brick minaret in the world, surrounded by ruins, arches, and the mysterious Iron Pillar that hasn't rusted in over 1,600 years. As the sun sets behind the tower, the entire complex takes on a dramatic, almost cinematic look.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Qutub Minar Dramatic Sunset">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Qutub Minar</span> (Yellow Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">A quick 10-minute walk or auto ride from the station.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 8. Lodhi Gardens -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">8.</span>
+                <h2 class="spot-title">Lodhi Gardens: Sunset, Joggers, and Ancient Tombs Together</h2>
+            </div>
+            <p class="spot-desc">
+                Lodhi Gardens is where Delhi comes to unwind — joggers, picnickers, couples, and 15th-century Lodhi and Sayyid dynasty tombs all sharing the same green space. Watching the sun set behind the Bara Gumbad or Sheesh Gumbad, framed by manicured lawns, is one of the most peaceful experiences in the city.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1621849400072-f554417f7051?auto=format&fit=crop&w=900&q=80" alt="Lodhi Gardens Sunset and Ancient Domes">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Jor Bagh</span> (Yellow Line) or <span class="metro-tag">Khan Market</span> (Violet Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">Around a 10-15 minute walk from either station.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 9. India Gate -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">9.</span>
+                <h2 class="spot-title">India Gate: The Classic Evening Hangout</h2>
+            </div>
+            <p class="spot-desc">
+                You can't talk about Delhi sunsets without India Gate. This 42-metre war memorial, lit up against a fading orange sky, is where the entire city seems to gather for evening walks, ice cream, and boat rides on the adjoining lawns. It's touristy, sure — but there's a reason it never gets old.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1592635196078-9ffc8f654b9d?auto=format&fit=crop&w=900&q=80" alt="India Gate Evening Sky">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Central Secretariat</span> (Yellow &amp; Violet Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">About a 15-minute walk, or hop in an auto for a quicker ride straight to the lawns.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 10. Jantar Mantar -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">10.</span>
+                <h2 class="spot-title">Jantar Mantar: Sunset Over Ancient Science</h2>
+            </div>
+            <p class="spot-desc">
+                An 18th-century astronomical observatory built by Maharaja Jai Singh II, Jantar Mantar is full of quirky, oversized stone instruments once used to track the stars and time. At sunset, the geometric structures cast long, dramatic shadows — an underrated photo-op hiding in plain sight near Connaught Place.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=900&q=80" alt="Jantar Mantar Geometric Astronomical Structures">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Patel Chowk</span> (Yellow Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">A short 5-10 minute walk from the station.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 11. Lotus Temple -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">11.</span>
+                <h2 class="spot-title">Lotus Temple: Sunset Petals in Full Glow</h2>
+            </div>
+            <p class="spot-desc">
+                Shaped like a blooming lotus flower, the Bahá'í Lotus Temple looks striking at any hour, but sunset adds a warm glow to its white marble petals that makes it look almost otherworldly. It's a place of quiet reflection, open to all faiths, so keep your visit calm and peaceful.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80" alt="Lotus Temple Warm Glow at Sunset">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Kalkaji Mandir</span> (Magenta &amp; Violet Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">About a 10-minute walk from the station.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 12. Akshardham Temple -->
+        <article class="spot-card">
+            <div class="spot-header">
+                <span class="spot-number">12.</span>
+                <h2 class="spot-title">Akshardham Temple: The Grand Finale</h2>
+            </div>
+            <p class="spot-desc">
+                Save this one for a slightly later evening — Akshardham Temple hosts a spectacular musical fountain show after dark, alongside intricately carved sandstone and marble architecture that's illuminated beautifully once the sun goes down. It's less "ancient ruins" and more "modern architectural marvel," but it earns its spot on any Delhi heritage trail.
+            </p>
+
+            <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80" alt="Akshardham Temple Night Illumination">
+            </div>
+
+            <div class="transit-box">
+                <div class="transit-row">
+                    <span class="transit-label">🚇 Nearest Metro:</span>
+                    <span class="transit-value"><span class="metro-tag">Akshardham</span> (Blue Line)</span>
+                </div>
+                <div class="transit-row">
+                    <span class="transit-label">🚶 How to reach:</span>
+                    <span class="transit-value">The station is directly connected to the temple complex via a short walkway.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Game Plan Section -->
+        <div class="gameplan-box">
+            <h2>Your Golden Hour Game Plan</h2>
+            <p>
+                Here's the fun part — Delhi's metro network connects almost every single one of these spots, so you can genuinely string together a heritage-hopping evening without touching a car. Pick two or three that are metro-close to each other (<strong>Humayun's Tomb + Safdarjung's Tomb + Lodhi Gardens</strong> is a solid golden-hour trio), time your last stop right before sunset, and just let the city's history glow around you.
+            </p>
+            <p style="font-style: italic; color: #ffd166; font-size: 1.25rem;">
+                "Delhi doesn't just have monuments — it has moods, and sunset is easily its best one. So next weekend, skip the mall, grab a friend, and let the city's tombs, gardens, and forts remind you why golden hour was invented right here."
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-gold">HERITAGE IRL</p>
+        <p>&copy; Delhi IRL. Exploring Delhi's Timeless Monuments &amp; Golden Hour Wonders.</p>
+    </footer>
+
 </body>
 </html>
