@@ -6,8 +6,6 @@
     <title>Delhi food 🍛</title>
     <style>
         :root {
-            --bg-color: #fdfbf7;
-            --card-bg: #ffffff;
             --text-main: #2c2c2c;
             --text-muted: #555555;
             --accent-gold: #c59b27;
@@ -17,17 +15,33 @@
 
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
-            background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.8;
             margin: 0;
             padding: 0;
+            background-color: #ffffff; /* Page background stays white */
+            position: relative; /* Needed for the background layer */
+        }
+
+        /* Subtle repeating watermark background - affects the whole page content area */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48dGV4dCB4PSIxMCIgeT0iMTcwIiBmb250LXNpemU9IjE2IiBmaWxsPSIjRjBGNEY5IiBmb250LWZhbWlseT0iJ0dlb3JnaWEnLCBzZXJpZiI+REVMS0kgRk9PRDwvdGV4dD48dGV4dCB4PSIxNjAiIHk9IjI5MCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI0YwRjRGOSIgZm9udC1mYW1pbHk9IidHZW9yZ2lhJywgc2VyaWYiPkRFTEhJIEZPT0Q8L3RleHQ+PC9zdmc+'); /* Data URI for an SVG with repeating "DELHI FOOD" */
+            background-repeat: repeat;
+            opacity: 0.1; /* Adjust the opacity of the watermark */
+            z-index: -1; /* Place it behind all other content */
         }
 
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 0 20px;
+            background-color: rgba(253, 251, 247, 0.9); /* Slight off-white, semi-transparent background for content over the watermark */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
         }
 
         header {
@@ -35,6 +49,7 @@
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 20px;
             margin-bottom: 30px;
+            margin-top: 30px;
         }
 
         h1.page-title {
@@ -54,12 +69,9 @@
         }
 
         section {
-            background: var(--card-bg);
             padding: 25px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             margin-bottom: 30px;
-            border: 1px solid var(--border-color);
+            border-bottom: 1px solid #eee;
         }
 
         h2 {
@@ -112,6 +124,7 @@
             color: var(--text-muted);
             padding: 20px 0;
             border-top: 1px solid var(--border-color);
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -188,6 +201,10 @@
             <section>
                 <h2>That View You Can't Miss: Red Fort From the Main Road</h2>
                 <p>Here's a little cinematic bonus: stand at the eastern end of Chandni Chowk's main road, and the majestic Red Fort (Lal Qila) looms straight ahead, its red sandstone walls framing the entire street like a painting. This isn't a coincidence — the road was originally designed as a direct processional route from the fort, meant to be seen exactly this way. Next time you're munching a jalebi mid-walk, look up. History is staring right back at you.</p>
+                
+                <!-- Added Red Fort image -->
+                <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/humayun-tomb-sunset.jpg" alt="View towards Red Fort (using sunset tomb placeholder)">
+                <p style="font-size:0.85rem; color:#888; font-style:italic;">[Image uses a placeholder - imagine the view from the street looking at the Red Fort!]</p>
             </section>
 
             <section>
@@ -197,6 +214,10 @@
                     <li><strong>Dariba Kalan</strong> – The centuries-old jewelry and silver market.</li>
                     <li><strong>Kinari Bazaar</strong> – Wedding and festive essentials: zari, laces, and embellishments galore.</li>
                     <li><strong>Khari Baoli</strong> – Asia's largest spice market, where the air itself makes you sneeze with flavor.</li>
+                    
+                    <!-- Added Spice market image -->
+                    <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/spice-market.jpg" alt="Khari Baoli Spice Market">
+
                     <li><strong>Nai Sarak</strong> – The go-to for books, stationery, and paper goods.</li>
                     <li><strong>Chawri Bazaar</strong> – Once a courtesans' quarter, now known for wedding cards and brassware.</li>
                     <li><strong>Ballimaran</strong> – A quieter, more residential lane, home to the legendary poet Mirza Ghalib's haveli.</li>
