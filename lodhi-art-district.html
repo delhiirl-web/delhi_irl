@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DELHI ART — Lodhi Art District: Delhi's Open-Air Gallery</title>
+    <title>DELHI ART 🎨 — Lodhi Art District: Delhi's Open-Air Gallery</title>
     
-    <!-- Modern Sans Font Family -->
+    <!-- Editorial Serif & Modern Sans Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-body: #06090e;
-            --bg-surface: #0e1520;
-            --bg-card: #121c2b;
-            --bg-card-hover: #172437;
-            --cyan-glow: #00f2fe;
-            --cyan-accent: #4facfe;
-            --pink-accent: #ff0844;
-            --pink-gradient: linear-gradient(135deg, #ff0844 0%, #ff4e50 100%);
-            --pill-gradient: linear-gradient(90deg, #d946ef 0%, #06b6d4 100%);
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border-subtle: rgba(79, 172, 254, 0.15);
-            --border-glow: rgba(0, 242, 254, 0.4);
+            /* Palette adapted from DELHI IRL Main Page */
+            --bg-page: #fbf9f4;
+            --bg-surface: #ffffff;
+            --bg-card: #f8f4ec;
+            --bg-card-hover: #ffffff;
+            --nav-bg: #14171a;
+            --text-title: #181c1f;
+            --text-main: #333a40;
+            --text-muted: #64748b;
+            --terracotta: #c25934;
+            --terracotta-gradient: linear-gradient(135deg, #c25934 0%, #d97746 100%);
+            --accent-gold: #c59b27;
+            --accent-cyan: #0284c7;
+            --accent-purple: #7e22ce;
+            --border-color: #e8ded2;
+            --border-accent: rgba(194, 89, 52, 0.25);
+            --shadow-subtle: 0 4px 20px rgba(0,0,0,0.04);
+            --shadow-hover: 0 10px 25px rgba(194, 89, 52, 0.12);
         }
 
         * {
@@ -35,81 +40,97 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-body);
+            background-color: var(--bg-page);
             color: var(--text-main);
             line-height: 1.8;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
+            position: relative;
         }
 
-        /* Top Navigation Bar */
+        /* Subtle Repeating Artistic Street Art Background Watermark */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj48cGF0aCBkPSJNMjAgMjBMMTAwIDgwbS00MCAyMGMxMC0yMCAzMC0yMCA0MCAwbTMwIDQwbTUwIDUwbS03MC0zMGMyMC0yMCA1MC0xMCA1MCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJkOGMyIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC4zNSIvPjx0ZXh0IHg9IjMwIiB5PSIxNzAiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNlMmQ4YzIiIGZvbnQtZmFtaWx5PSInQ2luemVsJywgc2VyaWYiIGxldHRlci1zcGFjaW5nPSIyIj5MT0RISSBBUlQ8L3RleHQ+PC9zdmc+');
+            background-repeat: repeat;
+            opacity: 0.65;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Top Navigation Bar matching DELHI IRL Navbar */
         nav.navbar {
-            background-color: #03060a;
-            border-bottom: 2px solid var(--cyan-accent);
+            background-color: var(--nav-bg);
+            border-bottom: 2px solid var(--accent-gold);
             padding: 18px 2.5rem;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.1);
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
         }
 
         .brand-logo {
-            font-size: 1.4rem;
-            font-weight: 900;
-            letter-spacing: 2px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: 3px;
             color: #ffffff;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             text-transform: uppercase;
         }
 
         .brand-logo span {
-            color: var(--cyan-glow);
-            text-shadow: 0 0 12px rgba(0, 242, 254, 0.8);
+            color: var(--accent-gold);
         }
 
         /* Hero Section */
         .hero {
+            position: relative;
             text-align: center;
             padding: 5rem 1.5rem 3.5rem;
-            max-width: 1050px;
+            max-width: 1080px;
             margin: 0 auto;
         }
 
         .pill-badge {
             display: inline-block;
-            background: var(--pill-gradient);
+            background: var(--terracotta-gradient);
             color: #ffffff;
             font-size: 0.75rem;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
+            letter-spacing: 2px;
             padding: 6px 18px;
             border-radius: 50px;
             margin-bottom: 1.8rem;
-            box-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
+            box-shadow: 0 3px 10px rgba(194, 89, 52, 0.25);
         }
 
         h1.hero-title {
-            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+            font-family: 'Cinzel', 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
             font-weight: 800;
-            color: #ffffff;
-            line-height: 1.2;
+            color: var(--text-title);
+            line-height: 1.25;
             margin-bottom: 2rem;
-            text-shadow: 0 0 25px rgba(0, 242, 254, 0.7), 0 0 50px rgba(79, 172, 254, 0.3);
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .hero-lead {
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            max-width: 780px;
+            font-style: italic;
+            color: #4a5568;
+            max-width: 840px;
             margin: 0 auto 3.5rem;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         /* Container */
@@ -119,33 +140,37 @@
             padding: 0 1.5rem 5rem;
         }
 
-        /* Quick Feature Row (From Screenshot) */
+        /* Quick Feature Row */
         .feature-grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
+            gap: 1.8rem;
+            margin-bottom: 4.5rem;
         }
 
         .feat-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 1.8rem;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--terracotta);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-subtle);
             transition: all 0.3s ease;
         }
 
         .feat-card:hover {
             transform: translateY(-5px);
             background-color: var(--bg-card-hover);
-            border-color: var(--cyan-glow);
-            box-shadow: 0 10px 25px rgba(0, 242, 254, 0.15);
+            border-color: var(--border-accent);
+            border-left-color: var(--accent-gold);
+            box-shadow: var(--shadow-hover);
         }
 
         .feat-card-title {
+            font-family: 'Cinzel', serif;
             font-size: 1.15rem;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--text-title);
             margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
@@ -155,23 +180,24 @@
         .feat-card p {
             font-size: 0.95rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
-        /* Section Layouts */
+        /* Content Section Cards */
         .content-section {
             background-color: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 3rem;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3.5rem 3rem;
             margin-bottom: 3.5rem;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            box-shadow: var(--shadow-subtle);
         }
 
         .section-heading {
+            font-family: 'Cinzel', 'Playfair Display', serif;
             font-size: 2rem;
             font-weight: 800;
-            color: #ffffff;
+            color: var(--text-title);
             margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
@@ -180,39 +206,39 @@
         .section-heading::after {
             content: '';
             position: absolute;
-            bottom: -6px;
+            bottom: -8px;
             left: 0;
-            width: 40%;
+            width: 50px;
             height: 3px;
-            background: var(--pill-gradient);
+            background: var(--terracotta-gradient);
             border-radius: 2px;
         }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
+            gap: 3rem;
             align-items: center;
-            margin: 2rem 0;
+            margin: 2.2rem 0;
         }
 
         /* Image Display Cards */
         .img-wrapper {
             position: relative;
-            border-radius: 14px;
+            border-radius: 12px;
             overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         }
 
         .img-wrapper img {
             width: 100%;
             height: 100%;
-            min-height: 300px;
+            min-height: 320px;
             max-height: 420px;
             object-fit: cover;
             display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .img-wrapper:hover img {
@@ -221,19 +247,20 @@
 
         .img-tag {
             position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: rgba(6, 9, 14, 0.85);
+            bottom: 14px;
+            left: 14px;
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: var(--cyan-glow);
+            border: 1px solid rgba(0,0,0,0.08);
+            color: var(--terracotta);
             font-size: 0.8rem;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
-            font-weight: 600;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        /* List Items with Neon Bullet */
+        /* Styled Art Themes List */
         .art-list {
             list-style: none;
             padding: 0;
@@ -241,42 +268,47 @@
         }
 
         .art-list li {
-            padding: 1rem 1.2rem;
+            padding: 1.1rem 1.3rem;
             background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-left: 4px solid var(--cyan-accent);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
             border-radius: 0 10px 10px 0;
             margin-bottom: 1rem;
-            font-size: 1.05rem;
-            color: #cbd5e1;
-            transition: all 0.2s ease;
+            font-size: 1rem;
+            color: var(--text-main);
+            transition: all 0.3s ease;
         }
 
         .art-list li:hover {
-            border-left-color: #d946ef;
-            background: var(--bg-card-hover);
-            transform: translateX(4px);
+            border-left-color: var(--terracotta);
+            background: #ffffff;
+            transform: translateX(5px);
+            box-shadow: var(--shadow-subtle);
         }
 
         .art-list li strong {
-            color: #ffffff;
+            color: var(--text-title);
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
             display: inline;
         }
 
-        /* Interactive Pro-Tip Banner */
+        /* Pro-Tips Box */
         .pro-tips-box {
-            background: linear-gradient(135deg, rgba(23, 36, 55, 0.9), rgba(18, 28, 43, 0.95));
-            border: 1px solid var(--cyan-accent);
-            border-radius: 16px;
+            background: linear-gradient(135deg, #fdfaf5, #f5efe4);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--terracotta);
+            border-radius: 12px;
             padding: 2.2rem;
             margin: 2.5rem 0;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+            box-shadow: var(--shadow-subtle);
         }
 
         .pro-tips-box h3 {
+            font-family: 'Cinzel', serif;
             font-size: 1.4rem;
-            color: var(--cyan-glow);
-            margin-bottom: 1.2rem;
+            color: var(--terracotta);
+            margin-bottom: 1.4rem;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -285,150 +317,158 @@
         .tips-list {
             list-style: none;
             display: grid;
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .tips-list li {
             display: flex;
-            gap: 12px;
+            gap: 14px;
             align-items: flex-start;
-            color: #e2e8f0;
+            color: var(--text-main);
             font-size: 1rem;
         }
 
         .tips-list li span.icon {
-            font-size: 1.2rem;
-            line-height: 1.4;
+            font-size: 1.25rem;
+            line-height: 1.3;
         }
 
-        /* Quote / Highlight */
+        /* Vibe Quote */
         .vibe-quote {
-            background: linear-gradient(90deg, rgba(217, 70, 239, 0.1), rgba(6, 182, 212, 0.1));
-            border-left: 4px solid #d946ef;
-            padding: 1.5rem 2rem;
+            background-color: var(--bg-card);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.8rem 2.2rem;
             border-radius: 0 12px 12px 0;
-            margin: 2rem 0;
+            margin: 2.2rem 0;
+            font-family: 'Playfair Display', Georgia, serif;
             font-style: italic;
-            color: #f1f5f9;
-            font-size: 1.15rem;
+            color: var(--text-title);
+            font-size: 1.2rem;
+            line-height: 1.7;
         }
 
-        /* Footer */
+        /* Footer matching DELHI IRL */
         footer {
-            background-color: #03060a;
-            border-top: 1px solid var(--border-subtle);
+            background-color: var(--nav-bg);
+            border-top: 2px solid var(--accent-gold);
             text-align: center;
             padding: 3.5rem 1.5rem;
-            color: var(--text-muted);
+            color: #94a3b8;
             font-size: 0.95rem;
         }
 
         footer p.footer-tagline {
+            font-family: 'Cinzel', serif;
             font-size: 1.2rem;
             font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.8rem;
+            letter-spacing: 2px;
         }
 
         @media (max-width: 820px) {
             .grid-2 {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
             .content-section {
-                padding: 1.8rem;
+                padding: 2rem 1.5rem;
+            }
+            .hero {
+                padding-top: 3.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Nav Bar matching Screenshot Header -->
+    <!-- Top Navigation Bar -->
     <nav class="navbar">
         <div class="brand-logo">DELHI <span>ART</span></div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <span class="pill-badge">AESTHETIC WALK</span>
+        <span class="pill-badge">Aesthetic Walk</span>
         <h1 class="hero-title">Lodhi Art District: Delhi's Open-Air Gallery</h1>
         <p class="hero-lead">
-            Forget everything you know about visiting an art gallery — the hushed silence, the "do not touch" signs, the entry tickets. Now imagine strolling down an ordinary Delhi residential street and suddenly finding a five-storey building wearing a giant mural of a woman lost in thought, or turning a corner to spot a wall exploding with parrots, geometric patterns, or a portrait so lifelike it stops you mid-step. That's Lodhi Colony for you — except everyone calls it the Lodhi Art District, India's first open-air public art district, and it's basically a treasure hunt disguised as a walk.
+            "Forget everything you know about visiting an art gallery — the hushed silence, the 'do not touch' signs, the entry tickets. Now imagine strolling down an ordinary Delhi residential street and suddenly finding a five-storey building wearing a giant mural of a woman lost in thought, or turning a corner to spot a wall exploding with parrots, geometric patterns, or a portrait so lifelike it stops you mid-step. That's Lodhi Colony for you — except everyone calls it the Lodhi Art District, India's first open-air public art district, and it's basically a treasure hunt disguised as a walk."
         </p>
 
-        <!-- 3 Feature Highlight Cards (Directly matching your screenshot) -->
+        <!-- 3 Feature Highlight Cards[cite: 1] -->
         <div class="feature-grid-3">
             <div class="feat-card">
                 <div class="feat-card-title">🎨 Photorealistic Portraits</div>
-                <p>Gigantic wall paintings detailing local legends, expressive emotion, and everyday faces.</p>
+                <p>Gigantic wall paintings detailing local legends, expressive emotion, and everyday faces[cite: 1].</p>
             </div>
             <div class="feat-card">
                 <div class="feat-card-title">🌀 Optical Illusions</div>
-                <p>Geometric abstract shapes and patterns that bend 3D building architecture into mind tricks.</p>
+                <p>Geometric abstract shapes and patterns that bend 3D building architecture into mind tricks[cite: 1].</p>
             </div>
             <div class="feat-card">
                 <div class="feat-card-title">🦜 Wildlife Explosions</div>
-                <p>Vibrant natural flora, soaring birds, and wildlife taking over concrete facades in full color.</p>
+                <p>Vibrant natural flora, soaring birds, and wildlife taking over concrete facades in full color[cite: 1].</p>
             </div>
         </div>
     </header>
 
     <main class="container">
 
-        <!-- History Section -->
+        <!-- History Section[cite: 1] -->
         <section class="content-section">
             <h2 class="section-heading">How a Government Colony Became an Art Capital</h2>
             
             <div class="grid-2">
                 <div>
                     <p style="margin-bottom: 1.2rem;">
-                        Here's the twist nobody expects: Lodhi Art District isn't in some trendy, curated art hub — it's a government housing colony built in the 1940s, full of quiet lanes and boxy residential blocks.
+                        Here's the twist nobody expects: Lodhi Art District isn't in some trendy, curated art hub — it's a government housing colony built in the 1940s, full of quiet lanes and boxy residential blocks[cite: 1].
                     </p>
                     <p>
-                        In 2015, the <strong>St+art India Foundation</strong>, in collaboration with the Delhi government, decided this unassuming neighborhood deserved a makeover — and not the boring kind. They invited street artists from India and across the globe to transform blank walls into massive canvases.
+                        In 2015, the <strong>St+art India Foundation</strong>, in collaboration with the Delhi government, decided this unassuming neighborhood deserved a makeover — and not the boring kind[cite: 1]. They invited street artists from India and across the globe to transform blank walls into massive canvases[cite: 1].
                     </p>
-                    <p style="margin-top: 1.2rem; color: var(--cyan-glow); font-weight: 600;">
-                        The result? Over 50 murals spread across residential blocks, turning a sleepy colony into one of the most Instagrammed corners of the capital, without charging a single rupee for entry.
+                    <p style="margin-top: 1.2rem; color: var(--terracotta); font-weight: 700;">
+                        The result? Over 50 murals spread across residential blocks, turning a sleepy colony into one of the most Instagrammed corners of the capital, without charging a single rupee for entry[cite: 1].
                     </p>
                 </div>
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Towering Street Art Facade">
+                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Towering Street Art Facade" />
                     <span class="img-tag">Block Architecture × Public Canvas</span>
                 </div>
             </div>
         </section>
 
-        <!-- Art Themes Section -->
+        <!-- Art Themes Section[cite: 1] -->
         <section class="content-section">
             <h2 class="section-heading">Walls That Actually Talk to You</h2>
             <p>
-                What makes this district so exciting is the sheer variety. You're not just looking at "pretty paintings" — every mural has a story, a theme, an artist's signature style bursting out of the concrete:
+                What makes this district so exciting is the sheer variety[cite: 1]. You're not just looking at "pretty paintings" — every mural has a story, a theme, an artist's signature style bursting out of the concrete[cite: 1]:
             </p>
 
             <div class="grid-2">
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=800&q=80" alt="Intricate Street Art Mural">
-                    <span class="img-tag">Global & Indian Artist Murals</span>
+                    <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=800&q=80" alt="Intricate Street Art Mural" />
+                    <span class="img-tag">Global &amp; Indian Artist Murals</span>
                 </div>
 
                 <ul class="art-list">
-                    <li><strong>Massive portraits</strong> so detailed they look almost photographic from a distance.</li>
-                    <li><strong>Bold abstract and geometric designs</strong> that turn entire building facades into optical illusions.</li>
-                    <li><strong>Nature-inspired works</strong> — birds, trees, and wildlife bursting out of grey walls in full color.</li>
-                    <li><strong>Pieces exploring social themes</strong> — gender, environment, and identity — making you pause and think, not just click a photo.</li>
-                    <li><strong>Quirky, surreal artworks</strong> that feel like stepping into someone's fever dream (in the best way).</li>
+                    <li><strong>Massive portraits</strong> so detailed they look almost photographic from a distance[cite: 1].</li>
+                    <li><strong>Bold abstract and geometric designs</strong> that turn entire building facades into optical illusions[cite: 1].</li>
+                    <li><strong>Nature-inspired works</strong> — birds, trees, and wildlife bursting out of grey walls in full color[cite: 1].</li>
+                    <li><strong>Pieces exploring social themes</strong> — gender, environment, and identity — making you pause and think, not just click a photo[cite: 1].</li>
+                    <li><strong>Quirky, surreal artworks</strong> that feel like stepping into someone's fever dream (in the best way)[cite: 1].</li>
                 </ul>
             </div>
 
             <p style="color: var(--text-muted); font-style: italic;">
-                Walk block by block, and you'll notice how the mood shifts from playful to political to poetic — sometimes within the same lane.
+                Walk block by block, and you'll notice how the mood shifts from playful to political to poetic — sometimes within the same lane[cite: 1].
             </p>
         </section>
 
-        <!-- The Walk & Pro-Tips -->
+        <!-- The Walk & Pro-Tips[cite: 1] -->
         <section class="content-section">
             <h2 class="section-heading">The Walk: What to Expect</h2>
             <p>
-                This isn't a "walk in, see everything in five minutes" kind of place. The murals are spread across residential blocks (mostly Block A to WEA), so you genuinely need to wander — and that's half the fun. Think of it less as a checklist and more as a scavenger hunt where every alley might surprise you.
+                This isn't a "walk in, see everything in five minutes" kind of place[cite: 1]. The murals are spread across residential blocks (mostly Block A to WEA), so you genuinely need to wander — and that's half the fun[cite: 1]. Think of it less as a checklist and more as a scavenger hunt where every alley might surprise you[cite: 1].
             </p>
 
             <div class="pro-tips-box">
@@ -436,68 +476,68 @@
                 <ul class="tips-list">
                     <li>
                         <span class="icon">🌅</span>
-                        <div><strong>Go early morning or late afternoon:</strong> The light hits the walls beautifully, and Delhi's heat is far more forgiving.</div>
+                        <div><strong>Go early morning or late afternoon:</strong> The light hits the walls beautifully, and Delhi's heat is far more forgiving[cite: 1].</div>
                     </li>
                     <li>
                         <span class="icon">👟</span>
-                        <div><strong>Wear comfortable shoes:</strong> You'll be walking more than you think, weaving between residential blocks.</div>
+                        <div><strong>Wear comfortable shoes:</strong> You'll be walking more than you think, weaving between residential blocks[cite: 1].</div>
                     </li>
                     <li>
                         <span class="icon">👀</span>
-                        <div><strong>Look up, look sideways, look everywhere:</strong> Murals aren't just on ground-floor walls — some wrap around entire multi-storey buildings.</div>
+                        <div><strong>Look up, look sideways, look everywhere:</strong> Murals aren't just on ground-floor walls — some wrap around entire multi-storey buildings[cite: 1].</div>
                     </li>
                     <li>
                         <span class="icon">🏡</span>
-                        <div><strong>It's still someone's home:</strong> Keep your voice down near residential entrances and be respectful of the residents living right behind that stunning artwork.</div>
+                        <div><strong>It's still someone's home:</strong> Keep your voice down near residential entrances and be respectful of the residents living right behind that stunning artwork[cite: 1].</div>
                     </li>
                     <li>
                         <span class="icon">📸</span>
-                        <div><strong>Bring your camera (or just your phone):</strong> But also just look with your own eyes for a minute before you start clicking. Trust us, it hits different.</div>
+                        <div><strong>Bring your camera (or just your phone):</strong> But also just look with your own eyes for a minute before you start clicking[cite: 1]. Trust us, it hits different[cite: 1].</div>
                     </li>
                 </ul>
             </div>
 
             <div class="grid-2">
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1561055657-b9e0bf0fa360?auto=format&fit=crop&w=800&q=80" alt="Wandering the Alleys of Lodhi Colony">
+                    <img src="https://images.unsplash.com/photo-1561055657-b9e0bf0fa360?auto=format&fit=crop&w=800&q=80" alt="Wandering the Alleys of Lodhi Colony" />
                     <span class="img-tag">Exploring Blocks A through WEA</span>
                 </div>
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80" alt="Colorful Delhi Wall Mural">
+                    <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80" alt="Colorful Delhi Wall Mural" />
                     <span class="img-tag">Art Woven into Daily Life</span>
                 </div>
             </div>
         </section>
 
-        <!-- Vibe & Atmosphere -->
+        <!-- Vibe & Atmosphere[cite: 1] -->
         <section class="content-section">
             <h2 class="section-heading">Not Just Art — It's a Whole Vibe</h2>
             <p>
-                The best part about Lodhi Art District is that it doesn't feel like a tourist trap. Locals jog past murals in the morning, kids play cricket next to a giant wall portrait, and residents go about daily life completely unbothered by visitors clicking photos of their building. It's art woven so naturally into everyday life that it feels less like a "district" and more like Delhi decided one day to wear a fresh coat of imagination.
+                The best part about Lodhi Art District is that it doesn't feel like a tourist trap[cite: 1]. Locals jog past murals in the morning, kids play cricket next to a giant wall portrait, and residents go about daily life completely unbothered by visitors clicking photos of their building[cite: 1]. It's art woven so naturally into everyday life that it feels less like a "district" and more like Delhi decided one day to wear a fresh coat of imagination[cite: 1].
             </p>
 
             <div class="vibe-quote">
-                "And since it's right next to Lodhi Garden and close to India Habitat Centre, you can easily turn this into a full half-day plan — art walk, garden stroll, and a coffee break, all within a few minutes of each other."
+                "And since it's right next to Lodhi Garden and close to India Habitat Centre, you can easily turn this into a full half-day plan — art walk, garden stroll, and a coffee break, all within a few minutes of each other."[cite: 1]
             </div>
         </section>
 
-        <!-- Final Call to Action -->
+        <!-- Final Call to Action[cite: 1] -->
         <section class="content-section" style="text-align: center;">
             <h2 class="section-heading" style="margin-bottom: 2rem;">Why You Need to Go (Like, This Weekend)</h2>
-            <p style="max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.15rem;">
-                In a city packed with monuments from centuries ago, Lodhi Art District is refreshingly, boldly now. It's proof that art doesn't need a frame, a ticket counter, or a velvet rope to be powerful — sometimes it just needs a blank wall and someone brave enough to paint outside the lines.
+            <p style="max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.15rem; color: var(--text-main);">
+                In a city packed with monuments from centuries ago, Lodhi Art District is refreshingly, boldly now[cite: 1]. It's proof that art doesn't need a frame, a ticket counter, or a velvet rope to be powerful — sometimes it just needs a blank wall and someone brave enough to paint outside the lines[cite: 1].
             </p>
-            <p style="color: var(--cyan-glow); font-size: 1.25rem; font-weight: 700; margin-top: 2rem;">
-                So next time someone asks you where to find "something different" in Delhi, skip the usual monuments-and-market answer. Send them straight to Lodhi Colony, tell them to put their phone on silent (but camera ready), and let the walls do the talking.
+            <p style="color: var(--terracotta); font-size: 1.25rem; font-weight: 700; margin-top: 2rem; font-family: 'Playfair Display', serif; font-style: italic;">
+                So next time someone asks you where to find "something different" in Delhi, skip the usual monuments-and-market answer[cite: 1]. Send them straight to Lodhi Colony, tell them to put their phone on silent (but camera ready), and let the walls do the talking[cite: 1].
             </p>
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer matching DELHI IRL -->
     <footer>
-        <p class="footer-tagline">DELHI ART × LODHI COLONY</p>
-        <p>&copy; Delhi IRL. India's First Open-Air Public Art District Guide.</p>
+        <p class="footer-tagline">DELHI ART &times; LODHI COLONY[cite: 1]</p>
+        <p>&copy; Delhi IRL. India's First Open-Air Public Art District Guide[cite: 1].</p>
     </footer>
 
 </body>
