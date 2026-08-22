@@ -6,6 +6,8 @@
     <title>Delhi food 🍛</title>
     <style>
         :root {
+            --bg-color: #fdfbf7;
+            --card-bg: rgba(255, 255, 255, 0.95); /* Semi-transparent for watermark to show through */
             --text-main: #2c2c2c;
             --text-muted: #555555;
             --accent-gold: #c59b27;
@@ -19,29 +21,26 @@
             line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Page background stays white */
-            position: relative; /* Needed for the background layer */
+            position: relative;
+            background-color: var(--bg-color);
         }
 
-        /* Subtle repeating watermark background - affects the whole page content area */
+        /* Watermark Background */
         body::before {
             content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48dGV4dCB4PSIxMCIgeT0iMTcwIiBmb250LXNpemU9IjE2IiBmaWxsPSIjRjBGNEY5IiBmb250LWZhbWlseT0iJ0dlb3JnaWEnLCBzZXJpZiI+REVMS0kgRk9PRDwvdGV4dD48dGV4dCB4PSIxNjAiIHk9IjI5MCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI0YwRjRGOSIgZm9udC1mYW1pbHk9IidHZW9yZ2lhJywgc2VyaWYiPkRFTEhJIEZPT0Q8L3RleHQ+PC9zdmc+'); /* Data URI for an SVG with repeating "DELHI FOOD" */
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0.05; /* Faded for subtlety */
+            background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100"%3E%3Ctext y="50%" x="50%" text-anchor="middle" font-size="20" font-family="Arial" fill="%23c59b27" opacity="0.3"%3EDelhi IRL%3C/text%3E%3C/svg%3E');
             background-repeat: repeat;
-            opacity: 0.1; /* Adjust the opacity of the watermark */
-            z-index: -1; /* Place it behind all other content */
+            z-index: -1;
         }
 
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 0 20px;
-            background-color: rgba(253, 251, 247, 0.9); /* Slight off-white, semi-transparent background for content over the watermark */
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid var(--border-color);
         }
 
         header {
@@ -49,7 +48,6 @@
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 20px;
             margin-bottom: 30px;
-            margin-top: 30px;
         }
 
         h1.page-title {
@@ -69,9 +67,12 @@
         }
 
         section {
+            background: var(--card-bg);
             padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
+            border: 1px solid var(--border-color);
         }
 
         h2 {
@@ -100,6 +101,7 @@
             color: var(--accent-dark);
         }
 
+        /* Updated and Extra Images */
         .article-img {
             width: 100%;
             height: auto;
@@ -108,6 +110,15 @@
             border-radius: 6px;
             margin: 15px 0 20px 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 20px;
         }
 
         .quote-box {
@@ -124,7 +135,6 @@
             color: var(--text-muted);
             padding: 20px 0;
             border-top: 1px solid var(--border-color);
-            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -133,13 +143,18 @@
     <div class="container">
         
         <header>
-            <h1 class="page-title">delhi food 🍛</h1>
+            <h1 class="page-title">Delhi food 🍛</h1>
         </header>
 
         <article>
             <section>
                 <div class="subtitle">Midnight Paranthas & Secret Spices: The Untold Food Story of Chandni Chowk</div>
                 <p>Picture this: it's past 11 pm, the shutters of Old Delhi's shops are half-down, smoke curls up from a dozen tawas at once, and somewhere in that chaos, a parantha stuffed with more filling than dough is sizzling in ghee that's been used the same way for generations. Welcome to Chandni Chowk — the one place in Delhi that never really sleeps, and definitely never stops eating.</p>
+                
+                <!-- Added: Tawa Scene -->
+                <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/midnight-parantha.jpg" alt="Sizzling Midnight Parantha">
+                <p class="image-caption">The midnight sizzle that never stops.</p>
+
                 <p>If you think Chandni Chowk is just "that crowded market near Red Fort," buckle up. You're about to discover a 350-year-old food universe hiding in plain sight.</p>
             </section>
 
@@ -154,6 +169,7 @@
                 <p>You can't talk about Chandni Chowk without name-dropping the icons that have fed generations:</p>
                 
                 <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/paranthe.jpg" alt="Paranthe Wali Gali Food">
+                <p class="image-caption">Stepping into history at Gali Paranthe Wali.</p>
 
                 <ul>
                     <li><strong>Paranthe Wali Gali</strong> – An entire lane dedicated to stuffed paranthas since the 1870s. Shops like Pandit Gaya Prasad Shiv Charan have been frying paranthas here for over 150 years, with fillings ranging from the classic aloo to the wildly experimental banana and even rabri-stuffed versions.</li>
@@ -172,11 +188,17 @@
                 <p>Chandni Chowk isn't a "pick one dish" kind of place. It's a full-day eating marathon. Here's your cheat sheet:</p>
 
                 <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/street-food.jpg" alt="Chandni Chowk Street Food Variety">
+                <p class="image-caption">A chaotic symphony of flavors.</p>
 
                 <ul>
                     <li><strong>Paranthas</strong> – Stuffed with everything from potato and paneer to rabri, papad, and even mixed dry fruits.</li>
                     <li><strong>Chaat</strong> – Aloo tikki, papdi chaat, and dahi bhalle that redefine tangy-sweet-spicy balance.</li>
                     <li><strong>Kebabs & Mughlai fare</strong> – Seekh kebabs, mutton korma, and nihari that simmer overnight for that melt-in-mouth texture.</li>
+                    
+                    <!-- Added: Daulat Ki Chaat -->
+                    <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/daulat-chaat.jpg" alt="Winter Specific Daulat Ki Chaat">
+                    <p class="image-caption">The seasonal, ethereal Daulat ki Chaat.</p>
+                    
                     <li><strong>Jalebis</strong> – Fried fresh every morning, syrup dripping before it even cools.</li>
                     <li><strong>Kachori-Sabzi</strong> – A breakfast staple, deep-fried kachoris paired with spicy aloo curry.</li>
                     <li><strong>Rabri & Lassi</strong> – Thick, creamy, and served in earthen kulhads that add their own earthy aroma.</li>
@@ -201,10 +223,6 @@
             <section>
                 <h2>That View You Can't Miss: Red Fort From the Main Road</h2>
                 <p>Here's a little cinematic bonus: stand at the eastern end of Chandni Chowk's main road, and the majestic Red Fort (Lal Qila) looms straight ahead, its red sandstone walls framing the entire street like a painting. This isn't a coincidence — the road was originally designed as a direct processional route from the fort, meant to be seen exactly this way. Next time you're munching a jalebi mid-walk, look up. History is staring right back at you.</p>
-                
-                <!-- Added Red Fort image -->
-                <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/humayun-tomb-sunset.jpg" alt="View towards Red Fort (using sunset tomb placeholder)">
-                <p style="font-size:0.85rem; color:#888; font-style:italic;">[Image uses a placeholder - imagine the view from the street looking at the Red Fort!]</p>
             </section>
 
             <section>
@@ -213,11 +231,12 @@
                 <ul>
                     <li><strong>Dariba Kalan</strong> – The centuries-old jewelry and silver market.</li>
                     <li><strong>Kinari Bazaar</strong> – Wedding and festive essentials: zari, laces, and embellishments galore.</li>
-                    <li><strong>Khari Baoli</strong> – Asia's largest spice market, where the air itself makes you sneeze with flavor.</li>
                     
-                    <!-- Added Spice market image -->
-                    <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/spice-market.jpg" alt="Khari Baoli Spice Market">
-
+                    <!-- Added: Spices -->
+                    <img class="article-img" src="https://delhiirl-web.github.io/delhi_irl/images/spice-market.jpg" alt="Spice Sacks of Khari Baoli">
+                    <p class="image-caption">The overwhelming aromas of Khari Baoli spice market.</p>
+                    
+                    <li><strong>Khari Baoli</strong> – Asia's largest spice market, where the air itself makes you sneeze with flavor.</li>
                     <li><strong>Nai Sarak</strong> – The go-to for books, stationery, and paper goods.</li>
                     <li><strong>Chawri Bazaar</strong> – Once a courtesans' quarter, now known for wedding cards and brassware.</li>
                     <li><strong>Ballimaran</strong> – A quieter, more residential lane, home to the legendary poet Mirza Ghalib's haveli.</li>
