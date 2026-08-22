@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunsets at Mughal Gardens & Hidden Tombs - Delhi IRL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold-primary: #d4af37;
+      --gold-accent: #f39c12;
+      --bg-dark: #0f0f10;
+      --bg-card: #18181c;
+      --text-main: #f0f0f2;
+      --text-muted: #a0a0aa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navbar Header */
+    .nav-bar {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(15, 15, 16, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 1rem 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .brand-logo span { color: var(--gold-primary); }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      background: linear-gradient(to bottom, rgba(15,15,16,0.3), var(--bg-dark)), 
+                  url('https://i.pinimg.com/736x/ae/da/ed/aedaed8fe79a13436aa36a1243b89365.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 4rem 10%;
+    }
+
+    .hero-content { max-width: 850px; }
+
+    .badge {
+      display: inline-block;
+      background: var(--gold-primary);
+      color: #000;
+      padding: 6px 16px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-shadow: 2px 4px 10px rgba(0,0,0,0.8);
+    }
+
+    .meta-info {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      display: flex;
+      gap: 15px;
+    }
+
+    /* Content Layout */
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    .lead-text {
+      font-size: 1.25rem;
+      line-height: 1.9;
+      color: var(--text-main);
+      border-left: 3px solid var(--gold-primary);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-primary);
+      font-size: 1.8rem;
+      margin: 3rem 0 1rem;
+    }
+
+    p { margin-bottom: 1.5rem; color: #d0d0d5; font-size: 1.05rem; }
+
+    /* Image Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 2.5rem 0;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-primary);
+    }
+
+    /* Feature Cards */
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 2rem 0;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 3px solid var(--gold-primary);
+    }
+
+    .feature-card strong {
+      color: #fff;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Highlight Banner */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(0,0,0,0.5));
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 3rem 0;
+    }
+
+    .highlight-box h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Navigation Back */
+    .footer-actions {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--gold-primary);
+      color: #000;
+      font-weight: 700;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero { height: 50vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="nav-bar">
+    <a href="index.html" class="brand-logo">DELHI <span>IRL</span></a>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">Heritage Spots</span>
+      <h1>Sunsets at Mughal Gardens & Hidden Tombs</h1>
+      <div class="meta-info">
+        <span>By Delhi IRL</span>
+        <span>•</span>
+        <span>6 Min Read</span>
+        <span>•</span>
+        <span>Updated August 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Content -->
+  <main class="container">
+
+    <p class="lead-text">
+      Picture this: it's past 11 pm, the shutters of Old Delhi's shops are half-down, smoke curls up from a dozen tawas at once, and somewhere in that chaos, a parantha stuffed with more filling than dough is sizzling in ghee that's been used the same way for generations. Welcome to Chandni Chowk — the one place in Delhi that never really sleeps.
+    </p>
+
+    <p>If you think Chandni Chowk is just "that crowded market near Red Fort," buckle up. You're about to discover a 350-year-old food and heritage universe hiding in plain sight.</p>
+
+    <h2>A Culture That Refuses to Modernize (Thank God)</h2>
+    <p>
+      Built in the 17th century by Shah Jahan's daughter Jahanara Begum, Chandni Chowk was designed as a moonlit square with a canal running through its center — literally "Moonlight Square." Today, the canal is gone, but the moonlight magic lives on through timeless heritage and secret family recipes.
+    </p>
+
+    <!-- Photo Gallery Grid 1 -->
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Mughal Heritage Architecture">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Old Delhi Street Food">
+      <img src="https://images.unsplash.com/photo-1596797882870-8c33deeac224?auto=format&fit=crop&w=600&q=80" alt="Spice Market Colors">
+    </div>
+
+    <h2>The Legends: Old Shops That Built Delhi's Appetite</h2>
+    <div class="feature-list">
+      <div class="feature-card"><strong>Paranthe Wali Gali:</strong> An entire lane dedicated to stuffed paranthas since the 1870s, featuring shops like Pandit Gaya Prasad Shiv Charan.</div>
+      <div class="feature-card"><strong>Karim's:</strong> Serving royal Mughlai kebabs and curries near Jama Masjid since 1913.</div>
+      <div class="feature-card"><strong>Old Famous Jalebi Wala:</strong> Century-old jalebi institution located at Dariba Kalan corner.</div>
+      <div class="feature-card"><strong>Natraj Dahi Bhalle:</strong> Iconic spot serving world-class dahi bhalle since 1940.</div>
+    </div>
+
+    <!-- Highlight Box for Red Fort View -->
+    <div class="highlight-box">
+      <h3>That View You Can't Miss: Red Fort From the Main Road</h3>
+      <p>Stand at the eastern end of Chandni Chowk's main road, and the majestic Red Fort (Lal Qila) looms straight ahead, its red sandstone walls framing the street like a grand oil painting. The road was originally designed as a direct processional route from the fort.</p>
+    </div>
+
+    <h2>Temples & Monuments Tucked Between Aromas</h2>
+    <ul style="margin-left: 1.5rem; margin-bottom: 2rem; color: #d0d0d5;">
+      <li><strong>Gauri Shankar Temple:</strong> Ancient Shiva temple dating back over 800 years.</li>
+      <li><strong>Digambar Jain Lal Mandir:</strong> Located opposite Red Fort, famous for its charity bird hospital.</li>
+      <li><strong>Sisganj Sahib Gurudwara:</strong> Historic Sikh shrine offering daily community meals (langar).</li>
+      <li><strong>Fatehpuri Masjid:</strong> Grand 17th-century mosque marking the western end of the main road.</li>
+    </ul>
+
+    <!-- Bonus Section: 5 Hidden Heritage Monuments -->
+    <h2>5 Lesser-Known Monuments Perfect for Golden Hour</h2>
+    <p>Escape the crowds and catch spectacular golden-hour views at these lesser-known historical spots across Delhi:</p>
+
+    <div class="feature-list">
+      <div class="feature-card">
+        <strong>1. Isa Khan's Tomb (Humayun's Tomb Complex)</strong>
+        An octagonal garden tomb pre-dating Humayun's Tomb, built with sunken gardens and exquisite blue tilework.
+      </div>
+      <div class="feature-card">
+        <strong>2. Jamali Kamali Mosque & Tomb (Mehrauli Archaeological Park)</strong>
+        Tucked inside silent wooded trails near Qutub Minar, featuring red sandstone walls and beautiful Mughal poetry carvings.
+      </div>
+      <div class="feature-card">
+        <strong>3. Safdarjung Tomb Gardens</strong>
+        The last monumental garden tomb of the Mughals, featuring sprawling lawn views and gorgeous arched gateways at sunset.
+      </div>
+      <div class="feature-card">
+        <strong>4. Hijron ka Khanqah (Mehrauli)</strong>
+        A tranquil 15th-century Sufi spiritual retreat with white marble graves bathed in golden sunlight.
+      </div>
+      <div class="feature-card">
+        <strong>5. Tomb of Rahim (Nizamuddin)</strong>
+        Restored grand dome of the famed Mughal poet Abdul Rahim Khan-i-Khanan, overlooking lush green garden paths.</div>
+    </div>
+
+    <h2>The Final Bite</h2>
+    <p>
+      Between midnight paranthas, secret spice blends, ancient temples, and the Red Fort keeping watch, Delhi's heritage proves that some stories are best experienced live on the street. Skip the rigid itinerary—just follow the aroma of history.
+    </p>
+
+    <div class="footer-actions">
+      <a href="index.html" class="btn-back">← Back to Main Guides</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
