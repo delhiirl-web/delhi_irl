@@ -36,7 +36,7 @@
             padding: 20px 10px;
         }
 
-        /* Repeating Watermark matching the reference image */
+        /* Repeating Watermark */
         body::before {
             content: "";
             position: fixed;
@@ -58,7 +58,7 @@
             padding: 40px 45px;
         }
 
-        /* Hero Split (Text on left, Big Thali on right) */
+        /* Hero Split */
         .hero-split {
             display: grid;
             grid-template-columns: 1.05fr 1fr;
@@ -108,7 +108,7 @@
             display: block;
         }
 
-        /* Section Layout (Story Left, Image Right) */
+        /* Section Layout */
         .story-row {
             display: grid;
             grid-template-columns: 1.25fr 0.95fr;
@@ -183,6 +183,8 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            align-items: center;
+            width: 100%;
         }
 
         .story-img {
@@ -195,37 +197,45 @@
             border: 1px solid rgba(0,0,0,0.05);
         }
 
-        .image-grid {
+        .dual-img-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Creates a 2-column grid */
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
+            width: 100%;
         }
 
-        .image-grid img {
+        .dual-img-grid img {
             width: 100%;
             height: 160px;
             object-fit: cover;
             border-radius: 6px;
         }
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns (3 rows total for 6 items) */
-  gap: 16px; /* Spacing between images */
-  max-width: 300px; /* Adjust container width as needed */
-}
 
-.image-grid img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Makes image fully circular */
-  object-fit: cover; /* Prevents image stretching */
-}
+        /* 6 Circular Image Grid */
+        .image-grid-circle {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 24px;
+            justify-items: center;
+            margin: 0 auto;
+        }
+
+        .image-grid-circle img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            border: 2px solid #fff;
+        }
+
         .img-caption {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.78rem;
             color: var(--text-muted);
             text-align: center;
             font-style: italic;
+            width: 100%;
         }
 
         /* Full Width Closing Banner */
@@ -289,7 +299,7 @@
 
     <main class="magazine-wrapper">
 
-        <!-- 1. Hero Row (Header, Lead & Big Mughal Platter) -->
+        <!-- 1. Hero Row -->
         <header class="hero-split">
             <div class="brand-header">
                 <h1>Delhi food <span>🍲</span></h1>
@@ -304,7 +314,7 @@
                 </p>
             </div>
             <div>
-                <img class="hero-main-img" src="https://i.pinimg.com/736x/d8/8e/1a/d88e1af22230857de000479e898dc690.jpg">
+                <img class="hero-main-img" src="https://i.pinimg.com/736x/d8/8e/1a/d88e1af22230857de000479e898dc690.jpg" alt="Mughal Feast Platter">
             </div>
         </header>
 
@@ -346,11 +356,11 @@
                     Every single one of these has survived wars, Partition, floods, and modernization — armed with nothing but flavor.
                 </p>
             </div>
-            <div class="image-row">
-                <img class="story-img" src="https://i.pinimg.com/1200x/c8/43/ba/c843ba78afbec5dd9bec3c5fcfa069da.jpg" alt="Karim">
-                 <img class="story-img" src="https://b.zmtcdn.com/data/reviews_photos/200/f9d386b5efd854448cfe2fd5b45cd200_1531029495.jpg?fit=around|750:500&crop=750:500;*,*" alt="Natraj Dahi Bhalle Corner Old Delhi">
-                 <img class="story-img" src="https://i.pinimg.com/736x/be/2b/38/be2b389f909b79b622aba0a1522d6ced.jpg" alt="Natraj Dahi Bhalle Corner Old Delhi">
-                 <img class="story-img" src="https://i.pinimg.com/736x/c9/47/1e/c9471ee694fbc9b655dba3798f133cbc.jpg" alt="Natraj Dahi Bhalle Corner Old Delhi">
+            <div class="story-visual">
+                <div class="dual-img-grid">
+                    <img src="https://i.pinimg.com/1200x/c8/43/ba/c843ba78afbec5dd9bec3c5fcfa069da.jpg" alt="Karim">
+                    <img src="https://b.zmtcdn.com/data/reviews_photos/200/f9d386b5efd854448cfe2fd5b45cd200_1531029495.jpg?fit=around|750:500&crop=750:500;*,*" alt="Natraj Dahi Bhalle Corner Old Delhi">
+                </div>
                 <div class="img-caption">Old Delhi street food joints.</div>
             </div>
         </section>
@@ -372,9 +382,16 @@
                     <li><strong>Midnight parantha runs</strong> – Yes, this is real. Some stalls stay open till the early hours, serving fresh, hot paranthas to night owls and post-party crowds alike.</li>
                 </ul>
             </div>
-            <div class="story-visual">
-                <img class="story-img" src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" alt="Hot Paranthas and Chaat in Gali Paranthe Wali">
-                <div class="img-caption">Gali Paranthe Wali buzzing with late-night foodies and steaming thalis.</div>
+             <div class="story-visual">
+                <div class="image-grid-circle">
+                    <img src="https://i.pinimg.com/736x/6b/db/7b/6bdb7b75bac6928dc68c4b8a8d9652fc.jpg" alt="Pic 1">
+                    <img src="https://i.pinimg.com/736x/6d/3b/57/6d3b579bd649e0cd78311f7d428a40b9.jpg" alt="Pic 2">
+                    <img src="https://i.pinimg.com/736x/b8/d0/06/b8d0063f6d7272ca9f6cd214c39d86ff.jpg" alt="Pic 3">
+                    <img src="https://i.pinimg.com/736x/0b/4b/90/0b4b90bac6999ba8e040b988f744404b.jpg" alt="Pic 4">
+                    <img src="https://i.pinimg.com/1200x/ad/2d/4f/ad2d4fbaa10ae1fa18ef269d5371ad6f.jpg" alt="Pic 5">
+                    <img src="https://i.pinimg.com/736x/55/0a/ed/550aeddb6aabacbb860b43f57cd5a424.jpg" alt="Pic 6">
+                </div>
+                <div class="img-caption">Late-night cravings.</div>
             </div>
         </section>
 
@@ -410,14 +427,16 @@
                     This isn't a coincidence — the road was originally designed as a direct processional route from the fort, meant to be seen exactly this way. Next time you're munching a jalebi mid-walk, look up. History is staring right back at you.
                 </p>
             </div>
-            <div class="image-grid">
-  <img src="https://i.pinimg.com/736x/6b/db/7b/6bdb7b75bac6928dc68c4b8a8d9652fc.jpg" alt="Pic 1">
-  <img src="https://i.pinimg.com/736x/6d/3b/57/6d3b579bd649e0cd78311f7d428a40b9.jpg" alt="Pic 2">
-  <img src="https://i.pinimg.com/736x/b8/d0/06/b8d0063f6d7272ca9f6cd214c39d86ff.jpg" alt="Pic 3">
-  <img src="https://i.pinimg.com/736x/0b/4b/90/0b4b90bac6999ba8e040b988f744404b.jpg" alt="Pic 4">
-  <img src="https://i.pinimg.com/1200x/ad/2d/4f/ad2d4fbaa10ae1fa18ef269d5371ad6f.jpg" alt="Pic 5">
-  <img src="https://i.pinimg.com/736x/55/0a/ed/550aeddb6aabacbb860b43f57cd5a424.jpg" alt="Pic 6">
-</div>
+            <div class="story-visual">
+                <div class="image-grid-circle">
+                    <img src="https://i.pinimg.com/736x/6b/db/7b/6bdb7b75bac6928dc68c4b8a8d9652fc.jpg" alt="Pic 1">
+                    <img src="https://i.pinimg.com/736x/6d/3b/57/6d3b579bd649e0cd78311f7d428a40b9.jpg" alt="Pic 2">
+                    <img src="https://i.pinimg.com/736x/b8/d0/06/b8d0063f6d7272ca9f6cd214c39d86ff.jpg" alt="Pic 3">
+                    <img src="https://i.pinimg.com/736x/0b/4b/90/0b4b90bac6999ba8e040b988f744404b.jpg" alt="Pic 4">
+                    <img src="https://i.pinimg.com/1200x/ad/2d/4f/ad2d4fbaa10ae1fa18ef269d5371ad6f.jpg" alt="Pic 5">
+                    <img src="https://i.pinimg.com/736x/55/0a/ed/550aeddb6aabacbb860b43f57cd5a424.jpg" alt="Pic 6">
+                </div>
+            </div>
         </section>
 
         <!-- 7. Section: The Secret Bazaars Within the Bazaar -->
