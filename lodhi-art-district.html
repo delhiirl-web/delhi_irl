@@ -90,6 +90,59 @@
         }
 
         /* Hero Section */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            border-radius: 0 0 18px 18px;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            min-width: 177.78vh;
+            min-height: 100vh;
+            transform: translate(-50%, -50%);
+            border: 0;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .hero-video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(20, 23, 26, 0.52);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .hero .pill-badge,
+        .hero .hero-title,
+        .hero .hero-lead,
+        .hero .feature-grid-3 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .hero-title {
+            color: #ffffff;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.45);
+        }
+
+        .hero .hero-lead {
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .hero .feat-card {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(5px);
+        }
+
         .hero {
             position: relative;
             text-align: center;
@@ -377,6 +430,10 @@
             .hero {
                 padding-top: 3.5rem;
             }
+
+            .hero-video-overlay {
+                background: rgba(20, 23, 26, 0.62);
+            }
         }
     </style>
 </head>
@@ -431,7 +488,7 @@
                     </p>
                 </div>
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Towering Street Art Facade" />
+                    <img src="https://i.pinimg.com/1200x/38/8b/77/388b774db3a6aabb2f638241a8592fd6.jpg" alt="Towering Street Art Facade" />
                     <span class="img-tag">Block Architecture × Public Canvas</span>
                 </div>
             </div>
@@ -446,7 +503,7 @@
 
             <div class="grid-2">
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=800&q=80" alt="Intricate Street Art Mural" />
+                    <img src="https://i.pinimg.com/736x/41/4e/4c/414e4cb8939e6931d6dac9549e7ce21f.jpg" alt="Intricate Street Art Mural" />
                     <span class="img-tag">Global &amp; Indian Artist Murals</span>
                 </div>
 
@@ -499,11 +556,11 @@
 
             <div class="grid-2">
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1561055657-b9e0bf0fa360?auto=format&fit=crop&w=800&q=80" alt="Wandering the Alleys of Lodhi Colony" />
+                    <img src="https://i.pinimg.com/736x/c7/cc/49/c7cc49722c7f3fb14892117227d16189.jpg" alt="Wandering the Alleys of Lodhi Colony" />
                     <span class="img-tag">Exploring Blocks A through WEA</span>
                 </div>
                 <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80" alt="Colorful Delhi Wall Mural" />
+                    <img src="https://i.pinimg.com/1200x/c7/29/6a/c7296a07060783b7c98fd5abf4c9e96c.jpg" alt="Colorful Delhi Wall Mural" />
                     <span class="img-tag">Art Woven into Daily Life</span>
                 </div>
             </div>
