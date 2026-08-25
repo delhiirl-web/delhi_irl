@@ -179,17 +179,24 @@
         /* Image Display within Cards */
         .card-img-wrap {
             width: 100%;
-            height: 380px;
+            min-height: 380px;
+            max-height: 560px;
             border-radius: 6px;
             overflow: hidden;
             margin: 1.5rem 0;
             box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f7f4ee;
         }
 
         .card-img-wrap img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            max-height: 560px;
+            object-fit: contain;
+            object-position: center;
             display: block;
             transition: transform 0.5s ease;
         }
@@ -295,7 +302,12 @@
                 padding: 1.5rem;
             }
             .card-img-wrap {
-                height: 250px;
+                min-height: 250px;
+                max-height: 420px;
+            }
+
+            .card-img-wrap img {
+                max-height: 420px;
             }
             .transit-row {
                 flex-direction: column;
@@ -341,7 +353,7 @@
             </p>
             
             <div class="card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1585130401366-fe05a8d813c4?auto=format&fit=crop&w=900&q=80" alt="Mughal Gardens Amrit Udyan in Full Bloom">
+                <img src="https://i.pinimg.com/736x/66/4e/7f/664e7ffd8ee88e898db7760b79e2edf8.jpg" alt="Mughal Gardens Amrit Udyan in Full Bloom">
             </div>
 
             <div class="transit-box">
@@ -367,7 +379,7 @@
             </p>
 
             <div class="card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?auto=format&fit=crop&w=900&q=80" alt="Red Fort Lal Qila at Sunset">
+                <img src="https://plus.unsplash.com/premium_photo-1697730373510-51b7fcf2ff52?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Red Fort Lal Qila at Sunset">
             </div>
 
             <div class="transit-box">
@@ -497,7 +509,7 @@
             </p>
 
             <div class="card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Qutub Minar Dramatic Sunset">
+                <img src="https://images.unsplash.com/photo-1667849521212-e9843b89f322?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Qutub Minar Dramatic Sunset">
             </div>
 
             <div class="transit-box">
@@ -575,7 +587,7 @@
             </p>
 
             <div class="card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=900&q=80" alt="Jantar Mantar Geometric Astronomical Structures">
+                <img src="https://i.pinimg.com/736x/9c/e3/e1/9ce3e1d6d51a60b4e0586f7106df8fef.jpg" alt="Jantar Mantar Geometric Astronomical Structures">
             </div>
 
             <div class="transit-box">
@@ -601,7 +613,7 @@
             </p>
 
             <div class="card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80" alt="Lotus Temple Warm Glow at Sunset">
+                <img src="https://i.pinimg.com/1200x/1b/b8/51/1bb851a0af9b48202c6b70e29cdf04c5.jpg" alt="Lotus Temple Warm Glow at Sunset">
             </div>
 
             <div class="transit-box">
@@ -627,7 +639,7 @@
             </p>
 
             <div class="card-img-wrap">
-                <img src="https://plus.unsplash.com/premium_photo-1697729555861-e406b4989ee1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Akshardham Temple Night Illumination">
+                <img src="https://i.pinimg.com/1200x/6e/57/21/6e5721247dc7501d6cc4e12371da0f72.jpg" alt="Akshardham Temple Night Illumination">
             </div>
 
             <div class="transit-box">
