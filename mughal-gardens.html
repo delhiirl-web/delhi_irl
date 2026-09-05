@@ -39,7 +39,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Top Header Banner matching screenshot */
+        /* Top Header Banner */
         header.top-nav {
             background-color: var(--heritage-green);
             padding: 16px 2.5rem;
@@ -48,6 +48,9 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .brand-title {
@@ -57,9 +60,25 @@
             color: var(--heritage-gold);
             letter-spacing: 3px;
             text-transform: uppercase;
+            text-decoration: none;
         }
 
-        /* Hero Section with Golden Hour Mughal Backdrop (Replaces Idli Sambar) */
+        .back-link-top {
+            color: var(--heritage-gold);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .back-link-top:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Section with Golden Hour Mughal Backdrop */
         .hero-banner {
             position: relative;
             min-height: 480px;
@@ -127,7 +146,7 @@
             padding: 1rem 1.5rem 5rem;
         }
 
-        /* Spot Card Layout matching the screenshot's left-border cards */
+        /* Spot Card Layout */
         .spot-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-soft);
@@ -321,7 +340,8 @@
 
     <!-- Top Navigation Header -->
     <header class="top-nav">
-        <div class="brand-title">HERITAGE IRL</div>
+        <a href="index.html" class="brand-title">HERITAGE IRL</a>
+        <a href="index.html" class="back-link-top">← Back to Main Hub</a>
     </header>
 
     <!-- Hero Banner with Sunset Silhouette -->
