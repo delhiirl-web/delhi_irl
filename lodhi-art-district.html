@@ -83,9 +83,24 @@
             align-items: center;
             gap: 10px;
             text-transform: uppercase;
+            text-decoration: none;
         }
 
         .brand-logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-back-home {
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-back-home:hover {
             color: var(--accent-gold);
         }
 
@@ -115,7 +130,6 @@
             z-index: 1;
         }
 
-
         .hero-video-bg {
             position: absolute;
             top: 50%;
@@ -130,7 +144,7 @@
             pointer-events: none;
         }
 
-                .hero-video-overlay {
+        .hero-video-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(
@@ -166,16 +180,6 @@
         .hero .feat-card {
             background: rgba(255,255,255,0.92);
             backdrop-filter: blur(5px);
-        }
-
-        .hero {
-            position: relative;
-            isolation: isolate;
-            text-align: center;
-            padding: 5.5rem 1.5rem 4.5rem;
-            max-width: 1080px;
-            margin: 0 auto;
-            min-height: 680px;
         }
 
         .pill-badge {
@@ -469,7 +473,8 @@
 
     <!-- Top Navigation Bar -->
     <nav class="navbar">
-        <div class="brand-logo">DELHI <span>ART</span></div>
+        <a href="index.html" class="brand-logo">DELHI <span>ART</span></a>
+        <a href="index.html" class="nav-back-home">← Home</a>
     </nav>
 
     <!-- Hero Section -->
@@ -480,39 +485,39 @@
             "Forget everything you know about visiting an art gallery — the hushed silence, the 'do not touch' signs, the entry tickets. Now imagine strolling down an ordinary Delhi residential street and suddenly finding a five-storey building wearing a giant mural of a woman lost in thought, or turning a corner to spot a wall exploding with parrots, geometric patterns, or a portrait so lifelike it stops you mid-step. That's Lodhi Colony for you — except everyone calls it the Lodhi Art District, India's first open-air public art district, and it's basically a treasure hunt disguised as a walk."
         </p>
 
-        <!-- 3 Feature Highlight Cards[cite: 1] -->
+        <!-- 3 Feature Highlight Cards -->
         <div class="feature-grid-3">
             <div class="feat-card">
                 <div class="feat-card-title">🎨 Photorealistic Portraits</div>
-                <p>Gigantic wall paintings detailing local legends, expressive emotion, and everyday faces[cite: 1].</p>
+                <p>Gigantic wall paintings detailing local legends, expressive emotion, and everyday faces.</p>
             </div>
             <div class="feat-card">
                 <div class="feat-card-title">🌀 Optical Illusions</div>
-                <p>Geometric abstract shapes and patterns that bend 3D building architecture into mind tricks[cite: 1].</p>
+                <p>Geometric abstract shapes and patterns that bend 3D building architecture into mind tricks.</p>
             </div>
             <div class="feat-card">
                 <div class="feat-card-title">🦜 Wildlife Explosions</div>
-                <p>Vibrant natural flora, soaring birds, and wildlife taking over concrete facades in full color[cite: 1].</p>
+                <p>Vibrant natural flora, soaring birds, and wildlife taking over concrete facades in full color.</p>
             </div>
         </div>
     </header>
 
     <main class="container">
 
-        <!-- History Section[cite: 1] -->
+        <!-- History Section -->
         <section class="content-section">
             <h2 class="section-heading">How a Government Colony Became an Art Capital</h2>
             
             <div class="grid-2">
                 <div>
                     <p style="margin-bottom: 1.2rem;">
-                        Here's the twist nobody expects: Lodhi Art District isn't in some trendy, curated art hub — it's a government housing colony built in the 1940s, full of quiet lanes and boxy residential blocks[cite: 1].
+                        Here's the twist nobody expects: Lodhi Art District isn't in some trendy, curated art hub — it's a government housing colony built in the 1940s, full of quiet lanes and boxy residential blocks.
                     </p>
                     <p>
-                        In 2015, the <strong>St+art India Foundation</strong>, in collaboration with the Delhi government, decided this unassuming neighborhood deserved a makeover — and not the boring kind[cite: 1]. They invited street artists from India and across the globe to transform blank walls into massive canvases[cite: 1].
+                        In 2015, the <strong>St+art India Foundation</strong>, in collaboration with the Delhi government, decided this unassuming neighborhood deserved a makeover — and not the boring kind. They invited street artists from India and across the globe to transform blank walls into massive canvases.
                     </p>
                     <p style="margin-top: 1.2rem; color: var(--terracotta); font-weight: 700;">
-                        The result? Over 50 murals spread across residential blocks, turning a sleepy colony into one of the most Instagrammed corners of the capital, without charging a single rupee for entry[cite: 1].
+                        The result? Over 50 murals spread across residential blocks, turning a sleepy colony into one of the most Instagrammed corners of the capital, without charging a single rupee for entry.
                     </p>
                 </div>
                 <div class="img-wrapper">
@@ -522,11 +527,11 @@
             </div>
         </section>
 
-        <!-- Art Themes Section[cite: 1] -->
+        <!-- Art Themes Section -->
         <section class="content-section">
             <h2 class="section-heading">Walls That Actually Talk to You</h2>
             <p>
-                What makes this district so exciting is the sheer variety[cite: 1]. You're not just looking at "pretty paintings" — every mural has a story, a theme, an artist's signature style bursting out of the concrete[cite: 1]:
+                What makes this district so exciting is the sheer variety. You're not just looking at "pretty paintings" — every mural has a story, a theme, an artist's signature style bursting out of the concrete:
             </p>
 
             <div class="grid-2">
@@ -536,24 +541,24 @@
                 </div>
 
                 <ul class="art-list">
-                    <li><strong>Massive portraits</strong> so detailed they look almost photographic from a distance[cite: 1].</li>
-                    <li><strong>Bold abstract and geometric designs</strong> that turn entire building facades into optical illusions[cite: 1].</li>
-                    <li><strong>Nature-inspired works</strong> — birds, trees, and wildlife bursting out of grey walls in full color[cite: 1].</li>
-                    <li><strong>Pieces exploring social themes</strong> — gender, environment, and identity — making you pause and think, not just click a photo[cite: 1].</li>
-                    <li><strong>Quirky, surreal artworks</strong> that feel like stepping into someone's fever dream (in the best way)[cite: 1].</li>
+                    <li><strong>Massive portraits</strong> so detailed they look almost photographic from a distance.</li>
+                    <li><strong>Bold abstract and geometric designs</strong> that turn entire building facades into optical illusions.</li>
+                    <li><strong>Nature-inspired works</strong> — birds, trees, and wildlife bursting out of grey walls in full color.</li>
+                    <li><strong>Pieces exploring social themes</strong> — gender, environment, and identity — making you pause and think, not just click a photo.</li>
+                    <li><strong>Quirky, surreal artworks</strong> that feel like stepping into someone's fever dream (in the best way).</li>
                 </ul>
             </div>
 
             <p style="color: var(--text-muted); font-style: italic;">
-                Walk block by block, and you'll notice how the mood shifts from playful to political to poetic — sometimes within the same lane[cite: 1].
+                Walk block by block, and you'll notice how the mood shifts from playful to political to poetic — sometimes within the same lane.
             </p>
         </section>
 
-        <!-- The Walk & Pro-Tips[cite: 1] -->
+        <!-- The Walk & Pro-Tips -->
         <section class="content-section">
             <h2 class="section-heading">The Walk: What to Expect</h2>
             <p>
-                This isn't a "walk in, see everything in five minutes" kind of place[cite: 1]. The murals are spread across residential blocks (mostly Block A to WEA), so you genuinely need to wander — and that's half the fun[cite: 1]. Think of it less as a checklist and more as a scavenger hunt where every alley might surprise you[cite: 1].
+                This isn't a "walk in, see everything in five minutes" kind of place. The murals are spread across residential blocks (mostly Block A to WEA), so you genuinely need to wander — and that's half the fun. Think of it less as a checklist and more as a scavenger hunt where every alley might surprise you.
             </p>
 
             <div class="pro-tips-box">
@@ -561,23 +566,23 @@
                 <ul class="tips-list">
                     <li>
                         <span class="icon">🌅</span>
-                        <div><strong>Go early morning or late afternoon:</strong> The light hits the walls beautifully, and Delhi's heat is far more forgiving[cite: 1].</div>
+                        <div><strong>Go early morning or late afternoon:</strong> The light hits the walls beautifully, and Delhi's heat is far more forgiving.</div>
                     </li>
                     <li>
                         <span class="icon">👟</span>
-                        <div><strong>Wear comfortable shoes:</strong> You'll be walking more than you think, weaving between residential blocks[cite: 1].</div>
+                        <div><strong>Wear comfortable shoes:</strong> You'll be walking more than you think, weaving between residential blocks.</div>
                     </li>
                     <li>
                         <span class="icon">👀</span>
-                        <div><strong>Look up, look sideways, look everywhere:</strong> Murals aren't just on ground-floor walls — some wrap around entire multi-storey buildings[cite: 1].</div>
+                        <div><strong>Look up, look sideways, look everywhere:</strong> Murals aren't just on ground-floor walls — some wrap around entire multi-storey buildings.</div>
                     </li>
                     <li>
                         <span class="icon">🏡</span>
-                        <div><strong>It's still someone's home:</strong> Keep your voice down near residential entrances and be respectful of the residents living right behind that stunning artwork[cite: 1].</div>
+                        <div><strong>It's still someone's home:</strong> Keep your voice down near residential entrances and be respectful of the residents living right behind that stunning artwork.</div>
                     </li>
                     <li>
                         <span class="icon">📸</span>
-                        <div><strong>Bring your camera (or just your phone):</strong> But also just look with your own eyes for a minute before you start clicking[cite: 1]. Trust us, it hits different[cite: 1].</div>
+                        <div><strong>Bring your camera (or just your phone):</strong> But also just look with your own eyes for a minute before you start clicking. Trust us, it hits different.</div>
                     </li>
                 </ul>
             </div>
@@ -594,26 +599,26 @@
             </div>
         </section>
 
-        <!-- Vibe & Atmosphere[cite: 1] -->
+        <!-- Vibe & Atmosphere -->
         <section class="content-section">
             <h2 class="section-heading">Not Just Art — It's a Whole Vibe</h2>
             <p>
-                The best part about Lodhi Art District is that it doesn't feel like a tourist trap[cite: 1]. Locals jog past murals in the morning, kids play cricket next to a giant wall portrait, and residents go about daily life completely unbothered by visitors clicking photos of their building[cite: 1]. It's art woven so naturally into everyday life that it feels less like a "district" and more like Delhi decided one day to wear a fresh coat of imagination[cite: 1].
+                The best part about Lodhi Art District is that it doesn't feel like a tourist trap. Locals jog past murals in the morning, kids play cricket next to a giant wall portrait, and residents go about daily life completely unbothered by visitors clicking photos of their building. It's art woven so naturally into everyday life that it feels less like a "district" and more like Delhi decided one day to wear a fresh coat of imagination.
             </p>
 
             <div class="vibe-quote">
-                "And since it's right next to Lodhi Garden and close to India Habitat Centre, you can easily turn this into a full half-day plan — art walk, garden stroll, and a coffee break, all within a few minutes of each other."[cite: 1]
+                "And since it's right next to Lodhi Garden and close to India Habitat Centre, you can easily turn this into a full half-day plan — art walk, garden stroll, and a coffee break, all within a few minutes of each other."
             </div>
         </section>
 
-        <!-- Final Call to Action[cite: 1] -->
+        <!-- Final Call to Action -->
         <section class="content-section" style="text-align: center;">
             <h2 class="section-heading" style="margin-bottom: 2rem;">Why You Need to Go (Like, This Weekend)</h2>
             <p style="max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.15rem; color: var(--text-main);">
-                In a city packed with monuments from centuries ago, Lodhi Art District is refreshingly, boldly now[cite: 1]. It's proof that art doesn't need a frame, a ticket counter, or a velvet rope to be powerful — sometimes it just needs a blank wall and someone brave enough to paint outside the lines[cite: 1].
+                In a city packed with monuments from centuries ago, Lodhi Art District is refreshingly, boldly now. It's proof that art doesn't need a frame, a ticket counter, or a velvet rope to be powerful — sometimes it just needs a blank wall and someone brave enough to paint outside the lines.
             </p>
             <p style="color: var(--terracotta); font-size: 1.25rem; font-weight: 700; margin-top: 2rem; font-family: 'Playfair Display', serif; font-style: italic;">
-                So next time someone asks you where to find "something different" in Delhi, skip the usual monuments-and-market answer[cite: 1]. Send them straight to Lodhi Colony, tell them to put their phone on silent (but camera ready), and let the walls do the talking[cite: 1].
+                So next time someone asks you where to find "something different" in Delhi, skip the usual monuments-and-market answer. Send them straight to Lodhi Colony, tell them to put their phone on silent (but camera ready), and let the walls do the talking.
             </p>
         </section>
 
@@ -621,8 +626,8 @@
 
     <!-- Footer matching DELHI IRL -->
     <footer>
-        <p class="footer-tagline">DELHI ART &times; LODHI COLONY[cite: 1]</p>
-        <p>&copy; Delhi IRL. India's First Open-Air Public Art District Guide[cite: 1].</p>
+        <p class="footer-tagline">DELHI ART &times; LODHI COLONY</p>
+        <p>&copy; Delhi IRL. India's First Open-Air Public Art District Guide.</p>
     </footer>
 
 </body>
