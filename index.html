@@ -4,7 +4,6 @@
     <meta name="google-site-verification" content="8CE3UST1Pcc0P7Fsjgp8ZiyfMEDRwcUO6c2zFAkIuSs" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary SEO Meta Tags -->
     <title>Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi</title>
     <meta name="title" content="Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi">
     <meta name="description" content="Discover Delhi in real life—from hidden food lanes in Chandni Chowk to aesthetic cafes, heritage walks, street style, and vibrant cultural stories.">
@@ -12,40 +11,15 @@
     <meta name="author" content="Delhi IRL Team">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook / WhatsApp Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://delhiirl.com/">
     <meta property="og:title" content="Delhi IRL | Discover the Heartbeat of Capital">
     <meta property="og:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
-    <meta property="og:image" content="https://i.pinimg.com/736x/5e/50/01/5e5001466952926da4abfb149e799dbe.jpg">
+    <meta property="og:image" content="https://images.pexels.com/photos/33813528/pexels-photo-33813528.jpeg">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://delhiirl.com/">
-    <meta property="twitter:title" content="Delhi IRL | Discover the Heartbeat of Capital">
-    <meta property="twitter:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
-    <meta property="twitter:image" content="https://i.pinimg.com/736x/5e/50/01/5e5001466952926da4abfb149e799dbe.jpg">
-
-    <!-- Structured Data (Schema.org JSON-LD for SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Delhi IRL",
-      "url": "https://delhiirl.com/",
-      "description": "Your ultimate lifestyle, heritage, and food guide to Delhi in Real Life.",
-      "sameAs": [
-        "https://www.instagram.com/delhii.irl/",
-        "https://www.facebook.com/profile.php?id=61592521435393",
-        "https://in.pinterest.com/delhiirl/"
-      ]
-    }
-    </script>
-
-    <!-- Google Fonts & FontAwesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -53,7 +27,7 @@
             --primary-terracotta: #C85A32;
             --primary-terracotta-dark: #A34320;
             --gold-accent: #D4AF37;
-            --dark-royal: #1A181B;
+            --dark-royal: #110F12;
             --bg-cream: #FAF6F0;
             --card-bg: #FFFFFF;
             --text-dark: #2C2828;
@@ -62,6 +36,7 @@
             --font-heading: 'Cinzel', serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
             --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
             --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
 
@@ -69,6 +44,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -91,66 +70,68 @@
             display: block;
         }
 
-        /* --- Header & Navigation --- */
+        /* --- Header Navigation --- */
         header {
-            background-color: rgba(26, 24, 27, 0.95);
-            backdrop-filter: blur(8px);
+            background-color: rgba(17, 15, 18, 0.96);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 1rem 2rem;
+            padding: 0.9rem 2rem;
             border-bottom: 2px solid var(--gold-accent);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
         .logo-text {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             font-weight: 800;
             color: #FFFFFF;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
         }
 
         .logo-text span {
             color: var(--primary-terracotta);
         }
 
-        /* Dynamic Dropdown Navigation */
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 1.4rem;
             align-items: center;
         }
 
         .nav-item {
             position: relative;
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
         }
 
-        .nav-item > a {
+        .nav-item > a,
+        .nav-link-btn {
             color: #E0DDD7;
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-size: 0.88rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
-        .nav-item:hover > a,
-        .nav-item:focus-within > a {
+        .nav-item > a:hover,
+        .nav-link-btn:hover {
             color: var(--gold-accent);
         }
 
@@ -159,7 +140,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            min-width: 210px;
+            min-width: 220px;
             background-color: var(--dark-royal);
             border: 1px solid var(--gold-accent);
             border-radius: 8px;
@@ -169,15 +150,23 @@
             z-index: 1000;
         }
 
-        .dropdown-menu li a {
+        .dropdown-menu li a,
+        .dropdown-menu li button {
             display: block;
-            padding: 0.6rem 1.2rem;
+            width: 100%;
+            text-align: left;
+            padding: 0.65rem 1.2rem;
             color: #E0DDD7;
             font-size: 0.85rem;
             text-transform: capitalize;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
-        .dropdown-menu li a:hover {
+        .dropdown-menu li a:hover,
+        .dropdown-menu li button:hover {
             background-color: rgba(212, 175, 55, 0.15);
             color: var(--gold-accent);
         }
@@ -187,86 +176,95 @@
             display: block;
         }
 
-        .social-header-icons {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
+        .header-cta {
+            background-color: var(--primary-terracotta);
+            color: #fff;
+            padding: 0.55rem 1.3rem;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid var(--primary-terracotta);
+            cursor: pointer;
         }
 
-        .social-header-icons a {
+        .header-cta:hover {
+            background-color: transparent;
             color: var(--gold-accent);
-            font-size: 1.2rem;
-            width: 36px;
-            height: 36px;
-            border: 1px solid var(--gold-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
+            border-color: var(--gold-accent);
         }
 
-        .social-header-icons a:hover {
-            background-color: var(--gold-accent);
-            color: var(--dark-royal);
-            transform: translateY(-2px);
-        }
-
-        /* --- Hero Section --- */
+        /* --- Clear HD Hero with Pexels India Gate --- */
         .hero {
             position: relative;
-            height: 80vh;
-            min-height: 550px;
-            background: linear-gradient(rgba(26, 24, 27, 0.45), rgba(26, 24, 27, 0.65)), 
-                        url('https://i.pinimg.com/736x/5e/50/01/5e5001466952926da4abfb149e799dbe.jpg') center/cover no-repeat;
+            height: 88vh;
+            min-height: 620px;
+            background: 
+                linear-gradient(180deg, rgba(14, 12, 16, 0.40) 0%, rgba(14, 12, 16, 0.65) 100%),
+                url('https://images.pexels.com/photos/33813528/pexels-photo-33813528.jpeg') center center / cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: #FFFFFF;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 920px;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-subtitle {
             font-family: var(--font-heading);
             color: var(--gold-accent);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 1rem;
+            letter-spacing: 4px;
+            margin-bottom: 1.2rem;
         }
 
         .hero-title {
             font-family: var(--font-heading);
-            font-size: 3.8rem;
+            font-size: clamp(2.4rem, 5.5vw, 4.3rem);
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 4px 25px rgba(0, 0, 0, 0.85);
         }
 
         .hero-description {
             font-size: 1.2rem;
             margin-bottom: 2.5rem;
             font-weight: 300;
-            color: #F0EAE1;
+            color: #FFFFFF;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .hero-cta-btn {
             background-color: var(--primary-terracotta);
             color: #FFFFFF;
-            padding: 1rem 2.5rem;
+            padding: 0.95rem 2.2rem;
             border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
+            font-weight: 700;
+            font-size: 0.95rem;
             letter-spacing: 1px;
             border: 2px solid var(--primary-terracotta);
-            box-shadow: 0 4px 15px rgba(200, 90, 50, 0.4);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
             display: inline-block;
+            cursor: pointer;
         }
 
         .hero-cta-btn:hover {
@@ -276,16 +274,27 @@
             transform: translateY(-3px);
         }
 
-        /* --- Global Container --- */
+        .hero-cta-btn.secondary {
+            background-color: rgba(17, 15, 18, 0.75);
+            border-color: var(--gold-accent);
+            color: var(--gold-accent);
+        }
+
+        .hero-cta-btn.secondary:hover {
+            background-color: var(--gold-accent);
+            color: var(--dark-royal);
+        }
+
+        /* --- Global Container & Titles --- */
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 5rem 1.5rem;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
         .section-tag {
@@ -293,7 +302,7 @@
             font-family: var(--font-heading);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             font-size: 0.9rem;
             display: block;
             margin-bottom: 0.5rem;
@@ -310,13 +319,98 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 70px;
             height: 3px;
             background-color: var(--gold-accent);
             margin: 0.8rem auto 0;
         }
 
-        /* --- Grid Layouts --- */
+        /* --- About Section (Direct Who We Are) --- */
+        .about-section {
+            background: linear-gradient(to bottom, #FAF6F0, #F2EBE0);
+            border-bottom: 1px solid var(--border-color);
+            scroll-margin-top: 70px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--dark-royal);
+            margin-bottom: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 1.2rem;
+            line-height: 1.75;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.8rem;
+        }
+
+        .about-pill {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-terracotta);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .about-pill strong {
+            display: block;
+            font-family: var(--font-heading);
+            color: var(--dark-royal);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .about-pill span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .about-image-stack {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid #fff;
+        }
+
+        .about-badge-floating {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background-color: var(--dark-royal);
+            color: var(--gold-accent);
+            padding: 1.2rem 1.6rem;
+            border-radius: 12px;
+            border: 2px solid var(--gold-accent);
+            box-shadow: var(--shadow-lg);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* --- Feature Guides Grid --- */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -341,7 +435,7 @@
 
         .card-img-wrapper {
             position: relative;
-            height: 220px;
+            height: 230px;
             overflow: hidden;
         }
 
@@ -401,7 +495,7 @@
             color: var(--text-muted);
         }
 
-        .read-more {
+        .location-btn {
             color: var(--primary-terracotta);
             font-weight: 700;
             display: flex;
@@ -409,85 +503,505 @@
             gap: 5px;
         }
 
-        .read-more:hover {
+        .location-btn:hover {
             color: var(--primary-terracotta-dark);
             gap: 8px;
         }
 
-        /* --- Social & Influencer Hub Section --- */
-        .social-hub-bg {
-            background-color: var(--dark-royal);
-            color: #FFFFFF;
-            padding: 5rem 1.5rem;
-            margin-top: 2rem;
+        /* --- In-Page Dynamic View Overlays --- */
+        .page-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(14, 12, 16, 0.97);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2.5rem 1.5rem;
         }
 
-        .social-hub-bg .section-title {
-            color: #FFFFFF;
+        .page-modal.active {
+            display: block;
+            animation: modalFadeIn 0.3s ease forwards;
         }
 
-        .social-grid {
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            background: #FAF6F0;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            border: 2px solid var(--gold-accent);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-container.dark-theme {
+            background: var(--dark-royal);
+            color: #ffffff;
+        }
+
+        .close-modal-btn {
+            position: sticky;
+            top: 15px;
+            float: right;
+            background: var(--primary-terracotta);
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: var(--shadow-md);
+            transition: all 0.2s ease;
+        }
+
+        .close-modal-btn:hover {
+            background: var(--dark-royal);
+            color: var(--gold-accent);
+            border-color: var(--gold-accent);
+            transform: scale(1.1);
+        }
+
+        /* --- Category Tabs & Directory --- */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: #E2DFD8;
+            padding: 0.8rem 1.3rem;
+            border-radius: 40px;
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background-color: var(--gold-accent);
+            color: var(--dark-royal);
+            border-color: var(--gold-accent);
+            font-weight: 700;
+            transform: translateY(-2px);
+        }
+
+        .category-panel {
+            display: none;
+        }
+
+        .category-panel.active {
+            display: block;
+        }
+
+        .items-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.8rem;
         }
 
-        .social-card {
+        .item-card {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             transition: all 0.3s ease;
         }
 
-        .social-card:hover {
-            background: rgba(255, 255, 255, 0.08);
+        .item-card:hover {
+            transform: translateY(-6px);
             border-color: var(--gold-accent);
-            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.09);
         }
 
-        .social-icon-lg {
-            font-size: 2.5rem;
+        .item-card-img {
+            height: 190px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item-card-range {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(17, 15, 18, 0.9);
             color: var(--gold-accent);
-            margin-bottom: 1rem;
-        }
-
-        .social-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .social-card p {
-            color: #B0AAA2;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-btn {
-            display: inline-block;
-            padding: 0.6rem 1.5rem;
-            border-radius: 25px;
-            background-color: var(--gold-accent);
-            color: var(--dark-royal);
+            font-size: 0.78rem;
             font-weight: 700;
-            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--gold-accent);
+        }
+
+        .item-card-body {
+            padding: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .item-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .item-card-loc {
+            color: var(--gold-accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .social-btn:hover {
-            background-color: #FFFFFF;
+        .item-card-desc {
+            color: #BFB8AE;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .item-card-meta {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #E2DFD8;
+        }
+
+        .range-badge {
+            color: var(--gold-accent);
+            font-weight: 700;
+        }
+
+        /* --- Nearby Card Styling --- */
+        .nearby-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nearby-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-terracotta);
+        }
+
+        .nearby-img-wrap {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .nearby-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .nearby-card:hover .nearby-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .distance-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(17, 15, 18, 0.88);
+            backdrop-filter: blur(4px);
+            color: var(--gold-accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nearby-body {
+            padding: 1.4rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .nearby-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
             color: var(--dark-royal);
+            margin-bottom: 0.3rem;
         }
 
-        /* --- Influencer Collab Callout Box --- */
+        .nearby-state {
+            color: var(--primary-terracotta);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.7rem;
+        }
+
+        .nearby-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .nearby-footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+        }
+
+        .budget-badge {
+            background-color: #FAF2E8;
+            color: var(--primary-terracotta-dark);
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-masonry {
+            columns: 4 260px;
+            column-gap: 1.2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            margin-bottom: 1.2rem;
+            break-inside: avoid;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 40%, rgba(17, 15, 18, 0.9) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.2rem;
+            color: #FFFFFF;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        .gallery-caption h5 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: var(--gold-accent);
+            margin-bottom: 2px;
+        }
+
+        .gallery-caption span {
+            font-size: 0.78rem;
+            color: #E2DFD8;
+        }
+
+        /* --- Substack Blogs Grid (Exact 2-Card Layout) --- */
+        .substack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .substack-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .substack-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+
+        .substack-img-wrap {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .substack-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .substack-card:hover .substack-img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .substack-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(6px);
+            color: #1A181B;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .substack-body {
+            padding: 1.6rem 1.4rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .substack-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1A181B;
+            line-height: 1.35;
+            margin-bottom: 0.6rem;
+        }
+
+        .substack-desc {
+            color: #66605C;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .substack-author-row {
+            border-top: 1px solid #F0ECE4;
+            padding-top: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #F4EBE3;
+            color: var(--primary-terracotta);
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #E5D5C6;
+        }
+
+        .author-details strong {
+            display: block;
+            font-size: 0.86rem;
+            color: #1A181B;
+            line-height: 1.2;
+        }
+
+        .author-details span {
+            font-size: 0.75rem;
+            color: #8C857B;
+        }
+
+        .read-time {
+            font-size: 0.8rem;
+            color: var(--primary-terracotta);
+            font-weight: 700;
+        }
+
+        /* --- Creator Collaboration & Brand Partnership Form Section --- */
         .collab-banner {
             background: linear-gradient(135deg, var(--primary-terracotta), var(--primary-terracotta-dark));
             border-radius: 16px;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
+            padding: 3.5rem 2rem;
+            margin: 4rem auto 0;
+            max-width: 1240px;
             text-align: center;
             color: #FFFFFF;
             box-shadow: var(--shadow-lg);
@@ -495,13 +1009,13 @@
 
         .collab-banner h3 {
             font-family: var(--font-heading);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
 
         .collab-banner p {
-            max-width: 650px;
-            margin: 0 auto 1.8rem;
+            max-width: 680px;
+            margin: 0 auto 2rem;
             font-size: 1.05rem;
             color: #F8E8E0;
         }
@@ -509,11 +1023,12 @@
         .collab-btn {
             background-color: var(--dark-royal);
             color: var(--gold-accent);
-            padding: 0.9rem 2rem;
+            padding: 0.95rem 2.4rem;
             border-radius: 30px;
             font-weight: 700;
             display: inline-block;
             border: 1px solid var(--gold-accent);
+            font-size: 0.95rem;
         }
 
         .collab-btn:hover {
@@ -521,51 +1036,150 @@
             color: var(--dark-royal);
         }
 
-        /* --- Easy Content Editor Guide Notice --- */
-        .cms-notice {
-            background-color: #EBF4FF;
-            border: 1px solid #BEE3F8;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 3rem;
+        /* Dedicated Brand Partnership Form Container */
+        .partnership-section {
+            max-width: 820px;
+            margin: 5rem auto 0;
+            padding: 3.5rem 2.5rem;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            scroll-margin-top: 80px;
+        }
+
+        .partnership-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
             display: flex;
-            align-items: center;
-            gap: 1rem;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .cms-notice i {
-            font-size: 2rem;
-            color: #3182CE;
+        .form-group.full-width {
+            grid-column: span 2;
         }
 
-        .cms-notice-text h4 {
-            color: #2B6CB0;
-            margin-bottom: 0.2rem;
+        .form-group label {
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--dark-royal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .cms-notice-text p {
-            color: #4A5568;
-            font-size: 0.9rem;
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1.1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            background-color: #FAF6F0;
+            color: var(--text-dark);
+            outline: none;
+            transition: all 0.3s ease;
         }
 
-        /* --- Footer --- */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-terracotta);
+            background-color: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(200, 90, 50, 0.15);
+        }
+
+        .submit-form-btn {
+            grid-column: span 2;
+            background-color: var(--primary-terracotta);
+            color: #FFFFFF;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(200, 90, 50, 0.35);
+        }
+
+        .submit-form-btn:hover {
+            background-color: var(--primary-terracotta-dark);
+            transform: translateY(-2px);
+        }
+
+        /* --- Footer & Social Hub Handles --- */
         footer {
-            background-color: #111012;
+            background-color: #0E0C0F;
             color: #8C857B;
-            padding: 3rem 1.5rem 1.5rem;
-            border-top: 1px solid #28252A;
+            padding: 4rem 1.5rem 2rem;
+            border-top: 1px solid #221F24;
             text-align: center;
+            margin-top: 5rem;
         }
 
         .footer-logo {
             font-family: var(--font-heading);
             font-size: 1.8rem;
             color: #FFFFFF;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         .footer-logo span {
             color: var(--primary-terracotta);
+        }
+
+        .footer-social-cluster {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: #E2DFD8;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-pill i {
+            color: var(--gold-accent);
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-pill:hover {
+            background-color: var(--gold-accent);
+            color: var(--dark-royal);
+            border-color: var(--gold-accent);
+            transform: translateY(-3px);
+        }
+
+        .social-pill:hover i {
+            color: var(--dark-royal);
+            transform: scale(1.15);
         }
 
         .footer-links {
@@ -577,22 +1191,48 @@
             flex-wrap: wrap;
         }
 
-        .footer-links a {
+        .footer-links a,
+        .footer-links button {
             color: #B0AAA2;
             font-size: 0.9rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover,
+        .footer-links button:hover {
             color: var(--gold-accent);
         }
 
         .copyright {
             font-size: 0.85rem;
-            border-top: 1px solid #222024;
+            border-top: 1px solid #1E1B21;
             padding-top: 1.5rem;
         }
 
-        /* Responsive Breakpoints */
+        @media (max-width: 860px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-badge-floating {
+                position: static;
+                margin-top: 1rem;
+                display: inline-block;
+            }
+            .gallery-masonry {
+                columns: 2 200px;
+            }
+            .partnership-form {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width,
+            .submit-form-btn {
+                grid-column: span 1;
+            }
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 0.8rem 1rem;
@@ -613,11 +1253,12 @@
                 gap: 1.2rem;
                 padding-bottom: 6px;
             }
-            .nav-item > a {
+            .nav-item > a,
+            .nav-link-btn {
                 font-size: 0.82rem;
                 white-space: nowrap;
             }
-            .social-header-icons {
+            .header-cta {
                 display: none;
             }
             .dropdown-menu {
@@ -626,103 +1267,128 @@
                 left: 5%;
                 width: 90%;
             }
-            .section-title {
-                font-size: 1.8rem;
+            .modal-container {
+                padding: 2rem 1.2rem;
+            }
+            .partnership-section {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header Navigation with Caret Arrow Icons on All Menu Items -->
     <header>
         <div class="nav-container">
             <div class="logo-group">
-                <a href="index.html" class="logo-text">DELHI <span>IRL</span></a>
+                <a href="#" onclick="scrollToTop(event)" class="logo-text">DELHI <span>IRL</span></a>
             </div>
             <nav>
                 <ul class="nav-links">
-                    <!-- About Dropdown -->
+                    <li class="nav-item"><a href="#" onclick="scrollToTop(event)">Home</a></li>
+                    
+                    <!-- About with arrow leading directly to 'Who We Are' -->
                     <li class="nav-item">
-                        <a href="#blogs">About <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <a href="#about" onclick="closeAllModals()">About <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+                    </li>
+
+                    <!-- Explore with arrow and submenu -->
+                    <li class="nav-item">
+                        <button class="nav-link-btn" onclick="openSectionModal('modal-explore')">Explore <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></button>
                         <ul class="dropdown-menu">
-                            <li><a href="https://delhiirl.com/" target="_blank">Our Story</a></li>
-                            <li><a href="https://delhiirl.com/" target="_blank">The Team</a></li>
-                            <li><a href="https://delhiirl.com/" target="_blank">Mission & Vision</a></li>
+                            <li><button onclick="openSectionModal('modal-explore', 'restaurants')">Top Restaurants</button></li>
+                            <li><button onclick="openSectionModal('modal-explore', 'parks')">Parks & Gardens</button></li>
+                            <li><button onclick="openSectionModal('modal-explore', 'markets')">Popular Markets</button></li>
+                            <li><button onclick="openSectionModal('modal-explore', 'cafes')">Top Cafes</button></li>
+                            <li><button onclick="openSectionModal('modal-explore', 'attractions')">Iconic Attractions</button></li>
+                            <li><button onclick="openSectionModal('modal-explore', 'streetfood')">Food Streets</button></li>
                         </ul>
                     </li>
 
-                    <!-- Stories & Guides Dropdown -->
+                    <!-- Nearby, Gallery, Blogs with arrows -->
                     <li class="nav-item">
-                        <a href="#blogs">Stories & Guides <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.google.com/maps/search/Chandni+Chowk+Food+Walk+Delhi/" target="_blank">Food & Culture</a></li>
-                            <li><a href="https://www.google.com/maps/search/Lodhi+Art+District+Delhi/" target="_blank">Asthetic Walks</a></li>
-                            <li><a href="https://www.google.com/maps/search/Humayun's+Tomb+Delhi/" target="_blank">Hertiage Spots</a></li>
-                        </ul>
+                        <button class="nav-link-btn" onclick="openSectionModal('modal-nearby')">Nearby <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link-btn" onclick="openSectionModal('modal-gallery')">Gallery <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link-btn" onclick="openSectionModal('modal-blogs')">Blogs <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></button>
                     </li>
 
-                    <!-- Social Hub Dropdown -->
+                    <!-- Collaborate with arrow and submenu -->
                     <li class="nav-item">
-                        <a href="#social">Social Hub <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.instagram.com/delhii.irl/" target="_blank"><i class="fab fa-instagram"></i> Instagram Feed</a></li>
-                            <li><a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank"><i class="fab fa-facebook-f"></i> Facebook Page</a></li>
-                            <li><a href="https://in.pinterest.com/delhiirl/" target="_blank"><i class="fab fa-pinterest-p"></i> Pinterest Boards</a></li>
-                            <li><a href="https://delhiirl.substack.com/" target="_blank"><i class="fas fa-newspaper"></i> Blog</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Collaborate Dropdown -->
-                    <li class="nav-item">
-                        <a href="#collab">Collaborate <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <a href="#collab" onclick="closeAllModals()">Collaborate <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="https://www.instagram.com/delhii.irl/" target="_blank">Creator DM Application</a></li>
-                            <li><a href="mailto:contact@delhiirl.com" target="_blank">Brand Partnerships</a></li>
+                            <li><a href="#brand-partnership-form" onclick="closeAllModals()">Brand Partnerships</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-            <div class="social-header-icons">
-                <a href="https://www.instagram.com/delhii.irl/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://in.pinterest.com/delhiirl/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://delhiirl.substack.com/" target="_blank" title="Blog"><i class="fas fa-rss"></i></a>
-            </div>
+            <button class="header-cta" onclick="openSectionModal('modal-explore')">Plan Visit</button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="hero-subtitle">The Real Capital Experience</p>
-            <h1 class="hero-title">Experience Delhi In Real Life</h1>
-            <p class="hero-description">Uncovering hidden heritage lanes, legendary street food spots, aesthetic corners, and authentic local culture.</p>
-            <a href="#blogs" class="hero-cta-btn">Explore Delhi Stories</a>
-        </div>
-    </section>
-
-    <!-- Main Content Container -->
-    <main class="container">
-
-        <!-- CMS Visual Editor Guidance Note -->
-        <div class="cms-notice">
-            <i class="fas fa-edit"></i>
-            <div class="cms-notice-text">
-                <h4>Easy Content Update Mode Activated</h4>
-                <p>This layout is built with clean, modular HTML blocks. You can open this file in any visual builder or code editor to edit text and photos directly.</p>
+    <!-- Main Clean Landing Page -->
+    <main id="main-landing">
+        
+        <!-- Hero Section using the Pexels India Gate Background -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">The Real Capital Experience</p>
+                <h1 class="hero-title">Experience Delhi In Real Life</h1>
+                <p class="hero-description">Uncovering hidden heritage lanes, legendary street food spots, buzzing local markets, and peaceful urban sanctuaries after dusk.</p>
+                <div class="hero-cta-group">
+                    <button class="hero-cta-btn" onclick="openSectionModal('modal-blogs')">Read City Stories</button>
+                    <button class="hero-cta-btn secondary" onclick="openSectionModal('modal-explore')">Explore City Hub</button>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Section: Curated Stories & Blogs -->
-        <section id="blogs">
+        <!-- About Section (Who We Are) -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="section-tag">Who We Are</span>
+                        <h3>Delhi IRL: Documenting the Living Soul of India's Capital</h3>
+                        <p>
+                            Delhi IRL is a homegrown independent archive and city discovery publication created to showcase Delhi beyond travel brochures and generic tourist checklists. We cut through the noise to bring you the real city—unfiltered, vibrant, and alive.
+                        </p>
+                        <p>
+                            From the sizzling midnight kadhais of Purani Dilli and colonial boulevards of Lutyens to underground cafes and open-air art alleys, our collective of local storytellers, food historians, and photographers documents the places where Delhi's heartbeat truly echoes.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="about-pill">
+                                <strong>100% Unfiltered</strong>
+                                <span>Real street walks, local secrets, and genuine reviews.</span>
+                            </div>
+                            <div class="about-pill">
+                                <strong>Hyper-Curated</strong>
+                                <span>Verified price ranges, metro guides, and timing tips.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image-stack">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1000&q=80" alt="Delhi Heritage Architecture" class="about-img-main">
+                        <div class="about-badge-floating">
+                            <i class="fas fa-heart" style="color:var(--primary-terracotta);"></i> For Delhiites & Wanderers
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curated Feature Guides -->
+        <section class="container">
             <div class="section-header">
-                <span class="section-tag">Curated Content & Guides</span>
+                <span class="section-tag">Feature Guides</span>
                 <h2 class="section-title">Latest From Delhi IRL</h2>
             </div>
 
             <div class="cards-grid">
-                <!-- Blog Card 1 -->
                 <article class="card">
                     <div class="card-img-wrapper">
                         <span class="card-badge">Food & Culture</span>
@@ -733,12 +1399,11 @@
                         <p class="card-excerpt">A deep-dive walkthrough into the 100-year-old culinary secrets hidden in the narrowest lanes of Purani Dilli.</p>
                         <div class="card-footer">
                             <span>5 min read</span>
-                            <a href="chandni-chowk.html" target="_blank" rel="noopener noreferrer" class="location-btn">See More ↗</a>
+                            <a href="chandni-chowk.html" target="_blank" rel="noopener noreferrer" class="location-btn">Read Guide ↗</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 2 -->
                 <article class="card">
                     <div class="card-img-wrapper">
                         <span class="card-badge">Aesthetic Walk</span>
@@ -749,12 +1414,11 @@
                         <p class="card-excerpt">Discovering the best Instagrammable wall murals, local coffee spots, and peaceful morning walk routes in Lodhi Colony.</p>
                         <div class="card-footer">
                             <span>4 min read</span>
-                           <a href="lodhi-art-district.html" target="_blank" rel="noopener noreferrer" class="location-btn">See More ↗</a>
+                           <a href="lodhi-art-district.html" target="_blank" rel="noopener noreferrer" class="location-btn">Read Guide ↗</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 3 -->
                 <article class="card">
                     <div class="card-img-wrapper">
                         <span class="card-badge">Heritage Spots</span>
@@ -762,80 +1426,548 @@
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Sunsets at Mughal Gardens & Hidden Tombs</h3>
-                        <p class="card-excerpt">Escape the city chaos. Here are 5 lesser-known historical monuments perfect for golden hour photography.</p>
+                        <p class="card-excerpt">Escape the city chaos. 12 historical monuments perfect for golden hour photography and relaxed evening walks.</p>
                         <div class="card-footer">
                             <span>6 min read</span>
-                            <a href="mughal-gardens.html" target="_blank" rel="noopener noreferrer" class="location-btn">See More ↗</a>
+                            <a href="mughal-gardens.html" target="_blank" rel="noopener noreferrer" class="location-btn">Read Guide ↗</a>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
+        <!-- Creator Collaboration Section -->
+        <div id="collab" class="collab-banner">
+            <h3>Are You A Delhi Creator or Photographer?</h3>
+            <p>We are actively collaborating with local foodies, street photographers, writers, and cultural creators to showcase Delhi in its rawest, most creative form.</p>
+            <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="collab-btn"><i class="fab fa-instagram"></i> DM Us On Instagram to Collab</a>
+        </div>
+
+        <!-- Brand Partnership Application Form -->
+        <section id="brand-partnership-form" class="partnership-section">
+            <div class="section-header" style="margin-bottom: 1.5rem;">
+                <span class="section-tag">Collaborate With Us</span>
+                <h2 class="section-title">Brand Partnership Application</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">
+                    Partner with Delhi IRL to spotlight your venue, heritage experience, boutique, or culinary brand to thousands of passionate city explorers.
+                </p>
+            </div>
+
+            <form class="partnership-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="companyName">Brand / Company Name *</label>
+                    <input type="text" id="companyName" placeholder="e.g. Blue Tokai, The Lodhi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPerson">Contact Person Name *</label>
+                    <input type="text" id="contactPerson" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Official Email *</label>
+                    <input type="email" id="contactEmail" placeholder="partner@brand.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">Phone / WhatsApp *</label>
+                    <input type="tel" id="contactPhone" placeholder="+91 98765 43210" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="collabType">Partnership Type *</label>
+                    <select id="collabType" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="curated-guide">Featured Venue Listing in Guides</option>
+                        <option value="sponsored-walk">Sponsored Heritage / Food Walk</option>
+                        <option value="editorial">Editorial Substack Feature</option>
+                        <option value="event">Event Promotion & Coverage</option>
+                        <option value="other">Other Collaboration</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budgetRange">Estimated Campaign Budget *</label>
+                    <select id="budgetRange" required>
+                        <option value="" disabled selected>Select budget range</option>
+                        <option value="tier1">₹25,000 – ₹50,000</option>
+                        <option value="tier2">₹50,000 – ₹1,00,000</option>
+                        <option value="tier3">₹1,00,000 – ₹2,50,000</option>
+                        <option value="tier4">₹2,50,000+</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="campaignDetails">Campaign Goals & Message *</label>
+                    <textarea id="campaignDetails" rows="4" placeholder="Tell us about your brand, campaign goals, timelines, and ideas..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-form-btn">Submit Partnership Proposal</button>
+            </form>
+        </section>
+
     </main>
 
-    <!-- Social Media Feed Hub Section -->
-    <section id="social" class="social-hub-bg">
-        <div class="container" style="padding-top:0; padding-bottom:0;">
+    <!-- ==================== IN-PAGE VIEW OVERLAYS ==================== -->
+
+    <!-- MODAL 1: EXPLORE DIRECTORY (15 Items/Category) -->
+    <div id="modal-explore" class="page-modal">
+        <div class="modal-container dark-theme">
+            <button class="close-modal-btn" onclick="closeSectionModal('modal-explore')">&times;</button>
+            
             <div class="section-header">
-                <span class="section-tag" style="color:var(--gold-accent);">Stay Connected</span>
-                <h2 class="section-title">Delhi IRL Across Channels</h2>
+                <span class="section-tag" style="color:var(--gold-accent);">City Explorer Hub</span>
+                <h2 class="section-title" style="color:#ffffff;">Discover Delhi Categories</h2>
             </div>
 
-            <div class="social-grid">
-                <!-- Instagram Box -->
-                <div class="social-card">
-                    <i class="fab fa-instagram social-icon-lg"></i>
-                    <h3>Instagram</h3>
-                    <p>Reels, aesthetic photography, daily street stories & polls.</p>
-                    <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="social-btn">Follow @delhii.irl</a>
-                </div>
+            <div class="category-tabs">
+                <button class="tab-btn active" onclick="switchCategory('restaurants')"><i class="fas fa-utensils"></i> Top Restaurants</button>
+                <button class="tab-btn" onclick="switchCategory('parks')"><i class="fas fa-tree"></i> Parks & Gardens</button>
+                <button class="tab-btn" onclick="switchCategory('markets')"><i class="fas fa-bag-shopping"></i> Popular Markets</button>
+                <button class="tab-btn" onclick="switchCategory('cafes')"><i class="fas fa-coffee"></i> Top Cafes</button>
+                <button class="tab-btn" onclick="switchCategory('attractions')"><i class="fas fa-landmark"></i> Iconic Attractions</button>
+                <button class="tab-btn" onclick="switchCategory('streetfood')"><i class="fas fa-fire-burner"></i> Food Streets</button>
+            </div>
 
-                <!-- Facebook Box -->
-                <div class="social-card">
-                    <i class="fab fa-facebook-f social-icon-lg"></i>
-                    <h3>Facebook</h3>
-                    <p>Community discussions, event updates & heritage deep dives.</p>
-                    <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" class="social-btn">Like Facebook Page</a>
-                </div>
-
-                <!-- Pinterest Box -->
-                <div class="social-card">
-                    <i class="fab fa-pinterest-p social-icon-lg"></i>
-                    <h3>Pinterest</h3>
-                    <p>Curated Delhi aesthetic boards, outfit inspo & travel pins.</p>
-                    <a href="https://in.pinterest.com/delhiirl/" target="_blank" class="social-btn">Explore Pinterest Boards</a>
-                </div>
-
-                <!-- Blog / Substack Box -->
-                <div class="social-card">
-                    <i class="fas fa-newspaper social-icon-lg"></i>
-                    <h3>Blog Publications</h3>
-                    <p>In-depth essays, city guides, cultural stories & newsletters.</p>
-                    <a href="https://delhiirl.substack.com/" target="_blank" class="social-btn">Read Our Substack</a>
+            <!-- Panel 1: Top Restaurants (15) -->
+            <div id="panel-restaurants" class="category-panel active">
+                <div class="items-grid">
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Bukhara"><span class="item-card-range">₹3,500 – ₹5,000 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Bukhara</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> ITC Maurya, Chanakyapuri</div><p class="item-card-desc">World-famous slow-cooked Dal Bukhara, tandoori leg of lamb, and iconic rustic clay oven flatbreads.</p><div class="item-card-meta"><span>North Indian, Tandoori</span><span class="range-badge">Luxury Dining</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Indian Accent"><span class="item-card-range">₹4,500 – ₹7,000 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Indian Accent</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> The Lodhi, Lodhi Road</div><p class="item-card-desc">Modern progressive Indian gastronomy by Chef Manish Mehrotra. Inventive flavor profiles paired with fine wines.</p><div class="item-card-meta"><span>Contemporary Indian</span><span class="range-badge">Fine Dining</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Karim's"><span class="item-card-range">₹800 – ₹1,400 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Karim’s</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Gali Kababian, Jama Masjid</div><p class="item-card-desc">Serving royal Mughal kitchen legacies since 1913. Renowned for rich mutton burra, seekh kebabs, and korma.</p><div class="item-card-meta"><span>Mughlai, Kebabs</span><span class="range-badge">Mid-Budget Heritage</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Moti Mahal"><span class="item-card-range">₹1,200 – ₹2,000 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Moti Mahal</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Daryaganj</div><p class="item-card-desc">The legendary birthplace of butter chicken and modern tandoori chicken, carrying mid-century capital heritage.</p><div class="item-card-meta"><span>North Indian Classic</span><span class="range-badge">Mid-Range</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Gulati"><span class="item-card-range">₹1,500 – ₹2,400 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Gulati Restaurant</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Pandara Road Market</div><p class="item-card-desc">The late-night holy grail for butter chicken, dal makhani, and velvety kakori kebabs near India Gate.</p><div class="item-card-meta"><span>North Indian, Mughlai</span><span class="range-badge">Mid-Range</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80" alt="Saravana Bhavan"><span class="item-card-range">₹500 – ₹900 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Saravana Bhavan</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Janpath, Connaught Place</div><p class="item-card-desc">Unbeatable crispy ghee roast dosas, steaming rava idlis, and authentic South Indian filter coffee.</p><div class="item-card-meta"><span>South Indian Pure Veg</span><span class="range-badge">Affordable</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Olive Bar & Kitchen"><span class="item-card-range">₹3,500 – ₹5,000 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Olive Bar & Kitchen</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Mehrauli, Near Qutub Minar</div><p class="item-card-desc">Chic Mediterranean sanctuary nestled beneath a banyan tree, serving sourdough pizzas and gourmet cocktails.</p><div class="item-card-meta"><span>European, Mediterranean</span><span class="range-badge">Upscale Romantic</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Andhra Bhavan"><span class="item-card-range">₹350 – ₹600 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Andhra Bhavan Canteen</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Ashoka Road, Feroze Shah</div><p class="item-card-desc">Unlimited traditional South Indian thalis with spicy gongura chutney, mutton fry, and Sunday Hyderabadi biryani.</p><div class="item-card-meta"><span>Andhra Meals, Thali</span><span class="range-badge">Pocket-Friendly</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="United Coffee House"><span class="item-card-range">₹1,800 – ₹2,600 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">United Coffee House</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> E-Block, Connaught Place</div><p class="item-card-desc">Operating since 1942 beneath crystal chandeliers. Famous for signature chicken a la kiev and colonial nostalgia.</p><div class="item-card-meta"><span>Continental & Heritage</span><span class="range-badge">Mid-Range Heritage</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Dhaba 1986"><span class="item-card-range">₹1,800 – ₹2,800 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Dhaba Estd 1986</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> The Claridges, Aurangzeb Rd</div><p class="item-card-desc">Highway dhaba ambiance blended with luxury hospitality: baltic meat, tandoori pomfret, and tawa mutton.</p><div class="item-card-meta"><span>Punjabi, Highway Style</span><span class="range-badge">Premium</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Sagar Ratna"><span class="item-card-range">₹600 – ₹950 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Sagar Ratna</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Defence Colony Market</div><p class="item-card-desc">Delhi's beloved family spot for mysore masala dosas, gunpowder idlis, dahi vadas, and hot rasam.</p><div class="item-card-meta"><span>South Indian</span><span class="range-badge">Affordable</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Yum Yum Cha"><span class="item-card-range">₹1,800 – ₹2,500 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Yum Yum Cha</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Khan Market & CyberHub</div><p class="item-card-desc">Playful origami-themed modern pan-Asian bistro popular for colorful dim sum baskets, sushi rolls, and noodle bowls.</p><div class="item-card-meta"><span>Pan-Asian, Dim Sum</span><span class="range-badge">Mid-to-High</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Guppy"><span class="item-card-range">₹2,800 – ₹4,000 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Guppy</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Lodhi Colony Market</div><p class="item-card-desc">Vibrant Japanese dining known for pork belly, fresh nigiri platters, ramen bowls, and playful manga-inspired interiors.</p><div class="item-card-meta"><span>Contemporary Japanese</span><span class="range-badge">Upscale</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" alt="Havemore"><span class="item-card-range">₹1,500 – ₹2,200 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Havemore</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Pandara Road Market</div><p class="item-card-desc">Fierce rival to Gulati for Delhi's top butter chicken, offering rich and creamy curries loved by locals.</p><div class="item-card-meta"><span>North Indian Curry</span><span class="range-badge">Mid-Range</span></div></div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-card-img"><img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80" alt="Town Hall"><span class="item-card-range">₹2,500 – ₹3,800 for two</span></div>
+                        <div class="item-card-body"><h4 class="item-card-title">Town Hall</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Khan Market</div><p class="item-card-desc">Spacious colonial rooftop restaurant famous for Chef Augusto Cabrera's specialty sushi platters and craft drinks.</p><div class="item-card-meta"><span>Asian, International</span><span class="range-badge">Premium</span></div></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Influencer Collaboration Banner -->
-            <div id="collab" class="collab-banner">
-                <h3>Are You A Delhi Creator or Influencer?</h3>
-                <p>We are actively collaborating with local content creators, foodies, photographers, and storytellers to showcase Delhi in its rawest, most creative form.</p>
-                <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="collab-btn"><i class="fab fa-instagram"></i> DM Us On Instagram to Collab</a>
+            <!-- Panel 2: Parks & Gardens (15) -->
+            <div id="panel-parks" class="category-panel">
+                <div class="items-grid">
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1571843378422-dad0004ad0f5?auto=format&fit=crop&w=600&q=80" alt="Lodhi Garden"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Lodhi Gardens</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Lodhi Road</div><p class="item-card-desc">90 acres of manicured lawns studded with 15th-century Sayyid and Lodhi dynasty domes. The capital's best morning walk.</p><div class="item-card-meta"><span>Heritage Park</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1588714477688-cf28a50e94f7?auto=format&fit=crop&w=600&q=80" alt="Sunder Nursery"><span class="item-card-range">₹50 (Indians) / ₹200 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Sunder Nursery</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Nizamuddin Heritage Zone</div><p class="item-card-desc">Delhi's Central Park. A restored 16th-century Mughal garden park with lakes, weekend farmers' markets, and biodiversity.</p><div class="item-card-meta"><span>Eco Heritage Park</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=600&q=80" alt="Garden of Five Senses"><span class="item-card-range">₹35 (Adults) / ₹15 (Kids)</span></div><div class="item-card-body"><h4 class="item-card-title">Garden of Five Senses</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Said-ul-Ajaib, Saket</div><p class="item-card-desc">A 20-acre experiential landscape designed with rock carvings, water spirals, scented flower trails, and sculptures.</p><div class="item-card-meta"><span>Botanical Leisure</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=600&q=80" alt="Deer Park"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Deer Park & Rose Garden</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Hauz Khas Village</div><p class="item-card-desc">Lush lake-facing sanctuary home to spotted deer, peacocks, historical water reservoirs, and running tracks.</p><div class="item-card-meta"><span>Urban Forest Park</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Sanjay Van"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Sanjay Van</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Vasant Kunj / Mehrauli</div><p class="item-card-desc">Sprawling 783-acre Southern Ridge city forest featuring bird-watching watchtowers, old fort ramparts, and cycling paths.</p><div class="item-card-meta"><span>Wild Ridge Forest</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="Nehru Park"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Nehru Park</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Chanakyapuri</div><p class="item-card-desc">Expansive rolling green lawns hosting open-air classical music morning ragas, jazz fests, and evening jogs.</p><div class="item-card-meta"><span>Public Lawn</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Amrit Udyan"><span class="item-card-range">Free (Seasonal Online Pass)</span></div><div class="item-card-body"><h4 class="item-card-title">Amrit Udyan (Mughal Gardens)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Rashtrapati Bhavan</div><p class="item-card-desc">Seasonal spectacle open in spring, presenting world-class tulip displays, musical fountains, and manicured terrace lawns.</p><div class="item-card-meta"><span>Presidential Garden</span><span class="range-badge">Free Booking</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=600&q=80" alt="Aravalli Biodiversity Park"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Aravalli Biodiversity Park</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Vasant Vihar / Gurgaon</div><p class="item-card-desc">Rehabilitated native ecosystem home to native desert trees, migratory birds, butterflies, and rugged nature trails.</p><div class="item-card-meta"><span>Ecological Reserve</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=600&q=80" alt="Central Park CP"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Central Park CP</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Inner Circle, Connaught Place</div><p class="item-card-desc">Circular manicured park surrounded by colonial colonnades, boasting a massive fluttering tricolor and musical fountains.</p><div class="item-card-meta"><span>City Center Park</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=600&q=80" alt="Millennium Indraprastha Park"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Indraprastha Park (Millennium)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Ring Road, Sarai Kale Khan</div><p class="item-card-desc">Long continuous green lung along the Yamuna featuring the world peace stupa, sprawling grasslands, and calm sunsets.</p><div class="item-card-meta"><span>Riverfront Park</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Asola Bhatti Sanctuary"><span class="item-card-range">₹20 – ₹50 Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Asola Bhatti Wildlife Sanctuary</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Tughlakabad</div><p class="item-card-desc">Rugged natural terrain known for its scenic Blue Lake quarries, golden jackal habitats, and weekend hiking trails.</p><div class="item-card-meta"><span>Wildlife Sanctuary</span><span class="range-badge">Affordable</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=600&q=80" alt="Kamla Nehru Ridge"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Kamla Nehru Ridge</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Civil Lines / DU</div><p class="item-card-desc">Historic forest corridor dotted with 1857 Mutiny memorials, the Flagstaff Tower, and quiet paths shaded by trees.</p><div class="item-card-meta"><span>Colonial Forest Ridge</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="National Rose Garden"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">National Rose Garden</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Satya Marg, Chanakyapuri</div><p class="item-card-desc">Home to hundreds of rare rose species blooming through winter and early spring in quiet, peaceful geometric beds.</p><div class="item-card-meta"><span>Floral Gardens</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?auto=format&fit=crop&w=600&q=80" alt="Japanese Park"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Swarna Jayanti (Japanese) Park</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Rohini Sector 10</div><p class="item-card-desc">Massive 250-acre green recreation area in North Delhi featuring boating lakes, picnic grounds, and jogging loops.</p><div class="item-card-meta"><span>Recreation Grounds</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=600&q=80" alt="Yamuna Biodiversity Park"><span class="item-card-range">Free (Pre-booked Tours)</span></div><div class="item-card-body"><h4 class="item-card-title">Yamuna Biodiversity Park</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Wazirabad</div><p class="item-card-desc">Restored river wetland ecosystem teeming with migratory winter waterfowl, native grass savannas, and walking trails.</p><div class="item-card-meta"><span>Wetland Sanctuary</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Popular Markets (15) -->
+            <div id="panel-markets" class="category-panel">
+                <div class="items-grid">
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=600&q=80" alt="Sarojini Nagar"><span class="item-card-range">Budget: ₹100 – ₹1,500</span></div><div class="item-card-body"><h4 class="item-card-title">Sarojini Nagar Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> South Delhi</div><p class="item-card-desc">India's most famous thrift and export-surplus apparel market. High fashion labels at unbeatable bargain prices.</p><div class="item-card-meta"><span>Thrift & Street Style</span><span class="range-badge">Super Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=600&q=80" alt="Khan Market"><span class="item-card-range">Premium / Luxury</span></div><div class="item-card-body"><h4 class="item-card-title">Khan Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Central Delhi</div><p class="item-card-desc">Delhi's premier upscale retail enclave filled with indie bookshops, designer lifestyle boutiques, and chic bistros.</p><div class="item-card-meta"><span>Designer & Lifestyle</span><span class="range-badge">High End</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=600&q=80" alt="Janpath Market"><span class="item-card-range">Budget: ₹150 – ₹2,500</span></div><div class="item-card-body"><h4 class="item-card-title">Janpath Market & Tibetan Ring</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> CP Border</div><p class="item-card-desc">Best for silver jewelry, bohemian garments, brass artifacts, antique wall hangings, and artisanal shawls.</p><div class="item-card-meta"><span>Boho, Antiques, Crafts</span><span class="range-badge">Bargain Friendly</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=600&q=80" alt="Dilli Haat"><span class="item-card-range">₹30 Entry | Souvenirs: ₹200 – ₹5,000</span></div><div class="item-card-body"><h4 class="item-card-title">Dilli Haat INA</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Sri Aurobindo Marg</div><p class="item-card-desc">Open-air cultural village bringing authentic regional artisans from every Indian state along with traditional food stalls.</p><div class="item-card-meta"><span>Handicrafts & State Cuisines</span><span class="range-badge">Affordable Craft</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="Chandni Chowk"><span class="item-card-range">Wholesale / Budget</span></div><div class="item-card-body"><h4 class="item-card-title">Chandni Chowk</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Old Delhi</div><p class="item-card-desc">Century-old bazaar packed with bridal lehengas, silverware in Dariba Kalan, and traditional embroidery supplies.</p><div class="item-card-meta"><span>Bridal, Jewelry, Textiles</span><span class="range-badge">Wholesale Prices</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=600&q=80" alt="Lajpat Nagar Central Market"><span class="item-card-range">Budget: ₹300 – ₹4,000</span></div><div class="item-card-body"><h4 class="item-card-title">Lajpat Nagar (Central Market)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> South Delhi</div><p class="item-card-desc">A major shopping hub for ethnic Indian wear, wedding fabrics, footwear, mehendi artists, and street chaat.</p><div class="item-card-meta"><span>Ethnic Wear, Fabrics</span><span class="range-badge">Mid-to-Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Khari Baoli"><span class="item-card-range">Wholesale Bulk Rates</span></div><div class="item-card-body"><h4 class="item-card-title">Khari Baoli Spice Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Fatehpuri Masjid</div><p class="item-card-desc">Asia's largest wholesale spice market, where lanes overflow with saffron, dried chilis, exotic teas, and dry fruits.</p><div class="item-card-meta"><span>Spices, Herbs & Dry Fruits</span><span class="range-badge">Wholesale</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1513094735237-8f2714d57c13?auto=format&fit=crop&w=600&q=80" alt="Connaught Place"><span class="item-card-range">Varied (Budget to Premium)</span></div><div class="item-card-body"><h4 class="item-card-title">Connaught Place</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Central Delhi</div><p class="item-card-desc">Georgian colonial colonnades offering flagship global apparel stores, underground Palika Bazaar, and historic bistros.</p><div class="item-card-meta"><span>Commercial Retail Hub</span><span class="range-badge">Varied</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" alt="Banjara Market"><span class="item-card-range">Budget: ₹200 – ₹3,500</span></div><div class="item-card-body"><h4 class="item-card-title">Banjara Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Sector 56 / 62 Border</div><p class="item-card-desc">Famous bohemian open-air market for rustic wooden furniture, ceramic dinnerware, brass planters, and home decor.</p><div class="item-card-meta"><span>Home Decor & Ceramics</span><span class="range-badge">Heavy Bargaining</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="Nai Sarak Book Market"><span class="item-card-range">Discounted: 20% – 50% Off</span></div><div class="item-card-body"><h4 class="item-card-title">Nai Sarak Book Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Old Delhi</div><p class="item-card-desc">The historic avenue for wholesale textbooks, academic papers, rare manuscripts, stationery, and art supplies.</p><div class="item-card-meta"><span>Books, Paper, Stationery</span><span class="range-badge">Deep Discounts</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="GK M-Block"><span class="item-card-range">Mid-to-High End</span></div><div class="item-card-body"><h4 class="item-card-title">GK 1 M-Block Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Greater Kailash Part 1</div><p class="item-card-desc">Upscale neighborhood square with trendy silver jewelry stores, street-side momo corners, and boutique lifestyle outlets.</p><div class="item-card-meta"><span>Fashion & Cafes</span><span class="range-badge">Mid-to-High</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Shahpur Jat"><span class="item-card-range">Designer: ₹3,000 – ₹50,000+</span></div><div class="item-card-body"><h4 class="item-card-title">Shahpur Jat Urban Village</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Asiad Village</div><p class="item-card-desc">Trendy urban village housing indie wedding couturiers, customized footwear designers, and artisanal cafes.</p><div class="item-card-meta"><span>Indie Fashion & Trousseau</span><span class="range-badge">Designer Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Palika Bazaar"><span class="item-card-range">Budget: ₹200 – ₹2,000</span></div><div class="item-card-body"><h4 class="item-card-title">Palika Bazaar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Underground CP</div><p class="item-card-desc">Air-conditioned subterranean market for budget electronics, casual sneakers, denim, leather goods, and gaming gear.</p><div class="item-card-meta"><span>Electronics & Casuals</span><span class="range-badge">Bargain</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Chawri Bazaar"><span class="item-card-range">Wholesale Prices</span></div><div class="item-card-body"><h4 class="item-card-title">Chawri Bazaar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Jama Masjid</div><p class="item-card-desc">Specialized historical market for ornate wedding invitation stationery, brass hardware, and idol sculptures.</p><div class="item-card-meta"><span>Wedding Cards & Brass</span><span class="range-badge">Wholesale</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Kirti Nagar Furniture"><span class="item-card-range">Varied Home Budget</span></div><div class="item-card-body"><h4 class="item-card-title">Kirti Nagar Furniture Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> West Delhi</div><p class="item-card-desc">Asia's largest specialized interior and furniture market, featuring everything from bespoke timber tables to luxury sofa sets.</p><div class="item-card-meta"><span>Interiors & Furniture</span><span class="range-badge">Budget to Luxury</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Panel 4: Top Cafes (15) -->
+            <div id="panel-cafes" class="category-panel">
+                <div class="items-grid">
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Blue Tokai"><span class="item-card-range">₹600 – ₹1,000 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Blue Tokai Coffee Roasters</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Champa Gali, Saidulajab</div><p class="item-card-desc">Pioneers of Indian specialty pour-overs, cold brews, and sourdough bakes tucked in an aesthetic fairy-lit courtyard.</p><div class="item-card-meta"><span>Specialty Coffee</span><span class="range-badge">Casual Dining</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Cafe Lota"><span class="item-card-range">₹1,200 – ₹1,800 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Café Lota</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> National Crafts Museum</div><p class="item-card-desc">Artisanal regional Indian comfort cuisine with modern twists: palak patta chaat, ragi dosas, and filter coffee.</p><div class="item-card-meta"><span>Regional Modern Cafe</span><span class="range-badge">Mid-Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1445116572660-238429888259?auto=format&fit=crop&w=600&q=80" alt="Diggin"><span class="item-card-range">₹1,400 – ₹2,000 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Diggin</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Chanakyapuri & Anand Lok</div><p class="item-card-desc">Fairytale brick-and-ivy Italian cafe with gorgeous outdoor courtyards, comforting pastas, and wood-fired pizzas.</p><div class="item-card-meta"><span>Italian, Aesthetic</span><span class="range-badge">Aesthetic Vibe</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Perch"><span class="item-card-range">₹2,000 – ₹3,000 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Perch Wine & Coffee Bar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Khan Market & Vasant Vihar</div><p class="item-card-desc">Sophisticated minimalist space for espresso lovers and wine enthusiasts, paired with gourmet European small plates.</p><div class="item-card-meta"><span>Coffee & Wine Bar</span><span class="range-badge">Upscale Cafe</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=80" alt="AMA Cafe"><span class="item-card-range">₹600 – ₹900 for two</span></div><div class="item-card-body"><h4 class="item-card-title">AMA Café</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Majnu Ka Tilla (MKT)</div><p class="item-card-desc">The cult-favorite Himalayan bakery and cafe in Delhi's Tibetan colony. Popular for pancakes, apple pie, and iced lattes.</p><div class="item-card-meta"><span>Himalayan Cafe, Bakes</span><span class="range-badge">Student Favorite</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Fabcafe"><span class="item-card-range">₹1,200 – ₹1,800 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Fabcafe by the Lake</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Sunder Nursery</div><p class="item-card-desc">Serene lakeside cafe serving guilt-free, nutritious Indian twists: jackfruit wraps, grain bowls, and organic tea.</p><div class="item-card-meta"><span>Organic, Lake View</span><span class="range-badge">Mid-Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?auto=format&fit=crop&w=600&q=80" alt="Rose Cafe"><span class="item-card-range">₹1,100 – ₹1,600 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Rose Café</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Saidulajab, Saket</div><p class="item-card-desc">Vintage pastel-pink Victorian tea parlor serving homemade cakes, high-tea pots, and creamy savory bites.</p><div class="item-card-meta"><span>Victorian Pastels</span><span class="range-badge">Mid-Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Paul India"><span class="item-card-range">₹1,800 – ₹2,600 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Paul India</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Vasant Kunj & Gurgaon</div><p class="item-card-desc">Authentic French bakery & patisserie serving classic butter croissants, quiches, macarons, and artisanal coffees.</p><div class="item-card-meta"><span>French Patisserie</span><span class="range-badge">Premium Cafe</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=600&q=80" alt="Sly Granny"><span class="item-card-range">₹2,000 – ₹3,000 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Sly Granny</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Khan Market</div><p class="item-card-desc">Quirky clubhouse atmosphere with eccentric art, European small plates, bespoke mixology, and weekend brunch.</p><div class="item-card-meta"><span>European Bistro</span><span class="range-badge">Upscale</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Colocal"><span class="item-card-range">₹1,000 – ₹1,600 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Colocal "The Cacao Post"</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Dhan Mill Compound</div><p class="item-card-desc">Artisanal bean-to-bar craft chocolate roastery and sunny yellow courtyard cafe famous for its decadent hot chocolate.</p><div class="item-card-meta"><span>Chocolate Roastery</span><span class="range-badge">Mid-Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80" alt="Quick Brown Fox"><span class="item-card-range">₹1,200 – ₹1,800 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Quick Brown Fox Coffee</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Dhan Mill, Chhatarpur</div><p class="item-card-desc">Minimalist roastery focusing on single-origin pour-overs, artisanal breakfast plates, and a sleek work environment.</p><div class="item-card-meta"><span>Specialty Coffee</span><span class="range-badge">Mid-Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1517256673644-36ad11246d21?auto=format&fit=crop&w=600&q=80" alt="Coast Cafe"><span class="item-card-range">₹1,500 – ₹2,200 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Coast Café</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Hauz Khas Village</div><p class="item-card-desc">Airy, sunlit coastal cafe set above Ogaan boutique, known for Kerala fish curries, appams, and crisp wine sangrias.</p><div class="item-card-meta"><span>Coastal & Continental</span><span class="range-badge">Mid-to-High</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=600&q=80" alt="Cha Bar"><span class="item-card-range">₹500 – ₹800 for two</span></div><div class="item-card-body"><h4 class="item-card-title">Cha Bar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Oxford Bookstore, CP</div><p class="item-card-desc">A book lover’s paradise serving over 60 varieties of tea, iced blends, muffins, and tea cakes right inside a library bookshop.</p><div class="item-card-meta"><span>Book Cafe & Tea</span><span class="range-badge">Affordable</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1529892485617-25f63cd7b1e9?auto=format&fit=crop&w=600&q=80" alt="The Grammar Room"><span class="item-card-range">₹2,000 – ₹3,000 for two</span></div><div class="item-card-body"><h4 class="item-card-title">The Grammar Room</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> One Style Mile, Mehrauli</div><p class="item-card-desc">Overlooking lush forest ridges in Mehrauli. A serene spot for fluffy pancakes, brioche sandwiches, and boozy coffees.</p><div class="item-card-meta"><span>Brunch & Coffee</span><span class="range-badge">Upscale</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1508766917616-d22f3f1eea14?auto=format&fit=crop&w=600&q=80" alt="DePaul's"><span class="item-card-range">₹150 – ₹350 for two</span></div><div class="item-card-body"><h4 class="item-card-title">DePaul’s Coffee</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Janpath Market</div><p class="item-card-desc">Iconic curbside kiosk serving Delhi's favorite glass-bottled hazelnut cold coffees and hot momos since 1952.</p><div class="item-card-meta"><span>Heritage Cold Coffee</span><span class="range-badge">Super Budget</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Panel 5: Iconic Attractions (15) -->
+            <div id="panel-attractions" class="category-panel">
+                <div class="items-grid">
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80" alt="Humayun's Tomb"><span class="item-card-range">₹40 (Indians) / ₹600 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Humayun’s Tomb</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Nizamuddin East</div><p class="item-card-desc">UNESCO World Heritage site with red sandstone mausoleums set in symmetrical Mughal Charbagh garden layouts.</p><div class="item-card-meta"><span>Mughal Architecture</span><span class="range-badge">Heritage Site</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1597042784586-1df8b056157f?auto=format&fit=crop&w=600&q=80" alt="India Gate"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">India Gate & Kartavya Path</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Rajpath, Central Delhi</div><p class="item-card-desc">42-metre sandstone war memorial honoring soldiers, illuminated nightly with boating canals and ice cream stalls.</p><div class="item-card-meta"><span>National Monument</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-16678495212212-e9843b89f322?auto=format&fit=crop&w=600&q=80" alt="Qutub Minar"><span class="item-card-range">₹40 (Indians) / ₹600 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Qutub Minar Complex</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Mehrauli</div><p class="item-card-desc">The world’s tallest brick minaret (73m), housing the ancient 1,600-year-old rust-resistant iron pillar of Chandragupta II.</p><div class="item-card-meta"><span>UNESCO Monument</span><span class="range-badge">Heritage Site</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1697730373510-51b7fcf2ff52?auto=format&fit=crop&w=600&q=80" alt="Red Fort"><span class="item-card-range">₹50 (Indians) / ₹600 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Red Fort (Lal Qila)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Chandni Chowk</div><p class="item-card-desc">Shah Jahan’s monumental seat of Mughal imperial power dating to 1648, featuring the Lahori Gate and Diwan-i-Khas.</p><div class="item-card-meta"><span>Imperial Fort</span><span class="range-badge">UNESCO Site</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1697730332011-11f027c6aa60?auto=format&fit=crop&w=600&q=80" alt="Jama Masjid"><span class="item-card-range">Free Entry (Minaret: ₹100)</span></div><div class="item-card-body"><h4 class="item-card-title">Jama Masjid</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Old Delhi</div><p class="item-card-desc">One of India's largest mosques. Climb its southern minaret for a 360-degree vista over the historic alleys of Purani Dilli.</p><div class="item-card-meta"><span>Historic Mosque</span><span class="range-badge">Free / Modest Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1606298246186-08868ab77562?auto=format&fit=crop&w=600&q=80" alt="Lotus Temple"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Lotus Temple</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Kalkaji</div><p class="item-card-desc">Striking petal-shaped white marble architectural masterpiece welcoming people of all faiths for silent meditation.</p><div class="item-card-meta"><span>Modern Architectural Marvel</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=600&q=80" alt="Akshardham Temple"><span class="item-card-range">Free (Exhibitions: ₹250)</span></div><div class="item-card-body"><h4 class="item-card-title">Akshardham Temple</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> NH 24, Noida Mor</div><p class="item-card-desc">Colossal Hindu temple complex crafted from Rajasthani pink sandstone, celebrated for night musical water shows.</p><div class="item-card-meta"><span>Spiritual Landmark</span><span class="range-badge">Free Entry</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Agrasen ki Baoli"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Agrasen ki Baoli</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Hailey Road, Near CP</div><p class="item-card-desc">A 14th-century stepped water reservoir tucked between modern high-rises. 108 stone steps steeped in urban legends.</p><div class="item-card-meta"><span>Ancient Stepwell</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1672399241222-fbc7388c3d0b?auto=format&fit=crop&w=600&q=80" alt="Safdarjung Tomb"><span class="item-card-range">₹25 (Indians) / ₹300 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Safdarjung’s Tomb</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Lodhi Rd & Aurobindo Marg</div><p class="item-card-desc">The final monumental garden tomb of the Mughal empire built in 1754, framed by palm trees and tranquil water ponds.</p><div class="item-card-meta"><span>Garden Mausoleum</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1697730392744-f02b027471b6?auto=format&fit=crop&w=600&q=80" alt="Purana Qila"><span class="item-card-range">₹25 (Indians) / ₹300 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Purana Qila (Old Fort)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Mathura Road</div><p class="item-card-desc">Standing on the legendary site of Indraprastha, showcasing 16th-century ramparts of Sher Shah Suri and pedal boating.</p><div class="item-card-meta"><span>Ancient Fortification</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=600&q=80" alt="National Rail Museum"><span class="item-card-range">₹50 – ₹100 Entry</span></div><div class="item-card-body"><h4 class="item-card-title">National Rail Museum</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Chanakyapuri</div><p class="item-card-desc">Fascinating open-air collection of vintage royal steam locomotives, maharaja saloons, and a working toy train ride.</p><div class="item-card-meta"><span>Heritage Museum</span><span class="range-badge">Affordable</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Hauz Khas Complex"><span class="item-card-range">₹25 (Fort Ruins)</span></div><div class="item-card-body"><h4 class="item-card-title">Hauz Khas Fort & Reservoir</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Hauz Khas Village</div><p class="item-card-desc">13th-century medieval college (madrasa), mosque, and water tank ruins set right alongside trendy bars and designer studios.</p><div class="item-card-meta"><span>Medieval Ruins</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1588714477688-cf28a50e94f7?auto=format&fit=crop&w=600&q=80" alt="NGMA"><span class="item-card-range">₹20 (Indians) / ₹500 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">NGMA (Modern Art Gallery)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> India Gate Circle</div><p class="item-card-desc">Former royal residence of the Maharaja of Jaipur displaying masterpieces by Amrita Sher-Gil, MF Husain, and Tagore.</p><div class="item-card-meta"><span>Fine Art Museum</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Bangla Sahib"><span class="item-card-range">Free Entry</span></div><div class="item-card-body"><h4 class="item-card-title">Gurudwara Bangla Sahib</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Ashoka Road, CP</div><p class="item-card-desc">Sikh shrine known for its golden dome, holy Sarovar water pond, and community kitchen (langar) feeding thousands daily.</p><div class="item-card-meta"><span>Sacred Shrine</span><span class="range-badge">Budget: ₹0</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=600&q=80" alt="Jantar Mantar"><span class="item-card-range">₹25 (Indians) / ₹300 (Foreigners)</span></div><div class="item-card-body"><h4 class="item-card-title">Jantar Mantar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Sansad Marg, CP</div><p class="item-card-desc">18th-century stone architectural astronomical observatory built by Maharaja Jai Singh II of Jaipur to measure time.</p><div class="item-card-meta"><span>Astronomical Heritage</span><span class="range-badge">Nominal Fee</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Panel 6: Legendary Food Streets (15) -->
+            <div id="panel-streetfood" class="category-panel">
+                <div class="items-grid">
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Paranthe Wali Gali"><span class="item-card-range">₹150 – ₹300 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Paranthe Wali Gali</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Chandni Chowk</div><p class="item-card-desc">Century-old narrow lane deep-frying stuffed paranthas filled with aloo, rabri, khoya, papad, and seasonal greens.</p><div class="item-card-meta"><span>Heritage Paranthas</span><span class="range-badge">Budget Friendly</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Matia Mahal"><span class="item-card-range">₹300 – ₹700 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Matia Mahal (Jama Masjid Lane)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Gate 1, Jama Masjid</div><p class="item-card-desc">Epicenter of Old Delhi non-veg fare: Aslam Butter Chicken, Lalu Kababee, buttery nihari, and hot shahi tukda.</p><div class="item-card-meta"><span>Mughlai Street Meat</span><span class="range-badge">Budget Feast</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Pandara Road"><span class="item-card-range">₹800 – ₹1,500 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Pandara Road Food Enclave</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> India Gate Circle</div><p class="item-card-desc">Delhi’s late-night food street destination for creamy butter chickens, mutton platters, and kulfi faloodas.</p><div class="item-card-meta"><span>Late Night North Indian</span><span class="range-badge">Mid-Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Majnu Ka Tilla"><span class="item-card-range">₹250 – ₹600 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Majnu Ka Tilla (MKT Tibetan)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> North Delhi</div><p class="item-card-desc">Alleys packed with steamed tingmo, fiery spicy laphing, piping hot momo baskets, and Korean street corn dogs.</p><div class="item-card-meta"><span>Tibetan & Himalayan</span><span class="range-badge">Pocket-Friendly</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80" alt="Chawri Bazaar"><span class="item-card-range">₹80 – ₹200 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Chawri Bazaar Street Chaat</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Old Delhi Metro Line</div><p class="item-card-desc">Famous for crispy kachori aloo at Jung Bahadur, Kuremal Mohan Lal stuffed fruit kulfis, and cooling fruit chaats.</p><div class="item-card-meta"><span>Street Chaat & Sweets</span><span class="range-badge">Super Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" alt="Dilli Haat Food"><span class="item-card-range">₹200 – ₹500 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Dilli Haat Regional Stalls</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> INA Market</div><p class="item-card-desc">All of India under one roof: authentic Naga pork ribs, Momos from Sikkim, Rajasthani pyaaz kachori, and Litti Chokha.</p><div class="item-card-meta"><span>Pan-India Regional</span><span class="range-badge">Affordable</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Nizamuddin Basti"><span class="item-card-range">₹150 – ₹450 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Nizamuddin Basti Street</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Dargah Hazrat Nizamuddin</div><p class="item-card-desc">Atmospheric Sufi lanes lined with Ghalib Kabab Corner seekhs, slow-simmered beef & mutton nihari, and sweet halwa paratha.</p><div class="item-card-meta"><span>Sufi Street Flavors</span><span class="range-badge">Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="CR Park"><span class="item-card-range">₹150 – ₹400 per person</span></div><div class="item-card-body"><h4 class="item-card-title">CR Park Market 1 & 2</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Chittaranjan Park</div><p class="item-card-desc">Delhi's mini-Kolkata. Famous for spicy street puchkas (pani puri), Kolkata egg-chicken rolls, chops, and mishti doi.</p><div class="item-card-meta"><span>Bengali Street Bites</span><span class="range-badge">Affordable</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Lajpat Nagar"><span class="item-card-range">₹100 – ₹300 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Lajpat Nagar Central Stalls</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Central Market</div><p class="item-card-desc">Home to iconic Ram Laddu (crispy moong dal fritters with radish & spicy green chutney) and Afghan flatbread kebabs.</p><div class="item-card-meta"><span>Ram Laddu, Afghan Treats</span><span class="range-badge">Street Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Zakir Nagar"><span class="item-card-range">₹200 – ₹500 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Zakir Nagar Food Lane</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Jamia Nagar, Okhla</div><p class="item-card-desc">South Delhi’s vibrant cousin to Jama Masjid, bursting with Talba seekh kebabs, purani dilli nihari, and hot shahi tukda.</p><div class="item-card-meta"><span>Awadhi & Mughlai</span><span class="range-badge">Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Kamla Nagar"><span class="item-card-range">₹80 – ₹250 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Kamla Nagar (North Campus)</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Vishwavidyalaya</div><p class="item-card-desc">Student haven filled with Vaishno chaat bhandar, stuffed bread pakoras, cheese momos, chole bhature, and thick shakes.</p><div class="item-card-meta"><span>Campus Street Food</span><span class="range-badge">Super Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=600&q=80" alt="Amar Colony"><span class="item-card-range">₹120 – ₹350 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Amar Colony Food Lane</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Lajpat Nagar 4</div><p class="item-card-desc">Famous for Baba Nagpal chole bhature, tandoori momos, rolls, and shawarmas packed into a bustling colony lane.</p><div class="item-card-meta"><span>Chole Bhature & Momos</span><span class="range-badge">Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Jail Road"><span class="item-card-range">₹150 – ₹400 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Jail Road Street Corner</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Tilak Nagar</div><p class="item-card-desc">West Delhi’s legendary foodie stretch for tandoori momos, malai soya chaap, kathi rolls, and layered faloodas.</p><div class="item-card-meta"><span>Punjabi Street Treats</span><span class="range-badge">Pocket-Friendly</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Babu Market"><span class="item-card-range">₹80 – ₹250 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Babu Market Food Stalls</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Sarojini Nagar Corner</div><p class="item-card-desc">Tucked inside the fashion market: famous spicy sweet corn cobs, steaming momo stalls, kachoris, and freshly squeezed fruit juices.</p><div class="item-card-meta"><span>Shopping Street Bites</span><span class="range-badge">Super Budget</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Bengali Market"><span class="item-card-range">₹150 – ₹400 per person</span></div><div class="item-card-body"><h4 class="item-card-title">Bengali Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Mandi House</div><p class="item-card-desc">Historic roundabout market known for Nathu’s Sweets and Bengali Sweet House: legendary golgappe, rasgullas, and pav bhaji.</p><div class="item-card-meta"><span>Traditional Chaat & Mithai</span><span class="range-badge">Budget</span></div></div></div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
+    <!-- MODAL 2: NEARBY 15 PLACES -->
+    <div id="modal-nearby" class="page-modal">
+        <div class="modal-container">
+            <button class="close-modal-btn" onclick="closeSectionModal('modal-nearby')">&times;</button>
+            
+            <div class="section-header">
+                <span class="section-tag">Day Trips & Escapes</span>
+                <h2 class="section-title">15 Best Places Nearby Delhi</h2>
+            </div>
+
+            <div class="items-grid">
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80" alt="Neemrana"><span class="distance-tag"><i class="fas fa-car"></i> 125 km (2.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Neemrana Fort Palace</h4><span class="nearby-state">Rajasthan</span><p class="nearby-desc">15th-century heritage hill fort featuring tiered hanging gardens, royal stepwells, and aerial zip-lining.</p><div class="nearby-footer"><span>Heritage Resort</span><span class="budget-badge">₹4,000 – ₹10,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Murthal"><span class="distance-tag"><i class="fas fa-car"></i> 55 km (1 hr)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Murthal Highway Dhabas</h4><span class="nearby-state">Haryana</span><p class="nearby-desc">Midnight highway drive from Delhi for piping hot tandoori paranthas melting in homemade butter at Amrik Sukhdev.</p><div class="nearby-footer"><span>Highway Food Run</span><span class="budget-badge">₹300 – ₹600</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=600&q=80" alt="Sultanpur Bird Sanctuary"><span class="distance-tag"><i class="fas fa-car"></i> 45 km (1.2 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Sultanpur National Park</h4><span class="nearby-state">Gurugram, Haryana</span><p class="nearby-desc">Serene winter wetland hosting thousands of migratory birds, Siberian cranes, flamingos, and observation towers.</p><div class="nearby-footer"><span>Eco Wildlife</span><span class="budget-badge">₹50 – ₹100 entry</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Damdama Lake"><span class="distance-tag"><i class="fas fa-car"></i> 60 km (1.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Damdama Lake & Adventure Camps</h4><span class="nearby-state">Sohna, Haryana</span><p class="nearby-desc">Natural lake nestled against the Aravalli hills popular for boating, obstacle courses, and lakeside day picnics.</p><div class="nearby-footer"><span>Lake Adventure</span><span class="budget-badge">₹800 – ₹2,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Vrindavan"><span class="distance-tag"><i class="fas fa-car"></i> 160 km (2.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Vrindavan & Mathura</h4><span class="nearby-state">Uttar Pradesh</span><p class="nearby-desc">Sacred temples including Prem Mandir and Banke Bihari along the Yamuna, famous for rich pedas and evening aarti.</p><div class="nearby-footer"><span>Spiritual Escapes</span><span class="budget-badge">₹1,500 – ₹3,500</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Taj Mahal"><span class="distance-tag"><i class="fas fa-car"></i> 210 km (3 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Taj Mahal & Agra Fort</h4><span class="nearby-state">Uttar Pradesh</span><p class="nearby-desc">An effortless day trip via the expressway to witness the UNESCO ivory-white marble wonder at sunrise.</p><div class="nearby-footer"><span>Wonder of the World</span><span class="budget-badge">₹2,000 – ₹6,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80" alt="Bharatpur"><span class="distance-tag"><i class="fas fa-car"></i> 220 km (3.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Keoladeo National Park (Bharatpur)</h4><span class="nearby-state">Rajasthan</span><p class="nearby-desc">UNESCO World Heritage avian reserve explored by bicycle rickshaws guided by naturalists through scenic marshes.</p><div class="nearby-footer"><span>UNESCO Wildlife</span><span class="budget-badge">₹1,200 – ₹2,500</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=600&q=80" alt="Alwar"><span class="distance-tag"><i class="fas fa-car"></i> 160 km (3 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Alwar City & Bala Quila</h4><span class="nearby-state">Rajasthan</span><p class="nearby-desc">Historic city home to Siliserh Lake Palace, Bala Quila hilltop fortress, and milk cake confectioneries.</p><div class="nearby-footer"><span>Lakes & Fortresses</span><span class="budget-badge">₹1,800 – ₹4,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Rishikesh"><span class="distance-tag"><i class="fas fa-car"></i> 240 km (4 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Rishikesh: Yoga & Rafting</h4><span class="nearby-state">Uttarakhand</span><p class="nearby-desc">Yoga capital on the banks of emerald green Ganga. Renowned for white-water rafting, cliff jumping, and cafes.</p><div class="nearby-footer"><span>Adventure & Yoga</span><span class="budget-badge">₹2,500 – ₹6,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80" alt="Sariska"><span class="distance-tag"><i class="fas fa-car"></i> 200 km (3.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Sariska National Park</h4><span class="nearby-state">Alwar, Rajasthan</span><p class="nearby-desc">Open jeep safaris through dry deciduous forests searching for Royal Bengal tigers, leopards, and ruins.</p><div class="nearby-footer"><span>Tiger Safari</span><span class="budget-badge">₹3,000 – ₹7,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Kuchesar"><span class="distance-tag"><i class="fas fa-car"></i> 85 km (2 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Mud Fort Kuchesar</h4><span class="nearby-state">Uttar Pradesh</span><p class="nearby-desc">18th-century mud fortress built by Jat rulers surrounded by sugarcane plantations and rural tranquility.</p><div class="nearby-footer"><span>Rural Heritage</span><span class="budget-badge">₹2,500 – ₹5,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Lansdowne"><span class="distance-tag"><i class="fas fa-car"></i> 250 km (5.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Lansdowne Pine Retreat</h4><span class="nearby-state">Uttarakhand</span><p class="nearby-desc">Closest peaceful pine-forest hill station to Delhi. Uncrowded cantonment roads, oak woods, and cool Himalayan air.</p><div class="nearby-footer"><span>Hill Station</span><span class="budget-badge">₹3,000 – ₹7,000</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Pratapgarh Farms"><span class="distance-tag"><i class="fas fa-car"></i> 55 km (1.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Pratapgarh Farms</h4><span class="nearby-state">Jhajjar, Haryana</span><p class="nearby-desc">Ethnic village tourism resort: tractor rides, camel safaris, mud baths, and traditional village thali meals.</p><div class="nearby-footer"><span>Day Farm Outing</span><span class="budget-badge">₹1,200 – ₹1,500</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=600&q=80" alt="Surajkund"><span class="distance-tag"><i class="fas fa-car"></i> 22 km (45 mins)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Surajkund Ancient Sun Pool</h4><span class="nearby-state">Faridabad, Haryana</span><p class="nearby-desc">10th-century amphitheater stone reservoir built by King Suraj Pal, host to the famous Crafts Mela in February.</p><div class="nearby-footer"><span>Short Drive</span><span class="budget-badge">₹30 – ₹150</span></div></div>
+                </article>
+                <article class="nearby-card">
+                    <div class="nearby-img-wrap"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Kasauli"><span class="distance-tag"><i class="fas fa-car"></i> 290 km (5.5 hrs)</span></div>
+                    <div class="nearby-body"><h4 class="nearby-title">Kasauli Cantonment</h4><span class="nearby-state">Himachal Pradesh</span><p class="nearby-desc">Colonial era Himalayan hamlet shaded by pine groves, famous for Gilbert Trail walks and mist-covered viewpoints.</p><div class="nearby-footer"><span>Mountain Getaway</span><span class="budget-badge">₹3,500 – ₹8,000</span></div></div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: GALLERY -->
+    <div id="modal-gallery" class="page-modal">
+        <div class="modal-container">
+            <button class="close-modal-btn" onclick="closeSectionModal('modal-gallery')">&times;</button>
+            
+            <div class="section-header">
+                <span class="section-tag">Visual Chronicles</span>
+                <h2 class="section-title">Delhi in Real Life Gallery</h2>
+            </div>
+
+            <div class="gallery-masonry">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80" alt="Humayun Tomb"><div class="gallery-caption"><h5>Humayun's Tomb</h5><span>Golden hour over sandstone domes</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1597042784586-1df8b056157f?auto=format&fit=crop&w=600&q=80" alt="India Gate"><div class="gallery-caption"><h5>Kartavya Path at Night</h5><span>The illuminated war memorial arch</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Food Craft"><div class="gallery-caption"><h5>Culinary Craft</h5><span>Modern plating with ancestral spices</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1667849521212-e9843b89f322?auto=format&fit=crop&w=600&q=80" alt="Qutub Minar"><div class="gallery-caption"><h5>Qutub Minar</h5><span>12th century brick geometry</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1571843378422-dad0004ad0f5?auto=format&fit=crop&w=600&q=80" alt="Lodhi Gardens"><div class="gallery-caption"><h5>Lodhi Gardens</h5><span>Morning fog around 15th-century domes</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1697730332011-11f027c6aa60?auto=format&fit=crop&w=600&q=80" alt="Jama Masjid"><div class="gallery-caption"><h5>Jama Masjid</h5><span>Rooftop views over Purani Dilli</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Street Food"><div class="gallery-caption"><h5>Old Delhi Kadhais</h5><span>Pure desi ghee frying traditions</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=600&q=80" alt="Crafts"><div class="gallery-caption"><h5>Dilli Haat Crafts</h5><span>Handmade pottery and Indian weaves</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Agrasen ki Baoli"><div class="gallery-caption"><h5>Agrasen ki Baoli</h5><span>108 step subterranean stone well</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1672399241222-fbc7388c3d0b?auto=format&fit=crop&w=600&q=80" alt="Safdarjung Tomb"><div class="gallery-caption"><h5>Safdarjung Tomb</h5><span>Peaceful palm avenues and gardens</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Khari Baoli"><div class="gallery-caption"><h5>Khari Baoli Spices</h5><span>Saffron, dried chilis, and cardamoms</span></div></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=600&q=80" alt="Akshardham"><div class="gallery-caption"><h5>Akshardham After Dark</h5><span>Pink sandstone illuminated by lights</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4: BLOGS (Exact Substack Posts Linked Directly with Divyansh Tiwari as Author) -->
+    <div id="modal-blogs" class="page-modal">
+        <div class="modal-container">
+            <button class="close-modal-btn" onclick="closeSectionModal('modal-blogs')">&times;</button>
+            
+            <div class="section-header">
+                <span class="section-tag">Read Our Substack</span>
+                <h2 class="section-title">Local Stories & City Essays</h2>
+            </div>
+
+            <div class="substack-grid">
+                <!-- Post 1: Majnu Ka Tilla -->
+                <a href="https://substack.com/home/post/p-210331024" target="_blank" rel="noopener noreferrer" class="substack-card">
+                    <div class="substack-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Majnu Ka Tilla">
+                        <span class="substack-tag">EXPLORE DELHI</span>
+                    </div>
+                    <div class="substack-body">
+                        <h4 class="substack-title">Majnu Ka Tilla</h4>
+                        <p class="substack-desc">A deep-dive visual exploration of Delhi's little Tibet—winding prayer-flag alleys, authentic Himalayan cafes, and street food culture.</p>
+                        <div class="substack-author-row">
+                            <div class="author-info">
+                                <div class="author-avatar">D</div>
+                                <div class="author-details">
+                                    <strong>Divyansh Tiwari</strong>
+                                    <span>8 Aug 2026</span>
+                                </div>
+                            </div>
+                            <span class="read-time">Read on Substack ↗</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Post 2: Dil Walon Ki Dilli -->
+                <a href="https://substack.com/home/post/p-209771810" target="_blank" rel="noopener noreferrer" class="substack-card">
+                    <div class="substack-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Dil Walon Ki Dilli">
+                        <span class="substack-tag">CITY ESSAY</span>
+                    </div>
+                    <div class="substack-body">
+                        <h4 class="substack-title">Dil Walon Ki Dilli</h4>
+                        <p class="substack-desc">Capturing the raw early mornings along the Yamuna Ghats: calm river mist, wooden boats, and the timeless warmth that defines the capital.</p>
+                        <div class="substack-author-row">
+                            <div class="author-info">
+                                <div class="author-avatar">D</div>
+                                <div class="author-details">
+                                    <strong>Divyansh Tiwari</strong>
+                                    <span>4 Aug 2026</span>
+                                </div>
+                            </div>
+                            <span class="read-time">Read on Substack ↗</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Complete Social Media Handles -->
     <footer>
         <div class="footer-logo">DELHI <span>IRL</span></div>
+
+        <!-- Social Channels & Direct Gmail Compose Link -->
+        <div class="footer-social-cluster">
+            <a href="https://www.instagram.com/delhii.irl/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://in.pinterest.com/delhiirl/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fab fa-pinterest-p"></i> Pinterest
+            </a>
+            <a href="https://substack.com/@delhiirl" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fas fa-newspaper"></i> Substack
+            </a>
+            <!-- Dual-action email opener: Opens Gmail web compose directly or native email app -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=delhiirl@gmail.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fas fa-envelope"></i> delhiirl@gmail.com
+            </a>
+        </div>
+
         <ul class="footer-links">
-            <li><a href="index.html">About Delhi IRL</a></li>
-            <li><a href="#blogs">Guides & Stories</a></li>
-            <li><a href="#social">Social Connect</a></li>
-            <li><a href="#collab">Creator Collaborations</a></li>
+            <li><a href="#" onclick="scrollToTop(event)">Home</a></li>
+            <li><a href="#about" onclick="closeAllModals()">About Delhi IRL</a></li>
+            <li><button onclick="openSectionModal('modal-explore')">Explore Categories</button></li>
+            <li><button onclick="openSectionModal('modal-nearby')">Nearby Escapes</button></li>
+            <li><button onclick="openSectionModal('modal-gallery')">Photo Gallery</button></li>
+            <li><button onclick="openSectionModal('modal-blogs')">Substack Blogs</button></li>
+            <li><a href="#brand-partnership-form" onclick="closeAllModals()">Brand Partnerships</a></li>
         </ul>
         <p class="copyright">&copy; 2026 Delhi IRL. All rights reserved. Crafting authentic Delhi experiences for the world.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script>
+        function scrollToTop(e) {
+            if (e) e.preventDefault();
+            closeAllModals();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeAllModals() {
+            document.querySelectorAll('.page-modal').forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto';
+        }
+
+        function openSectionModal(modalId, categoryName = null) {
+            closeAllModals();
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            if (categoryName) {
+                switchCategory(categoryName);
+            }
+        }
+
+        function closeSectionModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('page-modal')) {
+                closeAllModals();
+            }
+        });
+
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+
+        function switchCategory(categoryName) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            const targetBtn = Array.from(buttons).find(btn => 
+                btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(categoryName)
+            );
+            if (targetBtn) targetBtn.classList.add('active');
+
+            const panels = document.querySelectorAll('.category-panel');
+            panels.forEach(panel => panel.classList.remove('active'));
+
+            const targetPanel = document.getElementById('panel-' + categoryName);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const company = document.getElementById('companyName').value;
+            alert('Thank you, ' + company + '! Your brand partnership proposal has been submitted to the Delhi IRL team.');
+            e.target.reset();
+        }
+    </script>
 </body>
 </html>
