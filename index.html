@@ -149,7 +149,8 @@
             letter-spacing: 1px;
         }
 
-        .nav-item:hover > a {
+        .nav-item:hover > a,
+        .nav-item:focus-within > a {
             color: var(--gold-accent);
         }
 
@@ -181,7 +182,8 @@
             color: var(--gold-accent);
         }
 
-        .nav-item:hover .dropdown-menu {
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
             display: block;
         }
 
@@ -592,11 +594,37 @@
 
         /* Responsive Breakpoints */
         @media (max-width: 768px) {
+            header {
+                padding: 0.8rem 1rem;
+            }
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             .nav-links {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                width: 100%;
+                gap: 1.2rem;
+                padding-bottom: 6px;
+            }
+            .nav-item > a {
+                font-size: 0.82rem;
+                white-space: nowrap;
+            }
+            .social-header-icons {
                 display: none;
+            }
+            .dropdown-menu {
+                position: fixed;
+                top: 60px;
+                left: 5%;
+                width: 90%;
             }
             .section-title {
                 font-size: 1.8rem;
@@ -610,13 +638,13 @@
     <header>
         <div class="nav-container">
             <div class="logo-group">
-                <a href="#" class="logo-text">DELHI <span>IRL</span></a>
+                <a href="index.html" class="logo-text">DELHI <span>IRL</span></a>
             </div>
             <nav>
                 <ul class="nav-links">
                     <!-- About Dropdown -->
                     <li class="nav-item">
-                        <a href="#about">About <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                        <a href="#blogs">About <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="https://delhiirl.com/" target="_blank">Our Story</a></li>
                             <li><a href="https://delhiirl.com/" target="_blank">The Team</a></li>
@@ -801,7 +829,7 @@
     <footer>
         <div class="footer-logo">DELHI <span>IRL</span></div>
         <ul class="footer-links">
-            <li><a href="#about">About Delhi IRL</a></li>
+            <li><a href="index.html">About Delhi IRL</a></li>
             <li><a href="#blogs">Guides & Stories</a></li>
             <li><a href="#social">Social Connect</a></li>
             <li><a href="#collab">Creator Collaborations</a></li>
