@@ -580,36 +580,6 @@
             transform: scale(1.1);
         }
 
-        /* --- Legal Policy Text View --- */
-        .policy-content {
-            margin-top: 1.5rem;
-            color: var(--text-dark);
-            line-height: 1.8;
-            font-size: 0.95rem;
-        }
-
-        .policy-content h3 {
-            font-family: var(--font-heading);
-            font-size: 1.25rem;
-            color: var(--primary-terracotta);
-            margin: 1.6rem 0 0.6rem;
-        }
-
-        .policy-content p {
-            margin-bottom: 1rem;
-            color: #55504C;
-        }
-
-        .policy-content ul {
-            margin-left: 1.4rem;
-            margin-bottom: 1.2rem;
-            color: #55504C;
-        }
-
-        .policy-content li {
-            margin-bottom: 0.4rem;
-        }
-
         /* --- Plan Visit Styles --- */
         .plan-visit-grid {
             display: grid;
@@ -1397,7 +1367,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- Modern Multi-Column Light Footer --- */
+        /* --- Modern Multi-Column Light Footer (Adjusted to 3 columns) --- */
         footer {
             background-color: #FAF8F5;
             color: #55504C;
@@ -1410,7 +1380,7 @@
             max-width: 1240px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+            grid-template-columns: 1.6fr 1fr 1.2fr;
             gap: 3rem;
             text-align: left;
         }
@@ -2086,7 +2056,7 @@
         </div>
     </div>
 
-    <!-- MODAL 1: EXPLORE DIRECTORY (15 Items/Category) -->
+    <!-- MODAL 1: EXPLORE DIRECTORY -->
     <div id="modal-explore" class="page-modal">
         <div class="modal-container dark-theme">
             <button class="close-modal-btn" onclick="closeSectionModal('modal-explore')">&times;</button>
@@ -2330,9 +2300,9 @@
                     <div class="nearby-body"><h4 class="nearby-title">Sariska National Park</h4><span class="nearby-state">Alwar, Rajasthan</span><p class="nearby-desc">Open jeep safaris through dry deciduous forests searching for Royal Bengal tigers, leopards, and ruins.</p><div class="nearby-footer"><span>Tiger Safari</span><span class="budget-badge">₹3,000 – ₹7,000</span></div></div>
                 </article>
                 <article class="nearby-card">
-                   <div class="card">
-                   <div class="card-badge">🚗 530 km (10-12 hrs)</div><img src="https://i.pinimg.com/1200x/d1/12/de/d112defb86a57dae787bfddd6223b424.jpg" alt="Kullu Manali Valley" /><h2>Kullu & Manali Valley</h2><span class="location">HIMACHAL PRADESH</span><p>High-altitude Himalayan haven famous for Solang Valley adventure sports, Rohtang Pass snow points, old wooden temples, and pine-forested riverside cafes.</p>
-                   <div class="card-footer"><span class="tag">Mountain Getaway</span><span class="price">₹5,000 – ₹12,000</span></div></div>
+                    <div class="card">
+                    <div class="card-badge">🚗 530 km (10-12 hrs)</div><img src="https://i.pinimg.com/1200x/d1/12/de/d112defb86a57dae787bfddd6223b424.jpg" alt="Kullu Manali Valley" /><h2>Kullu & Manali Valley</h2><span class="location">HIMACHAL PRADESH</span><p>High-altitude Himalayan haven famous for Solang Valley adventure sports, Rohtang Pass snow points, old wooden temples, and pine-forested riverside cafes.</p>
+                    <div class="card-footer"><span class="tag">Mountain Getaway</span><span class="price">₹5,000 – ₹12,000</span></div></div>
                 </article>
                 <article class="nearby-card">
                     <div class="nearby-img-wrap"><img src="https://i.pinimg.com/736x/97/4d/90/974d90d59c65badc219054e3687f7ac1.jpg" alt="Lansdowne"><span class="distance-tag"><i class="fas fa-car"></i> 250 km (5.5 hrs)</span></div>
@@ -2354,7 +2324,7 @@
         </div>
     </div>
 
-    <!-- MODAL 3: GALLERY (UPDATED: 4 BROKEN/MISMATCHED IMAGES REMOVED, 7 NEW PINTEREST IMAGES ADDED) -->
+    <!-- MODAL 3: GALLERY (UPDATED) -->
     <div id="modal-gallery" class="page-modal">
         <div class="modal-container">
             <button class="close-modal-btn" onclick="closeSectionModal('modal-gallery')">&times;</button>
@@ -2365,11 +2335,7 @@
             </div>
 
             <div class="gallery-masonry">
-                <!-- Keep existing clean curated monuments -->
-                <a href="https://images.unsplash.com/photo-1597042784586-1df8b056157f?auto=format&fit=crop&w=1200&q=85" target="_blank" class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1597042784586-1df8b056157f?auto=format&fit=crop&w=600&q=80" alt="India Gate">
-                    <div class="gallery-caption"><h5>India Gate & Kartavya Path</h5><span>Illuminated war memorial arch</span></div>
-                </a>
+                <!-- 1st broken India Gate removed -->
                 <a href="https://images.unsplash.com/photo-1667849521212-e9843b89f322?auto=format&fit=crop&w=1200&q=85" target="_blank" class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1667849521212-e9843b89f322?auto=format&fit=crop&w=600&q=80" alt="Qutub Minar">
                     <div class="gallery-caption"><h5>Qutub Minar</h5><span>12th century brick geometry</span></div>
@@ -2386,16 +2352,20 @@
                     <img src="https://images.unsplash.com/photo-1571843378422-dad0004ad0f5?auto=format&fit=crop&w=600&q=80" alt="Lodhi Gardens">
                     <div class="gallery-caption"><h5>Lodhi Gardens</h5><span>Morning serenity around 15th-century domes</span></div>
                 </a>
-                <a href="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85" target="_blank" class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Agrasen ki Baoli">
-                    <div class="gallery-caption"><h5>Agrasen ki Baoli</h5><span>108-step subterranean stone well</span></div>
+
+                <!-- 4th pic Taj Mahal updated -->
+                <a href="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=85" target="_blank" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Taj Mahal">
+                    <div class="gallery-caption"><h5>Taj Mahal</h5><span>Ivory-white marble mausoleum</span></div>
                 </a>
-                <a href="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=85" target="_blank" class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=600&q=80" alt="Akshardham">
+
+                <!-- 2nd incorrect pic replaced with pinterest link -->
+                <a href="https://i.pinimg.com/1200x/6e/57/21/6e5721247dc7501d6cc4e12371da0f72.jpg" target="_blank" class="gallery-item">
+                    <img src="https://i.pinimg.com/1200x/6e/57/21/6e5721247dc7501d6cc4e12371da0f72.jpg" alt="Akshardham After Dark">
                     <div class="gallery-caption"><h5>Akshardham After Dark</h5><span>Pink sandstone illuminated by lights</span></div>
                 </a>
 
-                <!-- 7 NEW PINTEREST GALLERY PHOTOS -->
+                <!-- Additional Curated Items -->
                 <a href="https://i.pinimg.com/736x/30/f7/48/30f7480ad5d514969b53075fb1889ff9.jpg" target="_blank" class="gallery-item">
                     <img src="https://i.pinimg.com/736x/30/f7/48/30f7480ad5d514969b53075fb1889ff9.jpg" alt="Delhi Heritage Soul">
                     <div class="gallery-caption"><h5>Purani Dilli Aesthetics</h5><span>Capturing the soul of Old Delhi</span></div>
@@ -2406,9 +2376,10 @@
                     <div class="gallery-caption"><h5>Monuments of Capital</h5><span>Ancient archways and carved stone</span></div>
                 </a>
 
+                <!-- 3rd pic updated to Wall of Fame -->
                 <a href="https://i.pinimg.com/736x/c5/b1/0f/c5b10fb0a31bf4c6fe583695df2126d0.jpg" target="_blank" class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/c5/b1/0f/c5b10fb0a31bf4c6fe583695df2126d0.jpg" alt="Delhi Cultural Essence">
-                    <div class="gallery-caption"><h5>Delhi Living Culture</h5><span>Unfiltered moments and city textures</span></div>
+                    <img src="https://i.pinimg.com/736x/c5/b1/0f/c5b10fb0a31bf4c6fe583695df2126d0.jpg" alt="Hansraj College Wall of Fame">
+                    <div class="gallery-caption"><h5>Wall of Fame</h5><span>Hansraj College heritage & icons</span></div>
                 </a>
 
                 <a href="https://i.pinimg.com/736x/6d/53/d1/6d53d107c570655b600069792186b286.jpg" target="_blank" class="gallery-item">
@@ -2434,7 +2405,7 @@
         </div>
     </div>
 
-    <!-- MODAL 4: BLOGS (SUBSTACK POSTS & AUTHOR DIVYANSH TIWARI) -->
+    <!-- MODAL 4: BLOGS -->
     <div id="modal-blogs" class="page-modal">
         <div class="modal-container">
             <button class="close-modal-btn" onclick="closeSectionModal('modal-blogs')">&times;</button>
@@ -2570,7 +2541,7 @@
         </div>
     </div>
 
-    <!-- Modern Multi-Column Light Footer -->
+    <!-- Modern Multi-Column Light Footer (Quick Links Removed) -->
     <footer>
         <div class="footer-grid-container">
             <!-- Brand Column -->
@@ -2598,21 +2569,7 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h5 class="footer-col-title">Quick Links</h5>
-                <ul class="footer-links-list">
-                    <li><a href="#" onclick="scrollToTop(event)">Home</a></li>
-                    <li><button onclick="openSectionModal('modal-explore')">Explore</button></li>
-                    <li><button onclick="openSectionModal('modal-explore', 'attractions')">Places</button></li>
-                    <li><button onclick="openSectionModal('modal-nearby')">Nearby</button></li>
-                    <li><button onclick="openSectionModal('modal-gallery')">Gallery</button></li>
-                    <li><button onclick="openSectionModal('modal-blogs')">Blogs</button></li>
-                    <li><a href="#about" onclick="closeAllModals()">About</a></li>
-                </ul>
-            </div>
-
-            <!-- More -->
+            <!-- More Links -->
             <div>
                 <h5 class="footer-col-title">More</h5>
                 <ul class="footer-links-list">
