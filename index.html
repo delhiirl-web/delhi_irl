@@ -8,7 +8,9 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-7M9DKN8DS2');
+      gtag('config', 'G-7M9DKN8DS2', {
+        page_path: window.location.pathname + window.location.search
+      });
     </script>
     <meta name="google-site-verification" content="8CE3UST1Pcc0P7Fsjgp8ZiyfMEDRwcUO6c2zFAkIuSs" />
     <meta charset="UTF-8">
@@ -19,12 +21,35 @@
     <meta name="keywords" content="Delhi tourism, Delhi food guide, Old Delhi heritage, Delhi IRL, travel Delhi, Delhi street food, Delhi aesthetic spots, Delhi vlog">
     <meta name="author" content="Delhi IRL Team">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://delhiirl-web.github.io/delhi_irl/">
 
+    <!-- Open Graph / Social Media Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://delhiirl.com/">
-    <meta property="og:title" content="Delhi IRL | Discover the Heartbeat of Capital">
-    <meta property="og:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural posts.">
+    <meta property="og:url" content="https://delhiirl-web.github.io/delhi_irl/">
+    <meta property="og:title" content="Delhi IRL | Discover the Heartbeat of the Capital">
+    <meta property="og:description" content="Explore authentic Delhi stories, secret street food spots, curated aesthetic guides, and viral cultural dispatches.">
     <meta property="og:image" content="https://images.pexels.com/photos/33813528/pexels-photo-33813528.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi">
+    <meta name="twitter:description" content="Explore authentic Delhi stories, secret street food spots, and curated aesthetic guides.">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/33813528/pexels-photo-33813528.jpeg">
+
+    <!-- SEO Schema Markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Delhi IRL",
+      "url": "https://delhiirl-web.github.io/delhi_irl/",
+      "description": "Independent publication and city discovery archive documenting Delhi's hidden heritage, street food, and culture.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delhi IRL"
+      }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -516,6 +541,80 @@
         .location-btn:hover {
             color: var(--primary-terracotta-dark);
             gap: 8px;
+        }
+
+        /* --- Newsletter Subscription Section --- */
+        .newsletter-section {
+            background: var(--dark-royal);
+            color: #FFFFFF;
+            border-radius: 20px;
+            padding: 3.5rem 2rem;
+            margin: 4rem auto 0;
+            max-width: 1240px;
+            text-align: center;
+            border: 2px solid var(--gold-accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .newsletter-section h3 {
+            font-family: var(--font-heading);
+            font-size: 2.1rem;
+            color: var(--gold-accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .newsletter-section p {
+            max-width: 620px;
+            margin: 0 auto 1.8rem;
+            font-size: 1rem;
+            color: #DDD8D0;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 580px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 260px;
+            padding: 0.95rem 1.4rem;
+            border-radius: 40px;
+            border: 1px solid var(--gold-accent);
+            background: rgba(255, 255, 255, 0.08);
+            color: #FFF;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .newsletter-input::placeholder {
+            color: #AAA;
+        }
+
+        .newsletter-btn {
+            background-color: var(--primary-terracotta);
+            color: #FFFFFF;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 0.95rem 2rem;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--gold-accent);
+            color: var(--dark-royal);
+            transform: translateY(-2px);
         }
 
         /* --- Modals Base --- */
@@ -1555,6 +1654,12 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .newsletter-btn {
+                width: 100%;
+            }
         }
 
         @media (max-width: 860px) {
@@ -1665,7 +1770,7 @@
                     <li class="nav-item">
                         <a href="#collab" onclick="closeAllModals()">Collaborate <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://www.instagram.com/delhii.irl/" target="_blank">Creator DM Application</a></li>
+                            <li><a href="https://www.instagram.com/delhii.irl/" target="_blank" onclick="trackOutbound('Instagram Creator DM')">Creator DM Application</a></li>
                             <li><a href="#brand-partnership-form" onclick="closeAllModals()">Brand Partnerships</a></li>
                         </ul>
                     </li>
@@ -1743,7 +1848,7 @@
                         <p class="card-excerpt">A deep-dive walkthrough into the 100-year-old culinary secrets hidden in the narrowest lanes of Purani Dilli.</p>
                         <div class="card-footer">
                             <span>5 min read</span>
-                            <a href="chandni-chowk.html" target="_blank" rel="noopener noreferrer" class="location-btn">Read Guide ↗</a>
+                            <a href="chandni-chowk.html" target="_blank" rel="noopener noreferrer" class="location-btn" onclick="trackGuideClick('Chandni Chowk Guide')">Read Guide ↗</a>
                         </div>
                     </div>
                 </article>
@@ -1758,7 +1863,7 @@
                         <p class="card-excerpt">Discovering the best Instagrammable wall murals, local coffee spots, and peaceful morning walk routes in Lodhi Colony.</p>
                         <div class="card-footer">
                             <span>4 min read</span>
-                            <a href="lodhi-art-district.html" target="_blank" rel="noopener noreferrer" class="location-btn">Read Guide ↗</a>
+                            <a href="lodhi-art-district.html" target="_blank" rel="noopener noreferrer" class="location-btn" onclick="trackGuideClick('Lodhi Art District Guide')">Read Guide ↗</a>
                         </div>
                     </div>
                 </article>
@@ -1773,7 +1878,7 @@
                         <p class="card-excerpt">Escape the city chaos. 12 historical monuments perfect for golden hour photography and relaxed evening walks.</p>
                         <div class="card-footer">
                             <span>6 min read</span>
-                            <a href="mughal-gardens.html" target="_blank" rel="noopener noreferrer" class="location-btn">Read Guide ↗</a>
+                            <a href="mughal-gardens.html" target="_blank" rel="noopener noreferrer" class="location-btn" onclick="trackGuideClick('Mughal Gardens Guide')">Read Guide ↗</a>
                         </div>
                     </div>
                 </article>
@@ -1784,8 +1889,19 @@
         <div id="collab" class="collab-banner">
             <h3>Are You A Delhi Creator or Photographer?</h3>
             <p>We are actively collaborating with local foodies, street photographers, writers, and cultural creators to showcase Delhi in its rawest, most creative form.</p>
-            <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="collab-btn"><i class="fab fa-instagram"></i> DM Us On Instagram to Collab</a>
+            <a href="https://www.instagram.com/delhii.irl/" target="_blank" class="collab-btn" onclick="trackOutbound('Instagram Creator Banner')"><i class="fab fa-instagram"></i> DM Us On Instagram to Collab</a>
         </div>
+
+        <!-- NEW: Email Newsletter Subscription Box for Email Experiment -->
+        <section class="newsletter-section">
+            <span class="section-tag" style="color:var(--gold-accent);">Join 1,000+ Delhiites</span>
+            <h3>The Delhi IRL Friday Dispatch</h3>
+            <p>Get our weekly hand-picked guide to secret food stalls, upcoming heritage photowalks, and indie weekend events straight in your inbox.</p>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" id="subscriberEmail" class="newsletter-input" placeholder="Enter your email address..." required>
+                <button type="submit" class="newsletter-btn">Subscribe Free</button>
+            </form>
+        </section>
 
         <!-- Brand Partnership Application Form -->
         <section id="brand-partnership-form" class="partnership-section">
@@ -1830,14 +1946,15 @@
                     </select>
                 </div>
 
+                <!-- Revised realistic budget ranges for student submission -->
                 <div class="form-group">
                     <label for="budgetRange">Estimated Campaign Budget *</label>
                     <select id="budgetRange" required>
                         <option value="" disabled selected>Select budget range</option>
-                        <option value="tier1">₹25,000 – ₹50,000</option>
-                        <option value="tier2">₹50,000 – ₹1,00,000</option>
-                        <option value="tier3">₹1,00,000 – ₹2,50,000</option>
-                        <option value="tier4">₹2,50,000+</option>
+                        <option value="tier1">₹5,000 – ₹15,000 (Stories & Reel Feature)</option>
+                        <option value="tier2">₹15,000 – ₹35,000 (Dedicated Guide Inclusion)</option>
+                        <option value="tier3">₹35,000 – ₹50,000+ (Full Campaign & Event Walk)</option>
+                        <option value="tier4">Barter / Community Walk Sponsorship</option>
                     </select>
                 </div>
 
@@ -2420,7 +2537,7 @@
 
             <div class="substack-grid">
                 <!-- Post 1: Majnu Ka Tilla -->
-                <a href="https://substack.com/home/post/p-210331024" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://substack.com/home/post/p-210331024" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: Majnu Ka Tilla')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!EvtD!,w_474,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f464144-69a2-42c0-9095-1b3a88b386ff_736x1308.jpeg" alt="Majnu Ka Tilla">
                         <span class="substack-tag">EXPLORE DELHI</span>
@@ -2442,7 +2559,7 @@
                 </a>
 
                 <!-- Post 2: Dil Walon Ki Dilli -->
-                <a href="https://substack.com/home/post/p-209771810" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://substack.com/home/post/p-209771810" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: Dil Walon Ki Dilli')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!4q5a!,w_474,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1480c539-2e1d-4dc8-a58d-f4b012882625_1280x960.jpeg" alt="Dil Walon Ki Dilli">
                         <span class="substack-tag">CITY ESSAY</span>
@@ -2464,7 +2581,7 @@
                 </a>
 
                 <!-- Post 3: Delhi's Winter Magic -->
-                <a href="https://delhiirl.substack.com/p/delhis-winter-magic?r=2m8j1j&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://delhiirl.substack.com/p/delhis-winter-magic?r=2m8j1j&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: Delhi Winter Magic')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!799m!,w_720,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F24729ec3-4350-4909-84c8-c971f82ca336_736x981.jpeg" alt="Delhi's Winter Magic">
                         <span class="substack-tag">SEASONAL ESSAY</span>
@@ -2486,7 +2603,7 @@
                 </a>
 
                 <!-- Post 4: If Delhi Were a Person -->
-                <a href="https://delhiirl.substack.com/p/if-delhi-were-a-person" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://delhiirl.substack.com/p/if-delhi-were-a-person" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: If Delhi Were a Person')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!_mvU!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F717126c6-5d0d-4b23-8ee7-70a8fea0f9c8_1408x768.png" alt="If Delhi Were a Person">
                         <span class="substack-tag">CITY ESSAY</span>
@@ -2508,7 +2625,7 @@
                 </a>
 
                 <!-- Post 5: The Delhi Nobody Puts on Instagram -->
-                <a href="https://delhiirl.substack.com/p/the-delhi-nobody-puts-on-instagram" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://delhiirl.substack.com/p/the-delhi-nobody-puts-on-instagram" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: Nobody Puts On IG')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!QCjC!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd9ab9f5-e869-411e-8966-d59ac05f908d_1408x768.png" alt="The Delhi Nobody Puts on Instagram">
                         <span class="substack-tag">RAW & REAL</span>
@@ -2530,7 +2647,7 @@
                 </a>
 
                 <!-- Post 6: Delhi Doesn't Owe You a Postcard -->
-                <a href="https://delhiirl.substack.com/p/delhi-doesnt-owe-you-a-postcard" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://delhiirl.substack.com/p/delhi-doesnt-owe-you-a-postcard" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: Doesnt Owe Postcard')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!xrJ5!,w_720,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6719143c-3f94-484b-89ac-01d3c2b2d8d4_736x736.jpeg" alt="Delhi Doesn't Owe You a Postcard">
                         <span class="substack-tag">PERSPECTIVE</span>
@@ -2552,7 +2669,7 @@
                 </a>
 
                 <!-- Post 7: Top 5 Places for Booklovers in Delhi -->
-                <a href="https://delhiirl.substack.com/p/top-5-places-for-booklovers-in-delhi" target="_blank" rel="noopener noreferrer" class="substack-card">
+                <a href="https://delhiirl.substack.com/p/top-5-places-for-booklovers-in-delhi" target="_blank" rel="noopener noreferrer" class="substack-card" onclick="trackOutbound('Substack: Booklovers')">
                     <div class="substack-img-wrap">
                         <img src="https://substackcdn.com/image/fetch/$s_!y5e4!,w_720,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6ae9047a-2620-4bd8-ab6e-4cbc0c7658d6_736x1104.jpeg" alt="Top 5 Places for Booklovers in Delhi">
                         <span class="substack-tag">CITY GUIDE</span>
@@ -2615,7 +2732,7 @@
                 <h2 class="section-title" style="font-size:2rem;">Terms & Conditions</h2>
             </div>
             <div class="policy-content">
-                <p>By accessing or utilizing <strong>Delhi IRL</strong> (delhiirl.com), you acknowledge and agree to comply with the terms and conditions outlined below.</p>
+                <p>By accessing or utilizing <strong>Delhi IRL</strong> (delhiirl-web.github.io/delhi_irl), you acknowledge and agree to comply with the terms and conditions outlined below.</p>
                 
                 <h3>1. Editorial & Guide Accuracy</h3>
                 <p>All listings, budget ranges, monument ticket fees, and transit guidelines provided on Delhi IRL are researched and verified independently by our local editorial team. However, timings, monument fee structures, and cafe menus may vary at the sole discretion of the respective operators.</p>
@@ -2645,16 +2762,16 @@
                     Your immersive guide to the Capital City — from ancient Mughal monuments to buzzing night food lanes and aesthetic urban alleys.
                 </p>
                 <div class="footer-social-circles">
-                    <a href="https://www.instagram.com/delhii.irl/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Instagram">
+                    <a href="https://www.instagram.com/delhii.irl/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Instagram" onclick="trackOutbound('Instagram Footer')">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Facebook" onclick="trackOutbound('Facebook Footer')">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://in.pinterest.com/delhiirl/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Pinterest">
+                    <a href="https://in.pinterest.com/delhiirl/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Pinterest" onclick="trackOutbound('Pinterest Footer')">
                         <i class="fab fa-pinterest-p"></i>
                     </a>
-                    <a href="https://delhiirl.substack.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Substack">
+                    <a href="https://delhiirl.substack.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Substack" onclick="trackOutbound('Substack Footer')">
                         <i class="fas fa-newspaper"></i>
                     </a>
                 </div>
@@ -2681,7 +2798,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-globe"></i>
-                        <a href="https://delhiirl.substack.com" target="_blank" rel="noopener noreferrer">Visit our Blog</a>
+                        <a href="https://delhiirl.substack.com" target="_blank" rel="noopener noreferrer" onclick="trackOutbound('Substack Text Link')">Visit our Blog</a>
                     </div>
                 </div>
             </div>
@@ -2716,6 +2833,10 @@
 
             if (categoryName) {
                 switchCategory(categoryName);
+            }
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'modal_open', { 'modal_name': modalId });
             }
         }
 
@@ -2760,8 +2881,47 @@
         function handleFormSubmit(e) {
             e.preventDefault();
             const company = document.getElementById('companyName').value;
-            alert('Thank you, ' + company + '! Your brand partnership proposal has been submitted to the Delhi IRL team.');
+            const collabType = document.getElementById('collabType').value;
+            const budget = document.getElementById('budgetRange').value;
+
+            // Log custom event to GA4
+            if (typeof gtag === 'function') {
+                gtag('event', 'partnership_form_submit', {
+                    'brand_name': company,
+                    'collab_type': collabType,
+                    'budget_range': budget
+                });
+            }
+
+            alert('Thank you, ' + company + '! Your brand partnership proposal has been received.');
             e.target.reset();
+        }
+
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('subscriberEmail').value;
+
+            // Log newsletter conversion to GA4
+            if (typeof gtag === 'function') {
+                gtag('event', 'newsletter_signup', {
+                    'subscriber_domain': email.split('@')[1] || 'unknown'
+                });
+            }
+
+            alert('You are subscribed to the Delhi IRL Friday Dispatch! Welcome to the collective.');
+            e.target.reset();
+        }
+
+        function trackGuideClick(guideTitle) {
+            if (typeof gtag === 'function') {
+                gtag('event', 'guide_read_click', { 'guide_title': guideTitle });
+            }
+        }
+
+        function trackOutbound(destination) {
+            if (typeof gtag === 'function') {
+                gtag('event', 'outbound_social_click', { 'destination': destination });
+            }
         }
     </script>
 </body>
