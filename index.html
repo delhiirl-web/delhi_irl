@@ -1,4 +1,3 @@
-name=index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,7 @@ name=index.html
     <title>Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi</title>
     <meta name="title" content="Delhi IRL | The Real Soul, Flavors & Hidden Gems of Delhi">
     <meta name="description" content="Discover Delhi in real life—from hidden food lanes in Chandni Chowk to aesthetic cafes, heritage walks, street style, and vibrant cultural stories.">
-    <meta name="keywords" content="Delhi tourism, Delhi food guide, Old Delhi heritage, Delhi IRL, travel Delhi, Delhi street food, Delhi aesthetic spots, Delhi vlog">
+    <meta name="keywords" content="Delhi tourism, Delhi food guide, Old Delhi heritage, Delhi IRL, travel Delhi, Delhi street food, Delhi aesthetic spots, Delhi vlog, Chandni Chowk street food, Lodhi Art District, Sunder Nursery, Delhi metro phase 4, Delhi heritage walks, secret food spots in Delhi, best cafes in Delhi">
     <meta name="author" content="Delhi IRL Team">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://delhiirl-web.github.io/delhi_irl/">
@@ -259,6 +258,11 @@ name=index.html
             font-family: serif;
             font-weight: 900;
             font-size: 1.05rem;
+        }
+
+        .header-social-btn.substack {
+            background: #FF6719;
+            font-weight: 900;
         }
 
         .header-cta {
@@ -583,7 +587,7 @@ name=index.html
             gap: 8px;
         }
 
-        /* --- Delhi IRL In Motion Section --- */
+        /* --- Delhi IRL In Motion Section (Embedded Video Player) --- */
         .in-motion-section {
             background-color: #110F12;
             color: #FFFFFF;
@@ -595,7 +599,7 @@ name=index.html
 
         .in-motion-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -603,74 +607,34 @@ name=index.html
 
         .in-motion-card {
             background: #1A181B;
-            border-radius: 14px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .in-motion-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             border-color: var(--gold-accent);
         }
 
-        .in-motion-img-wrap {
+        .in-motion-video-frame {
             position: relative;
-            height: 380px;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            max-height: 560px;
+            background: #000000;
             overflow: hidden;
         }
 
-        .in-motion-img-wrap img {
+        .in-motion-video-frame iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-
-        .in-motion-play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 55px;
-            height: 55px;
-            background: rgba(200, 90, 50, 0.85);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-            font-size: 1.2rem;
-            border: 2px solid #FFFFFF;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .in-motion-card:hover .in-motion-play-btn {
-            background: var(--primary-terracotta);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .in-motion-body {
-            padding: 1.2rem 1.4rem;
-        }
-
-        .in-motion-title {
-            font-family: var(--font-heading);
-            font-size: 1rem;
-            color: #FFFFFF;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 0.4rem;
-        }
-
-        .in-motion-views {
-            font-size: 0.8rem;
-            color: #A09A93;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            border: none;
+            display: block;
         }
 
         /* --- Reviews & Reader Ratings Section --- */
@@ -707,6 +671,18 @@ name=index.html
             cursor: pointer;
         }
 
+        .stars-row i {
+            transition: color 0.2s;
+        }
+
+        .stars-row i.active {
+            color: #E6A117;
+        }
+
+        .stars-row i:not(.active) {
+            color: #D5CEC5;
+        }
+
         .review-form-group {
             display: flex;
             flex-direction: column;
@@ -739,9 +715,9 @@ name=index.html
 
         .review-submit-btn {
             width: 100%;
-            background: #EBE6DF;
-            border: 1px solid #D5CEC5;
-            color: var(--dark-royal);
+            background: var(--primary-terracotta);
+            border: 1px solid var(--primary-terracotta);
+            color: #FFFFFF;
             font-weight: 700;
             font-size: 0.92rem;
             padding: 0.85rem;
@@ -751,13 +727,16 @@ name=index.html
         }
 
         .review-submit-btn:hover {
-            background: #DFD7CD;
+            background: var(--primary-terracotta-dark);
         }
 
         .recent-reviews-stack {
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 4px;
         }
 
         .review-card-item {
@@ -1768,7 +1747,6 @@ name=index.html
             align-items: center;
         }
 
-        /* Brand Icon Badges Matching Reference */
         .social-brand-btn {
             width: 38px;
             height: 38px;
@@ -1804,6 +1782,11 @@ name=index.html
             font-family: serif;
             font-weight: 900;
             font-size: 1.25rem;
+        }
+
+        .social-brand-btn.substack {
+            background: #FF6719;
+            font-weight: 900;
         }
 
         .footer-col-title {
@@ -2016,7 +1999,7 @@ name=index.html
                     </ul>
                 </nav>
 
-                <!-- Brand Social Logos Between News and Plan Visit -->
+                <!-- Brand Social Logos (Updated with exact Pinterest link and Substack with logo) -->
                 <div class="header-social-row">
                     <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" rel="noopener noreferrer" class="header-social-btn fb" title="Facebook" onclick="trackOutbound('Facebook Header')">
                         <i class="fab fa-facebook-f"></i>
@@ -2024,11 +2007,14 @@ name=index.html
                     <a href="https://www.instagram.com/delhii.irl/" target="_blank" rel="noopener noreferrer" class="header-social-btn ig" title="Instagram" onclick="trackOutbound('Instagram Header')">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://in.pinterest.com/delhiirl/" target="_blank" rel="noopener noreferrer" class="header-social-btn pin" title="Pinterest" onclick="trackOutbound('Pinterest Header')">
+                    <a href="https://in.pinterest.com/delhiirl/_profile/_created/" target="_blank" rel="noopener noreferrer" class="header-social-btn pin" title="Pinterest" onclick="trackOutbound('Pinterest Header')">
                         <i class="fab fa-pinterest-p"></i>
                     </a>
                     <a href="https://www.quora.com" target="_blank" rel="noopener noreferrer" class="header-social-btn quora" title="Quora" onclick="trackOutbound('Quora Header')">
                         Q
+                    </a>
+                    <a href="https://substack.com/@delhiirl" target="_blank" rel="noopener noreferrer" class="header-social-btn substack" title="Substack" onclick="trackOutbound('Substack Header')">
+                        S
                     </a>
                 </div>
 
@@ -2141,58 +2127,64 @@ name=index.html
             </div>
         </section>
 
-        <!-- Delhi IRL In Motion Section -->
+        <!-- Delhi IRL In Motion Section (Playable Embedded Video Feed) -->
         <section class="in-motion-section">
             <div class="container" style="padding-top: 0; padding-bottom: 0;">
                 <div class="section-header">
                     <span class="section-tag" style="color:var(--gold-accent);">Visual Feeds</span>
                     <h2 class="section-title" style="color:#ffffff;">Delhi IRL In Motion</h2>
                     <p style="color:#BFB8AE; font-size:0.95rem; max-width:680px; margin: 1rem auto 0; text-align: center;">
-                        Watch our viral vertical dispatches documenting midnight butter chicken runs, sunrise at Yamuna Ghats, and hidden havelis.
+                        Watch our vertical dispatches documenting the streets, flavors, and secret corners of the capital in real time.
                     </p>
                 </div>
 
                 <div class="in-motion-grid">
-                    <!-- Motion Card 1 -->
+                    <!-- Embedded Reel 1 -->
                     <div class="in-motion-card">
-                        <div class="in-motion-img-wrap">
-                            <img src="https://i.pinimg.com/1200x/ca/40/2a/ca402ac2aec9ae3ac93d0799cda626bf.jpg" alt="Midnight in Matia Mahal">
-                            <div class="in-motion-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="in-motion-body">
-                            <h4 class="in-motion-title">Midnight in Matia Mahal</h4>
-                            <span class="in-motion-views"><i class="fas fa-eye"></i> 14.2k Views • Instagram Reel</span>
+                        <div class="in-motion-video-frame">
+                            <iframe 
+                                src="https://www.instagram.com/reel/Db7SkoJsI_s/embed/" 
+                                loading="lazy"
+                                allowfullscreen 
+                                scrolling="no" 
+                                frameborder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
                         </div>
                     </div>
 
-                    <!-- Motion Card 2 -->
+                    <!-- Embedded Reel 2 -->
                     <div class="in-motion-card">
-                        <div class="in-motion-img-wrap">
-                            <img src="https://i.pinimg.com/736x/bc/d8/4a/bcd84a270c7a1a4e8befd5250b61c039.jpg" alt="Walking Through Lodhi Canvas">
-                            <div class="in-motion-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="in-motion-body">
-                            <h4 class="in-motion-title">Walking Through Lodhi Canvas</h4>
-                            <span class="in-motion-views"><i class="fas fa-eye"></i> 8.9k Views • Instagram Reel</span>
+                        <div class="in-motion-video-frame">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DdHkR1iSsS6/embed/" 
+                                loading="lazy"
+                                allowfullscreen 
+                                scrolling="no" 
+                                frameborder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
                         </div>
                     </div>
 
-                    <!-- Motion Card 3 -->
+                    <!-- Embedded Reel 3 -->
                     <div class="in-motion-card">
-                        <div class="in-motion-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Sunrise Whispers at Yamuna Ghat">
-                            <div class="in-motion-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="in-motion-body">
-                            <h4 class="in-motion-title">Sunrise Whispers at Yamuna Ghat</h4>
-                            <span class="in-motion-views"><i class="fas fa-eye"></i> 19.5k Views • Instagram Reel</span>
+                        <div class="in-motion-video-frame">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DdTfHPpPdQb/embed/" 
+                                loading="lazy"
+                                allowfullscreen 
+                                scrolling="no" 
+                                frameborder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Reviews & Reader Ratings Section -->
+        <!-- Reviews & Reader Ratings Section (Actual Dynamic Review Submission) -->
         <section class="reviews-section">
             <div class="section-header" style="margin-bottom: 2rem;">
                 <h2 class="section-title">Reviews & Reader Ratings</h2>
@@ -2205,14 +2197,14 @@ name=index.html
                 <!-- Left: Rate Experience Form -->
                 <div class="rate-experience-col">
                     <h4>Rate Your Experience</h4>
-                    <div class="stars-row">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="stars-row" id="interactive-star-rating">
+                        <i class="fas fa-star active" data-rating="1" onclick="setStarRating(1)"></i>
+                        <i class="fas fa-star active" data-rating="2" onclick="setStarRating(2)"></i>
+                        <i class="fas fa-star active" data-rating="3" onclick="setStarRating(3)"></i>
+                        <i class="fas fa-star active" data-rating="4" onclick="setStarRating(4)"></i>
+                        <i class="fas fa-star active" data-rating="5" onclick="setStarRating(5)"></i>
                     </div>
-                    <form onsubmit="event.preventDefault(); alert('Thank you for rating Delhi IRL!'); this.reset();">
+                    <form id="community-review-form" onsubmit="handleDynamicReviewSubmit(event)">
                         <div class="review-form-group">
                             <label for="revName">Your Name *</label>
                             <input type="text" id="revName" placeholder="e.g. Ananya Sharma" required>
@@ -2225,32 +2217,17 @@ name=index.html
                     </form>
                 </div>
 
-                <!-- Right: Recent Verified Reviews List -->
+                <!-- Right: Recent Verified Reviews List (Populated Dynamically) -->
                 <div class="recent-reviews-col">
                     <h4>Recent Verified Reviews</h4>
-                    <div class="recent-reviews-stack">
+                    <div class="recent-reviews-stack" id="reviews-feed-container">
+                        <!-- Default real community entry -->
                         <div class="review-card-item">
                             <div class="review-card-top">
-                                <span class="review-card-author">Rohan Malhotra (MBA Batch '27)</span>
+                                <span class="review-card-author">Aarav Mehta</span>
                                 <span class="review-card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                             </div>
-                            <p class="review-card-text">"The metro timing tips and exact price ranges for Matia Mahal saved us so much confusion on our weekend night walk!"</p>
-                        </div>
-
-                        <div class="review-card-item">
-                            <div class="review-card-top">
-                                <span class="review-card-author">Pooja Venkatesh</span>
-                                <span class="review-card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                            </div>
-                            <p class="review-card-text">"Lodhi Art District route map is perfection. Best artisanal coffee spots listed with genuine verified prices."</p>
-                        </div>
-
-                        <div class="review-card-item">
-                            <div class="review-card-top">
-                                <span class="review-card-author">Karthik Reddy</span>
-                                <span class="review-card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                            </div>
-                            <p class="review-card-text">"Super clean website and aesthetic curation. Loved the Sunder Nursery weekend itinerary recommendations."</p>
+                            <p class="review-card-text">"The Sunder Nursery guide and café recommendations are spot on. Absolutely love the unfiltered local perspective!"</p>
                         </div>
                     </div>
                 </div>
@@ -2614,7 +2591,7 @@ name=index.html
                     <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/b8/d9/96/b8d9969c927507b12d179e17f692b579.jpg" alt="Banjara Market"><span class="item-card-range">Budget: ₹200 – ₹3,500</span></div><div class="item-card-body"><h4 class="item-card-title">Banjara Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Sector 56 / 62 Border</div><p class="item-card-desc">Famous bohemian open-air market for rustic wooden furniture, ceramic dinnerware, brass planters, and home decor.</p><div class="item-card-meta"><span>Home Decor & Ceramics</span><span class="range-badge">Heavy Bargaining</span></div></div></div>
                     <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/60/57/df/6057df309af0fb94fc10543be8986b81.jpg" alt="Nai Sarak Book Market"><span class="item-card-range">Discounted: 20% – 50% Off</span></div><div class="item-card-body"><h4 class="item-card-title">Nai Sarak Book Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Old Delhi</div><p class="item-card-desc">The historic avenue for wholesale textbooks, academic papers, rare manuscripts, stationery, and art supplies.</p><div class="item-card-meta"><span>Books, Paper, Stationery</span><span class="range-badge">Deep Discounts</span></div></div></div>
                     <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/87/19/3e/87193ecea10c03ea0e3f8d2114b005d0.jpg" alt="GK M-Block"><span class="item-card-range">Mid-to-High End</span></div><div class="item-card-body"><h4 class="item-card-title">GK 1 M-Block Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Greater Kailash Part 1</div><p class="item-card-desc">Upscale neighborhood square with trendy silver jewelry stores, street-side momo corners, and boutique lifestyle outlets.</p><div class="item-card-meta"><span>Fashion & Cafes</span><span class="range-badge">Mid-to-High</span></div></div></div>
-                    <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/9a/d3/a2/9ad3a239bc063c92bbd24eebcfa669c6.jpg" alt="Shahpur Jat"><span class="item-card-range">Designer: ₹3,000 – ₹50,000+</span></div><div class="item-card-body"><h4 class="item-card-title">Shahpur Jat Urban Village</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Asiad Village</div><p class="item-card-desc">Trendy urban village housing indie wedding couturiers, customized footwear designers, and artisanal cafes.</p><div class="item-card-meta"><span>Indie Fashion & Trousseau</span><span class="range-badge">Designer Range</span></div></div></div>
+                    <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/9d/d3/a2/9ad3a239bc063c92bbd24eebcfa669c6.jpg" alt="Shahpur Jat"><span class="item-card-range">Designer: ₹3,000 – ₹50,000+</span></div><div class="item-card-body"><h4 class="item-card-title">Shahpur Jat Urban Village</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Asiad Village</div><p class="item-card-desc">Trendy urban village housing indie wedding couturiers, customized footwear designers, and artisanal cafes.</p><div class="item-card-meta"><span>Indie Fashion & Trousseau</span><span class="range-badge">Designer Range</span></div></div></div>
                     <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/9c/e5/e6/9ce5e615bb242af3dc7896de6399fc88.jpg" alt="Palika Bazaar"><span class="item-card-range">Budget: ₹200 – ₹2,000</span></div><div class="item-card-body"><h4 class="item-card-title">Palika Bazaar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Underground CP</div><p class="item-card-desc">Air-conditioned subterranean market for budget electronics, casual sneakers, denim, leather goods, and gaming gear.</p><div class="item-card-meta"><span>Electronics & Casuals</span><span class="range-badge">Bargain</span></div></div></div>
                     <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/bc/12/8d/bc128dfc9541a6ebed16702ae4142bbb.jpg" alt="Chawri Bazaar"><span class="item-card-range">Wholesale Prices</span></div><div class="item-card-body"><h4 class="item-card-title">Chawri Bazaar</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> Near Jama Masjid</div><p class="item-card-desc">Specialized historical market for ornate wedding invitation stationery, brass hardware, and idol sculptures.</p><div class="item-card-meta"><span>Wedding Cards & Brass</span><span class="range-badge">Wholesale</span></div></div></div>
                     <div class="item-card"><div class="item-card-img"><img src="https://i.pinimg.com/736x/18/a5/89/18a589fdcfa5df034775430f3696ed68.jpg" alt="Kirti Nagar Furniture"><span class="item-card-range">Varied Home Budget</span></div><div class="item-card-body"><h4 class="item-card-title">Kirti Nagar Furniture Market</h4><div class="item-card-loc"><i class="fas fa-map-pin"></i> West Delhi</div><p class="item-card-desc">Asia's largest specialized interior and furniture market, featuring everything from bespoke timber tables to luxury sofa sets.</p><div class="item-card-meta"><span>Interiors & Furniture</span><span class="range-badge">Budget to Luxury</span></div></div></div>
@@ -2684,7 +2661,7 @@ name=index.html
                 </div>
             </div>
 
-            <!-- Panel 7: Nearby Escapes (All 15 Places Integrated) -->
+            <!-- Panel 7: Nearby Escapes -->
             <div id="panel-nearby" class="category-panel">
                 <div class="items-grid">
                     <div class="item-card">
@@ -2998,7 +2975,7 @@ name=index.html
         </div>
     </div>
 
-    <!-- MODAL 8: CONTACT MODAL -->
+    <!-- MODAL 8: CONTACT MODAL (Using Formspree Endpoint mdekokey) -->
     <div id="modal-contact" class="page-modal">
         <div class="modal-container policy-container" style="max-width: 960px;">
             <button class="close-modal-btn" onclick="closeSectionModal('modal-contact')">&times;</button>
@@ -3030,31 +3007,32 @@ name=index.html
                         <div class="contact-social-row">
                             <a href="https://x.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.instagram.com/delhii.irl/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="https://in.pinterest.com/delhiirl/_profile/_created/" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
                             <a href="https://www.facebook.com/profile.php?id=61592521435393" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://delhiirl.substack.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-newspaper"></i></a>
+                            <a href="https://substack.com/@delhiirl" target="_blank" rel="noopener noreferrer" title="Substack"><i class="fas fa-newspaper"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right: Form -->
-                <form class="contact-form-panel" onsubmit="handleContactSubmit(event)">
+                <!-- Right: Form Connected via Formspree -->
+                <form class="contact-form-panel" action="https://formspree.io/f/mdekokey" method="POST">
                     <div class="contact-row-2col">
                         <div class="contact-field-group">
                             <label for="cFirstName">First Name</label>
-                            <input type="text" id="cFirstName" required>
+                            <input type="text" id="cFirstName" name="first_name" required>
                         </div>
                         <div class="contact-field-group">
                             <label for="cLastName">Last Name</label>
-                            <input type="text" id="cLastName">
+                            <input type="text" id="cLastName" name="last_name">
                         </div>
                     </div>
                     <div class="contact-field-group">
                         <label for="cEmail">Email *</label>
-                        <input type="email" id="cEmail" required>
+                        <input type="email" id="cEmail" name="email" required>
                     </div>
                     <div class="contact-field-group">
                         <label for="cMessage">Message</label>
-                        <textarea id="cMessage" rows="5" required></textarea>
+                        <textarea id="cMessage" name="message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="contact-send-btn">Send</button>
                 </form>
@@ -3077,45 +3055,45 @@ name=index.html
             <h3 style="font-family: var(--font-body); font-size: 1.4rem; font-weight: 800; color: var(--dark-royal); margin-bottom: 1.5rem;">Latest News</h3>
 
             <div class="news-list">
-                <!-- News 1 -->
+                <!-- News 1: PropNewsTime link -->
                 <article class="news-article-card">
-                    <a href="https://timesofindia.indiatimes.com/city/delhi" target="_blank" rel="noopener noreferrer" class="news-article-title">
-                        Delhi Metro Phase 4 Expansion: New Priority Corridors Set to Open Ahead of Winter Schedule
+                    <a href="https://propnewstime.com/latestnewsstories/MzA3NjI=/delhi-metro-phase-iv-corridors-set-for-launch-by-december-as-phase-v-expansion-moves-ahead" target="_blank" rel="noopener noreferrer" class="news-article-title">
+                        Delhi Metro Phase IV Corridors Set for Launch by December as Phase V Expansion Moves Ahead
                     </a>
                     <div class="news-card-inner">
                         <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=400&q=80" alt="Delhi Metro" class="news-thumbnail">
                         <div class="news-snippet-block">
                             <span class="news-date">Aug 15</span>
                             <p class="news-snippet">
-                                DMRC accelerates trial runs on the Janakpuri West–RK Ashram corridor, linking central shopping districts and easing transit across old market centers...
+                                DMRC accelerates trial runs on key priority extensions including the Janakpuri West–RK Ashram corridor and the Golden Line, linking central shopping districts, airports, and old market centers...
                             </p>
                         </div>
                     </div>
                 </article>
 
-                <!-- News 2 -->
+                <!-- News 2: Moneycontrol link -->
                 <article class="news-article-card">
-                    <a href="https://www.thehindu.com/news/cities/Delhi/" target="_blank" rel="noopener noreferrer" class="news-article-title">
-                        Heritage Preservation Drive: ASI Launches Walkways and Night Illuminations at Mehrauli Park
+                    <a href="https://www.moneycontrol.com/travel/delhi-tourism-expands-heritage-walks-launches-evening-and-night-tours-to-boost-experiential-travel-article-13849593.html" target="_blank" rel="noopener noreferrer" class="news-article-title">
+                        Delhi Tourism Expands Heritage Walks: Launches Evening and Night Tours to Boost Experiential Travel
                     </a>
                     <div class="news-card-inner">
-                        <img src="https://images.unsplash.com/photo-1667849521212-e9843b89f322?auto=format&fit=crop&w=400&q=80" alt="Delhi Heritage" class="news-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1667849521212-e9843b89f322?auto=format&fit=crop&w=400&q=80" alt="Delhi Heritage Night Walks" class="news-thumbnail">
                         <div class="news-snippet-block">
                             <span class="news-date">Jul 11</span>
                             <p class="news-snippet">
-                                A major restoration campaign revamps medieval monuments, stepwells, and pedestrian routes, offering night photography access for weekend heritage walks...
+                                Delhi Tourism expands its experiential heritage walk offerings with curated evening and night-time tours across Mehrauli Archaeological Park, Qutub Minar, and Shahjahanabad...
                             </p>
                         </div>
                     </div>
                 </article>
             </div>
 
-            <!-- News Newsletter Subscribe Box -->
+            <!-- News Newsletter Subscribe Box (Using Formspree Endpoint mdekokey) -->
             <div class="news-sub-box">
                 <h4>Subscribe To Delhi IRL</h4>
                 <p>Join our mailing list for the latest updates, news, stories & more.</p>
-                <form class="news-sub-form" onsubmit="handleNewsLetterSub(event)">
-                    <input type="email" id="newsSubEmail" class="news-sub-input" placeholder="Email Address" required>
+                <form class="news-sub-form" action="https://formspree.io/f/mdekokey" method="POST">
+                    <input type="email" id="newsSubEmail" name="subscriber_email" class="news-sub-input" placeholder="Email Address" required>
                     <button type="submit" class="news-sub-btn">Subscribe</button>
                 </form>
             </div>
@@ -3141,11 +3119,14 @@ name=index.html
                     <a href="https://www.instagram.com/delhii.irl/" target="_blank" rel="noopener noreferrer" class="social-brand-btn ig" title="Instagram" onclick="trackOutbound('Instagram Footer')">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://in.pinterest.com/delhiirl/" target="_blank" rel="noopener noreferrer" class="social-brand-btn pin" title="Pinterest" onclick="trackOutbound('Pinterest Footer')">
+                    <a href="https://in.pinterest.com/delhiirl/_profile/_created/" target="_blank" rel="noopener noreferrer" class="social-brand-btn pin" title="Pinterest" onclick="trackOutbound('Pinterest Footer')">
                         <i class="fab fa-pinterest-p"></i>
                     </a>
                     <a href="https://www.quora.com" target="_blank" rel="noopener noreferrer" class="social-brand-btn quora" title="Quora" onclick="trackOutbound('Quora Footer')">
                         Q
+                    </a>
+                    <a href="https://substack.com/@delhiirl" target="_blank" rel="noopener noreferrer" class="social-brand-btn substack" title="Substack" onclick="trackOutbound('Substack Footer')">
+                        S
                     </a>
                 </div>
             </div>
@@ -3251,27 +3232,60 @@ name=index.html
             }
         }
 
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            const fname = document.getElementById('cFirstName').value;
-            if (typeof gtag === 'function') {
-                gtag('event', 'contact_form_submit', { 'first_name': fname });
-            }
-            alert('Thank you, ' + fname + '! Your message has been sent to the Delhi IRL team.');
-            e.target.reset();
-            closeSectionModal('modal-contact');
+        /* --- Dynamic Star Rating Logic --- */
+        let currentSelectedRating = 5;
+        function setStarRating(rating) {
+            currentSelectedRating = rating;
+            const stars = document.querySelectorAll('#interactive-star-rating i');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                    star.classList.replace('far', 'fas');
+                } else {
+                    star.classList.remove('active');
+                    star.classList.replace('fas', 'far');
+                }
+            });
         }
 
-        function handleNewsLetterSub(e) {
+        /* --- Dynamic Review Feed Submission Logic --- */
+        function handleDynamicReviewSubmit(e) {
             e.preventDefault();
-            const email = document.getElementById('newsSubEmail').value;
-            if (typeof gtag === 'function') {
-                gtag('event', 'news_newsletter_signup', {
-                    'subscriber_domain': email.split('@')[1] || 'unknown'
-                });
+            const nameInput = document.getElementById('revName').value.trim();
+            const contentInput = document.getElementById('revContent').value.trim();
+
+            if (!nameInput || !contentInput) return;
+
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= currentSelectedRating) {
+                    starsHtml += '<i class="fas fa-star"></i>';
+                } else {
+                    starsHtml += '<i class="far fa-star"></i>';
+                }
             }
-            alert('Thank you for subscribing to Delhi IRL News!');
+
+            const feedContainer = document.getElementById('reviews-feed-container');
+            const newReviewCard = document.createElement('div');
+            newReviewCard.className = 'review-card-item';
+            newReviewCard.innerHTML = `
+                <div class="review-card-top">
+                    <span class="review-card-author">${escapeHtml(nameInput)}</span>
+                    <span class="review-card-stars">${starsHtml}</span>
+                </div>
+                <p class="review-card-text">"${escapeHtml(contentInput)}"</p>
+            `;
+
+            feedContainer.insertBefore(newReviewCard, feedContainer.firstChild);
+
+            alert('Thank you, ' + nameInput + '! Your review has been successfully published.');
             e.target.reset();
+            setStarRating(5);
+        }
+
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, m => map[m]);
         }
 
         function trackGuideClick(guideTitle) {
