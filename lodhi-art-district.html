@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7M9DKN8DS2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-7M9DKN8DS2');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DELHI ART 🎨 — Lodhi Art District: Delhi's Open-Air Gallery</title>
+    <title>Lodhi Art District: Popular Open-Air Gallery & Trendy Delhi Walks</title>
+    <meta name="description" content="Visit popular wall murals and trendy aesthetic spots at Lodhi Art District. See how once quiet government blocks transformed into Delhi's favorite open-air canvas.">
+    <meta name="keywords" content="popular Delhi art walks, trendy Lodhi Colony murals, Delhi open-air gallery, once quiet government colony, St+art India">
+    <link rel="canonical" href="https://delhiirl-web.github.io/delhi_irl/lodhi-art-district.html">
     
     <!-- Editorial Serif & Modern Sans Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +23,6 @@
 
     <style>
         :root {
-            /* Palette adapted from DELHI IRL Main Page */
             --bg-page: #fbf9f4;
             --bg-surface: #ffffff;
             --bg-card: #f8f4ec;
@@ -33,8 +34,6 @@
             --terracotta: #c25934;
             --terracotta-gradient: linear-gradient(135deg, #c25934 0%, #d97746 100%);
             --accent-gold: #c59b27;
-            --accent-cyan: #0284c7;
-            --accent-purple: #7e22ce;
             --border-color: #e8ded2;
             --border-accent: rgba(194, 89, 52, 0.25);
             --shadow-subtle: 0 4px 20px rgba(0,0,0,0.04);
@@ -56,19 +55,7 @@
             position: relative;
         }
 
-        /* Subtle Repeating Artistic Street Art Background Watermark */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj48cGF0aCBkPSJNMjAgMjBMMTAwIDgwbS00MCAyMGMxMC0yMCAzMC0yMCA0MCAwbTMwIDQwbTUwIDUwbS03MC0zMGMyMC0yMCA1MC0xMCA1MCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJkOGMyIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC4zNSIvPjx0ZXh0IHg9IjMwIiB5PSIxNzAiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNlMmQ4YzIiIGZvbnQtZmFtaWx5PSInQ2luemVsJywgc2VyaWYiIGxldHRlci1zcGFjaW5nPSIyIj5MT0RISSBBUlQ8L3RleHQ+PC9zdmc+');
-            background-repeat: repeat;
-            opacity: 0.65;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* Top Navigation Bar matching DELHI IRL Navbar */
+        /* Top Navigation Bar */
         nav.navbar {
             background-color: var(--nav-bg);
             border-bottom: 2px solid var(--accent-gold);
@@ -134,63 +121,6 @@
             background-repeat: no-repeat;
         }
 
-        .hero > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-video-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 56.25vw;
-            min-width: 177.78vh;
-            min-height: 100vh;
-            transform: translate(-50%, -50%);
-            border: 0;
-            z-index: -2;
-            pointer-events: none;
-        }
-
-        .hero-video-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to bottom,
-                rgba(251, 249, 244, 0.88) 0%,
-                rgba(251, 249, 244, 0.90) 35%,
-                rgba(251, 249, 244, 0.94) 65%,
-                rgba(251, 249, 244, 0.98) 88%,
-                #fbf9f4 100%
-            );
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero .pill-badge,
-        .hero .hero-title,
-        .hero .hero-lead,
-        .hero .feature-grid-3 {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero .hero-title {
-            color: #000000;
-            text-shadow: 0 1px 4px rgba(255,255,255,0.45);
-        }
-
-        .hero .hero-lead {
-            color: #000000;
-            text-shadow: 0 1px 4px rgba(255,255,255,0.45);
-        }
-
-        .hero .feat-card {
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(5px);
-        }
-
         .pill-badge {
             display: inline-block;
             background: var(--terracotta-gradient);
@@ -248,15 +178,6 @@
             border-radius: 12px;
             padding: 2rem;
             box-shadow: var(--shadow-subtle);
-            transition: all 0.3s ease;
-        }
-
-        .feat-card:hover {
-            transform: translateY(-5px);
-            background-color: var(--bg-card-hover);
-            border-color: var(--border-accent);
-            border-left-color: var(--accent-gold);
-            box-shadow: var(--shadow-hover);
         }
 
         .feat-card-title {
@@ -265,9 +186,6 @@
             font-weight: 700;
             color: var(--text-title);
             margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .feat-card p {
@@ -315,7 +233,6 @@
             margin: 2.2rem 0;
         }
 
-        /* Image Display Cards */
         .img-wrapper {
             position: relative;
             border-radius: 12px;
@@ -331,11 +248,6 @@
             max-height: 420px;
             object-fit: cover;
             display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .img-wrapper:hover img {
-            transform: scale(1.04);
         }
 
         .img-tag {
@@ -350,10 +262,8 @@
             padding: 5px 14px;
             border-radius: 20px;
             font-weight: 700;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        /* Styled Art Themes List */
         .art-list {
             list-style: none;
             padding: 0;
@@ -369,24 +279,13 @@
             margin-bottom: 1rem;
             font-size: 1rem;
             color: var(--text-main);
-            transition: all 0.3s ease;
-        }
-
-        .art-list li:hover {
-            border-left-color: var(--terracotta);
-            background: #ffffff;
-            transform: translateX(5px);
-            box-shadow: var(--shadow-subtle);
         }
 
         .art-list li strong {
             color: var(--text-title);
             font-family: 'Cinzel', serif;
-            font-size: 1.05rem;
-            display: inline;
         }
 
-        /* Pro-Tips Box */
         .pro-tips-box {
             background: linear-gradient(135deg, #fdfaf5, #f5efe4);
             border: 1px solid var(--border-color);
@@ -394,7 +293,6 @@
             border-radius: 12px;
             padding: 2.2rem;
             margin: 2.5rem 0;
-            box-shadow: var(--shadow-subtle);
         }
 
         .pro-tips-box h3 {
@@ -402,9 +300,6 @@
             font-size: 1.4rem;
             color: var(--terracotta);
             margin-bottom: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .tips-list {
@@ -421,12 +316,6 @@
             font-size: 1rem;
         }
 
-        .tips-list li span.icon {
-            font-size: 1.25rem;
-            line-height: 1.3;
-        }
-
-        /* Vibe Quote */
         .vibe-quote {
             background-color: var(--bg-card);
             border-left: 4px solid var(--accent-gold);
@@ -440,7 +329,46 @@
             line-height: 1.7;
         }
 
-        /* Footer matching DELHI IRL */
+        /* External Reference Box */
+        .external-ref-box {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .external-ref-box h4 {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 1rem;
+            color: var(--text-title);
+        }
+
+        .ref-links-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .ref-btn {
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid var(--terracotta);
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .ref-btn:hover {
+            background: var(--terracotta);
+            color: #fff;
+        }
+
+        /* Footer */
         footer {
             background-color: var(--nav-bg);
             border-top: 2px solid var(--accent-gold);
@@ -467,14 +395,6 @@
             .content-section {
                 padding: 2rem 1.5rem;
             }
-            .hero {
-                padding-top: 3.5rem;
-                min-height: 620px;
-            }
-
-            .hero-video-overlay {
-                background: rgba(20, 23, 26, 0.62);
-            }
         }
     </style>
 </head>
@@ -491,7 +411,7 @@
         <span class="pill-badge">Aesthetic Walk</span>
         <h1 class="hero-title">Lodhi Art District: Delhi's Open-Air Gallery</h1>
         <p class="hero-lead">
-            "Forget everything you know about visiting an art gallery — the hushed silence, the 'do not touch' signs, the entry tickets. Now imagine strolling down an ordinary Delhi residential street and suddenly finding a five-storey building wearing a giant mural of a woman lost in thought, or turning a corner to spot a wall exploding with parrots, geometric patterns, or a portrait so lifelike it stops you mid-step. That's Lodhi Colony for you — except everyone calls it the Lodhi Art District, India's first open-air public art district, and it's basically a treasure hunt disguised as a walk."
+            "Forget everything you know about visiting an art gallery — the hushed silence, the 'do not touch' signs. Step into a popular open-air space where once ordinary walls display trendy, giant murals that turn an entire neighborhood into Delhi's most vibrant canvas."
         </p>
 
         <!-- 3 Feature Highlight Cards -->
@@ -520,13 +440,13 @@
             <div class="grid-2">
                 <div>
                     <p style="margin-bottom: 1.2rem;">
-                        Here's the twist nobody expects: Lodhi Art District isn't in some trendy, curated art hub — it's a government housing colony built in the 1940s, full of quiet lanes and boxy residential blocks.
+                        Here's the twist nobody expects: Lodhi Art District isn't in some trendy, curated art hub — it's a once quiet government housing colony built in the 1940s, full of residential blocks.
                     </p>
                     <p>
-                        In 2015, the <strong>St+art India Foundation</strong>, in collaboration with the Delhi government, decided this unassuming neighborhood deserved a makeover — and not the boring kind. They invited street artists from India and across the globe to transform blank walls into massive canvases.
+                        In 2015, the <strong>St+art India Foundation</strong>, in collaboration with the Delhi government, decided this unassuming neighborhood deserved a popular public makeover. They invited street artists from India and across the globe to transform blank walls into massive canvases.
                     </p>
                     <p style="margin-top: 1.2rem; color: var(--terracotta); font-weight: 700;">
-                        The result? Over 50 murals spread across residential blocks, turning a sleepy colony into one of the most Instagrammed corners of the capital, without charging a single rupee for entry.
+                        The result? Over 50 murals spread across residential blocks, turning a sleepy colony into one of the most trendy and photographed corners of the capital, with free public entry.
                     </p>
                 </div>
                 <div class="img-wrapper">
@@ -540,7 +460,7 @@
         <section class="content-section">
             <h2 class="section-heading">Walls That Actually Talk to You</h2>
             <p>
-                What makes this district so exciting is the sheer variety. You're not just looking at "pretty paintings" — every mural has a story, a theme, an artist's signature style bursting out of the concrete:
+                What makes this district so exciting is the sheer variety. You're not just looking at paintings — every popular mural has a story, a theme, and an artist's signature style bursting out of the concrete:
             </p>
 
             <div class="grid-2">
@@ -553,21 +473,17 @@
                     <li><strong>Massive portraits</strong> so detailed they look almost photographic from a distance.</li>
                     <li><strong>Bold abstract and geometric designs</strong> that turn entire building facades into optical illusions.</li>
                     <li><strong>Nature-inspired works</strong> — birds, trees, and wildlife bursting out of grey walls in full color.</li>
-                    <li><strong>Pieces exploring social themes</strong> — gender, environment, and identity — making you pause and think, not just click a photo.</li>
-                    <li><strong>Quirky, surreal artworks</strong> that feel like stepping into someone's fever dream (in the best way).</li>
+                    <li><strong>Pieces exploring social themes</strong> — gender, environment, and identity — making you pause and think.</li>
+                    <li><strong>Quirky, surreal artworks</strong> that feel like stepping into a trendy dreamscape.</li>
                 </ul>
             </div>
-
-            <p style="color: var(--text-muted); font-style: italic;">
-                Walk block by block, and you'll notice how the mood shifts from playful to political to poetic — sometimes within the same lane.
-            </p>
         </section>
 
         <!-- The Walk & Pro-Tips -->
         <section class="content-section">
             <h2 class="section-heading">The Walk: What to Expect</h2>
             <p>
-                This isn't a "walk in, see everything in five minutes" kind of place. The murals are spread across residential blocks (mostly Block A to WEA), so you genuinely need to wander — and that's half the fun. Think of it less as a checklist and more as a scavenger hunt where every alley might surprise you.
+                This isn't a quick attraction. The popular murals are spread across residential blocks (mostly Block A to WEA), so you genuinely need to wander — and that's half the fun.
             </p>
 
             <div class="pro-tips-box">
@@ -583,27 +499,26 @@
                     </li>
                     <li>
                         <span class="icon">👀</span>
-                        <div><strong>Look up, look sideways, look everywhere:</strong> Murals aren't just on ground-floor walls — some wrap around entire multi-storey buildings.</div>
+                        <div><strong>Look up, look sideways, look everywhere:</strong> Murals wrap around entire multi-storey buildings.</div>
                     </li>
                     <li>
                         <span class="icon">🏡</span>
-                        <div><strong>It's still someone's home:</strong> Keep your voice down near residential entrances and be respectful of the residents living right behind that stunning artwork.</div>
-                    </li>
-                    <li>
-                        <span class="icon">📸</span>
-                        <div><strong>Bring your camera (or just your phone):</strong> But also just look with your own eyes for a minute before you start clicking. Trust us, it hits different.</div>
+                        <div><strong>It's still someone's home:</strong> Keep your voice down near residential entrances and be respectful of residents.</div>
                     </li>
                 </ul>
             </div>
 
-            <div class="grid-2">
-                <div class="img-wrapper">
-                    <img src="https://i.pinimg.com/736x/c7/cc/49/c7cc49722c7f3fb14892117227d16189.jpg" alt="Wandering the Alleys of Lodhi Colony" />
-                    <span class="img-tag">Exploring Blocks A through WEA</span>
-                </div>
-                <div class="img-wrapper">
-                    <img src="https://i.pinimg.com/1200x/c7/29/6a/c7296a07060783b7c98fd5abf4c9e96c.jpg" alt="Colorful Delhi Wall Mural" />
-                    <span class="img-tag">Art Woven into Daily Life</span>
+            <!-- External References Section -->
+            <div class="external-ref-box">
+                <h4>📚 Explore More Online Archives</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Dive deeper into the digital archives and historical background of the district:</p>
+                <div class="ref-links-row">
+                    <a href="http://artsandculture.google.com/story/lodhi-art-district-st-art-india/EAWh787tb1GHJA?hl=en" target="_blank" rel="noopener noreferrer" class="ref-btn">
+                        🏛️ Google Arts & Culture Exhibition
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Lodhi_Art_District" target="_blank" rel="noopener noreferrer" class="ref-btn">
+                        📖 Wikipedia Article
+                    </a>
                 </div>
             </div>
         </section>
@@ -612,7 +527,7 @@
         <section class="content-section">
             <h2 class="section-heading">Not Just Art — It's a Whole Vibe</h2>
             <p>
-                The best part about Lodhi Art District is that it doesn't feel like a tourist trap. Locals jog past murals in the morning, kids play cricket next to a giant wall portrait, and residents go about daily life completely unbothered by visitors clicking photos of their building. It's art woven so naturally into everyday life that it feels less like a "district" and more like Delhi decided one day to wear a fresh coat of imagination.
+                The best part about Lodhi Art District is that it doesn't feel like a tourist trap. Locals jog past murals in the morning, kids play cricket next to a giant wall portrait, and residents go about daily life completely unbothered. It's art woven so naturally into everyday life that it feels like Delhi decided one day to wear a fresh coat of imagination.
             </p>
 
             <div class="vibe-quote">
@@ -620,28 +535,17 @@
             </div>
         </section>
 
-        <!-- Final Call to Action -->
-        <section class="content-section" style="text-align: center;">
-            <h2 class="section-heading" style="margin-bottom: 2rem;">Why You Need to Go (Like, This Weekend)</h2>
-            <p style="max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.15rem; color: var(--text-main);">
-                In a city packed with monuments from centuries ago, Lodhi Art District is refreshingly, boldly now. It's proof that art doesn't need a frame, a ticket counter, or a velvet rope to be powerful — sometimes it just needs a blank wall and someone brave enough to paint outside the lines.
-            </p>
-            <p style="color: var(--terracotta); font-size: 1.25rem; font-weight: 700; margin-top: 2rem; font-family: 'Playfair Display', serif; font-style: italic;">
-                So next time someone asks you where to find "something different" in Delhi, skip the usual monuments-and-market answer. Send them straight to Lodhi Colony, tell them to put their phone on silent (but camera ready), and let the walls do the talking.
-            </p>
-        </section>
-
     </main>
 
-    <!-- Footer matching DELHI IRL -->
+    <!-- Footer -->
     <footer>
         <p class="footer-tagline">DELHI ART &times; LODHI COLONY</p>
         <p>&copy; Delhi IRL. India's First Open-Air Public Art District Guide.</p>
     </footer>
-</script>
-    <!-- WebWhiz Chatbot SDK Script -->
-    <script id="__webwhizSdk__" data-chatbot-id="6aab164475700356fee48200"
-    src="https://widget.webwhiz.ai/webwhiz-sdk.js">
-    </script>
+
+    <!-- WebWhiz Chatbot SDK Script Cleaned & Fixed -->
+    <script id="__webwhizSdk__" data-chatbot-id="6aab164475700356fee48200"
+    src="https://widget.webwhiz.ai/webwhiz-sdk.js">
+    </script>
 </body>
 </html>
